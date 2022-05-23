@@ -1,0 +1,23 @@
+header {
+    height: 20%;
+    width: 100%;
+    background-color: #191d3d;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.logo1{
+    max-height: 5em;
+    margin-left: 0.5em;
+    padding-top: 1%;
+}
+
+h1{
+    color: white;
+    padding-right: 8%;
+}
+
+.logo2{
+    max-height: 5em;
+    margin-right: 0;
+}
