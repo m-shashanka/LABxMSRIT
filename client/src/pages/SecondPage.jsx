@@ -3,7 +3,7 @@ import Question from "../components/Question/Question";
 import Prerequisite from "../components/Prerequisite/Prerequisite";
 import Objectives from "../components/Objectives/Objectives";
 import InputOutput from "../components/InputOutput/InputOutput";
-import Anime from "../anime";
+import IFrame from "../components/IFrame/IFrame";
 
 function SecondPage(){
     return (
@@ -14,7 +14,7 @@ function SecondPage(){
         />
         <Prerequisite />
         <Objectives />
-        <Anime />
+        <IFrame />
         <InputOutput />
         </>
     );
