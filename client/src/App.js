@@ -1,6 +1,7 @@
 import { Routes, Route} from "react-router-dom";
 import FirstPage from "./pages/FirstPage";
 import SecondPage from "./pages/SecondPage";
+import DataStructure from "./pages/DataStructure";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
        <Routes>
          <Route path='/' element={<FirstPage />} />
          <Route path="/main" element={<SecondPage />} />
+         <Route path="/datastructure" element={<DataStructure />} />
        </Routes>
     
    </>
