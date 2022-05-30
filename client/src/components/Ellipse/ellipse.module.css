@@ -1,0 +1,17 @@
+.ellipse{
+    background-color: #7b9a1c;
+    height:fit-content;
+    width: max-content;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0.2rem;
+    margin-right: 1rem;
+    border: 0.5rem solid #7b9a1c;
+}
+
+.ellipse:hover{
+    background-color: #ef26263a;
+    cursor: pointer;
+    transform: scale(1.08);
+    border: 0 #ef26263a;
+}
