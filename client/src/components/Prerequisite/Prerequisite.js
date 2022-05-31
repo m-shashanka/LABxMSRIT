@@ -1,13 +1,14 @@
 import styles from './prerequisite.module.css';
 import Ellipse from '../Ellipse/Ellipse';
 
-function Prerequisite(){
+function Prerequisite(props){
+    console.log(props.arrayOfItems)
 return(
     <div className={styles.prereq}>
        <h4>Prerequisite:</h4>
-       <Ellipse name="Stack"/>
-       <Ellipse name="Queue"/>
-       <Ellipse name="Linked List"/>
+      { (props.arrayOfItems).map((dataStructure) => {
+        <Ellipse name={dataStructure} />
+       })}
     </div>
 );
 }

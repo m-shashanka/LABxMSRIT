@@ -5,21 +5,17 @@ import Questions from "../Data/Questions";
 import { Link } from "react-router-dom";
 
 function FirstPage() {
-  const [id, setID]= useState(0);
-  //console.log(id);
 
-  function handleClick(event){
-    console.log(this.attr('id'));
-  }
-
+  // function handleClick(event){
+  //   console.log(event.target.id);
+  // }
   return (
     <>
       <Header />
       <h1 style={{textAlign: "center"}}>Questions Filtering will come here</h1>
       {Questions.map((question) => (
-         <Link to={"/main"} style={{all: 'unset'}} onClick={handleClick}>
+         <Link to={`/main/${question.id}`} style={{all: 'unset'}} key={question.id}>
          <Question 
-              key={question.id}
               id={question.id}
               question={question.value}
           />
