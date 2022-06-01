@@ -15,17 +15,18 @@ function SecondPage(){
     return (
         <>
           {Questions.map((question) => 
-            (id == question.id) ? <Question  id={question.id} question={question.value} /> : null
+            (id == question.id) ? <Question  id={question.id} question={question.value} key={question.id} /> : null
             )}
 
           {DetailedQuestionData.map(question => 
            (id == question.id) ? 
-           [<Prerequisite arrayOfItems={question.PreReq} />,
+           <div key={question.id}>
+           <Prerequisite arrayOfItems={question.PreReq} />,
            <Objectives text={question.Objective} />,
            <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />,
            <InputOutput input={question.Input} output={question.Output} />,
            <Code code={question.Code} />
-           ]
+           </div>
            :null
            )}
         </>
