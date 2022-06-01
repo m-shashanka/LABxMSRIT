@@ -1,11 +1,9 @@
-.code{ 
-    border: 3px solid rgba(254, 156, 251, 0.3);;
+.codeSnippet{ 
     padding: 1.5%;
-    background-color: #fad4f7;
+    background-color: black;
+    color: white;
     margin: 2% 5%;
-    font-family: "Montserrat-Bold";
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-align: center;
     border-radius: 12px;
-    }
+    display: block;
+    white-space: pre-wrap;
+}

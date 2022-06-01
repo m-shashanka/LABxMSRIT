@@ -2,9 +2,7 @@ import styles from './code.module.css'
 
 function Code(props){
     return(
-        <div className={styles.code}>
-         {props.code}
-        </div>
+        <code className={styles.codeSnippet}>{props.code}</code>
     )
 }
 
