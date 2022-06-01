@@ -10,7 +10,7 @@
     border-radius: 12px;
 }
 
-.qbox:hover{
+.qboxHover:hover{
     background-color: #a1ffff3a;
     opacity: 1.0;
     cursor: pointer;

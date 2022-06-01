@@ -1,13 +1,13 @@
 import styles from './prerequisite.module.css';
-import Ellipse from '../Ellipse/Ellipse';
+import Chip from '../Chip/Chip';
 
 function Prerequisite(props){
 return(
     <div className={styles.prereq}>
-       <h4>Prerequisite:</h4>
-      { (props.arrayOfItems).map((dataStructure) => {
-        <Ellipse dataStructure={dataStructure} key={dataStructure} />
-       })}
+      <h4>Prerequisites: &nbsp;</h4>
+      {props.arrayOfItems.map((dataStructure) =>
+        <Chip name={dataStructure} key={dataStructure} />
+      )}
     </div>
 );
 }

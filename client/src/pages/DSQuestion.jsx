@@ -4,21 +4,21 @@ import Prerequisite from "../components/Prerequisite/Prerequisite";
 import Objectives from "../components/Objectives/Objectives";
 import InputOutput from "../components/InputOutput/InputOutput";
 import IFrame from "../components/IFrame/IFrame";
-import Questions from "../Data/Questions";
 import DetailedQuestionData from "../Data/DetailedQuestionData";
 import {useParams} from "react-router-dom";
 import Code from "../components/Code/Code";
 
-function SecondPage(){
+function DSQuestion(){
   const {id} = useParams();
 
-    return (
-        <>
-          {Questions.map((question) => 
-            (id == question.id) ? <Question  id={question.id} question={question.value} key={question.id} /> : null
-            )}
+  const question = DetailedQuestionData.filter(q => id == q.id)[0];
 
-          {DetailedQuestionData.map(question => 
+  return (
+      <>
+        <Question id={question.id} question={question.value} disableHover/>
+        <Prerequisite arrayOfItems={question.PreReq} />
+
+        {/* {DetailedQuestionData.map(question => 
            (id == question.id) ? 
            <div key={question.id}>
            <Prerequisite arrayOfItems={question.PreReq} />,
@@ -28,9 +28,9 @@ function SecondPage(){
            <Code code={question.Code} />
            </div>
            :null
-           )}
-        </>
-    );
+        )} */}
+      </>
+  );
 }
 
-export default SecondPage;
+export default DSQuestion;
