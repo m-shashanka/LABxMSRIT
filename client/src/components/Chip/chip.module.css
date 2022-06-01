@@ -10,5 +10,5 @@
 
 .chip:hover{
     background-color: #ef26263a;
-    transform: scale(1.08);
+    /* transform: scale(1.08); */
 }

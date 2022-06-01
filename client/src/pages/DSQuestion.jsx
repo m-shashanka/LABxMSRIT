@@ -17,18 +17,10 @@ function DSQuestion(){
       <>
         <Question id={question.id} question={question.value} disableHover/>
         <Prerequisite arrayOfItems={question.PreReq} />
-
-        {/* {DetailedQuestionData.map(question => 
-           (id == question.id) ? 
-           <div key={question.id}>
-           <Prerequisite arrayOfItems={question.PreReq} />,
-           <Objectives text={question.Objective} />,
-           <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />,
-           <InputOutput input={question.Input} output={question.Output} />,
-           <Code code={question.Code} />
-           </div>
-           :null
-        )} */}
+        <Objectives text={question.Objective} />
+        <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />
+        <InputOutput input={question.Input} output={question.Output} />
+        <Code code={question.Code} />
       </>
   );
 }
