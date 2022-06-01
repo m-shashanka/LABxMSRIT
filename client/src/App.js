@@ -9,7 +9,7 @@ function App() {
    <>
        <Routes>
          <Route path='/' element={<FirstPage />} />
-         <Route path="/main" element={<SecondPage />} />
+         <Route exact path='/main/:id' element={<SecondPage />} />
          <Route path="/datastructure" element={<DataStructure />} />
        </Routes>
     

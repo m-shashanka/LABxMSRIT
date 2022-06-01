@@ -13,3 +13,11 @@
 h3{
     float: left;
 }
+
+button{
+       background-color: transparent;
+       border: none;
+       font-weight: 500;
+       color: rgb(204, 23, 174);
+       cursor: pointer;
+}

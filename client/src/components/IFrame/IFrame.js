@@ -2,15 +2,14 @@ import styles from './IFrame.module.css'
 
 function IFrame(props){
     return(
-        <>
-        <iframe width="1060" height="520" className={styles.iframe}
+        <div className={styles.videoContainer}>
+        <iframe className={styles.iframe}
         src={props.src}
-        title={props.title} frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        title={props.title} frameBorder="0" 
+        allow="accelerometer; autoplay; clipboardrite; encrypted-media; 
         gyroscope; picture-in-picture" allowFullScreen >
         </iframe>
-
-        </>
+        </div>
     );
 }
 

@@ -1,9 +1,9 @@
 import styles from './inputOutput.module.css'
 
-function InputOutput(){
+function InputOutput(props){
     return(
         <div className={styles.inout}>
-         I/O
+         {props.input} {props.output}
         </div>
     );
 }
