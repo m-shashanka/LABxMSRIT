@@ -20,7 +20,7 @@ function DSQuestion(){
         <Objectives text={question.Objective} />
         <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />
         <InputOutput input={question.Input} output={question.Output} />
-        <Code code={question.Code} />
+        <Code idx={question.id-1} />
       </>
   );
 }

@@ -3,7 +3,10 @@
     background-color: black;
     color: white;
     margin: 2% 5%;
-    border-radius: 12px;
+    border-radius: 10px;
     display: block;
-    white-space: pre-wrap;
+    width: 87%;
+    cursor: text;
+    overflow: hidden;
+    resize: none;
 }
