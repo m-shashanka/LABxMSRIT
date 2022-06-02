@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styles from './code.module.css'
-import programs from './Program';
+import programs from './Programs';
 
 function Code({idx}){
 
