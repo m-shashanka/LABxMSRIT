@@ -1,0 +1,12 @@
+.page{
+    background-color: aliceblue;
+    padding: 8px;
+}
+
+.page h1{
+    text-align: center;
+}
+
+.page > p{
+    white-space: pre-wrap;
+}

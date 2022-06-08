@@ -1,7 +1,7 @@
 import { Routes, Route} from "react-router-dom";
 import DSLab from "./pages/DSLab";
 import DSQuestion from "./pages/DSQuestion";
-import DataStructure from "./pages/DataStructure";
+import Stack from "./pages/DataStructures/Stack/Stack";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<DSLab />} />
         <Route exact path='/dslab/question/:id' element={<DSQuestion />} />
-        <Route path="/datastructure" element={<DataStructure />} />
+        <Route path="/datastructure/Stack" element={<Stack />} />
       </Routes>
    </>
   );

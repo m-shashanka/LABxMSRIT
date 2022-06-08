@@ -1,14 +1,14 @@
 .chip{
-    background-color: #7b9a1c;
+    background-color: #5CE1E6;
     border-radius: 16px;
     text-align: center;
     margin: 0.2rem;
     margin-right: 1rem;
-    border: 0.5rem solid #7b9a1c;
+    padding: 6px;
     cursor: pointer;
+    color: black;
 }
 
 .chip:hover{
-    background-color: #ef26263a;
-    /* transform: scale(1.08); */
+    background-color: #DFF6FF;
 }
