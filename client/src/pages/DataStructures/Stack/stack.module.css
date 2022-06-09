@@ -7,6 +7,27 @@
     text-align: center;
 }
 
-.page > p{
+.page p{
     white-space: pre-wrap;
+    font-size: large;
+}
+
+.page p span{
+    font-weight: 500;
+}
+
+.stackimg{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.operation{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operation > div{
+    margin-left: 0;
+    margin-top: 0;
 }
