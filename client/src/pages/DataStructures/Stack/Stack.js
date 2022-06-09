@@ -3,7 +3,7 @@ import stackimg1 from "./stack.png"
 import stackimg2 from "./stack-operations.png"
 import stackimg3 from "./stack-operations-2.png"
 
-function Stack(){
+export default function Stack(){
     return(
         <div className={styles.page}>
             <h1>Stack</h1>
@@ -93,5 +93,3 @@ The operation of  adding an element to the stack is called push, while the opera
         </div>
     );
 }
-
-export default Stack;
