@@ -1,6 +1,7 @@
 import styles from './stack.module.css'
 import stackimg1 from "./stack.png"
 import stackimg2 from "./stack-operations.png"
+import stackimg3 from "./stack-operations-2.png"
 
 function Stack(){
     return(
@@ -85,6 +86,7 @@ The operation of  adding an element to the stack is called push, while the opera
 3. Else return stack is not full`}</p>
                 </div>
             </div>
+            <img className={styles.stackimg} src={stackimg3} alt="stack" />
             <h3>Implementation</h3>
             <p>A stack data structure can be implemented by using arrays or linked lists.</p>
             <br />
