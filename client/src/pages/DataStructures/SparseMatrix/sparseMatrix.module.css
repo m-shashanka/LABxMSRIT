@@ -1,0 +1,19 @@
+.page{
+    background-color: aliceblue;
+    padding: 8px;
+}
+
+.page h1{
+    text-align: center;
+}
+
+.page p{
+    white-space: pre-wrap;
+    font-size: large;
+}
+
+.matriximg{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}

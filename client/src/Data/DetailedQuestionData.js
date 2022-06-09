@@ -1,7 +1,7 @@
 const DetailedQuestionData = [
 {
     id: 1,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Stack", "Queue", "LinkedList", "SparseMatrix"],
     Objective:`
     Matrix: A matrix is a two-dimensional array having m rows and n columns. A matrix with m rows and n columns is called an mxn matrix. The data is stored in horizontal and vertical lines of entries.\n
     Sparse Matrix: A sparse matrix is a matrix that has a majority of its elements equal to zero. Simply put, a matrix in which the number of zero elements is greater than non-zero elements is a sparse matrix.\n
