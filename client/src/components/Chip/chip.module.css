@@ -1,5 +1,5 @@
 .chip{
-    background-color: #5CE1E6;
+    background-color: #DFF6FF;
     border-radius: 16px;
     text-align: center;
     margin: 0.2rem;
@@ -10,5 +10,5 @@
 }
 
 .chip:hover{
-    background-color: #DFF6FF;
+    background-color: #75e6ea;
 }

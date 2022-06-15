@@ -14,9 +14,9 @@ void transpose(term a[], term t[])
  if (numterms > 0)
  {
  for (i = 0; i < numcols; i++)
- rt[i] = 0;
+    rt[i] = 0;
  for (i = 1; i <= numterms; i++)
- rt[a[i].c]++;
+    rt[a[i].c]++;
  sp[0] = 1;
  for (i = 1; i < numcols; i++)
  sp[i] = sp[i - 1] + rt[i - 1];

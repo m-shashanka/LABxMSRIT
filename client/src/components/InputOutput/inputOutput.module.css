@@ -1,5 +1,36 @@
 .inout{
-    height: 8rem;
     margin: 2% 5%;
-    background-color: beige;
+    background-color: #d4f1fa;
+    border-radius: 12px;
+    padding: 3px 10px;
+}
+
+.inout textarea{
+    resize: none;
+    margin-top: 5px;
+    width: 99%;
+    background-color: aliceblue;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input h4,button{
+    margin: 0;
+}
+
+.input button{
+    background-color: #191D3D;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.border{
+   border-bottom: 1px solid white;
+   border: 2px 0 0 0;   
+   margin: 2px -10px;
 }

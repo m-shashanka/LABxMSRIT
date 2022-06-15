@@ -37,7 +37,7 @@ const DetailedQuestionData = [
     id: 4,
     PreReq: ["Stack", "Queue", "LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    YouTubeLink: "https://",
+    YouTubeLink: "https://www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
 },
@@ -45,7 +45,7 @@ const DetailedQuestionData = [
     id: 5,
     PreReq: ["Stack", "Queue", "LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    YouTubeLink: "https://",
+    YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
 },
@@ -124,7 +124,7 @@ const DetailedQuestionData = [
     The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
     The space complexity of DFS is O(V).
     `,
-    YouTubeLink: "https://",
+    YouTubeLink: "https://www.youtube.com/embed/6NWtoUsxVC8?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
 },
@@ -136,9 +136,9 @@ const DetailedQuestionData = [
     Breadth-first search is a graph traversal algorithm that starts traversing the graph from the root node and explores all the neighboring nodes. Then, it selects the nearest node and explores all the unexplored nodes. While using BFS for traversal, any node in the graph can be considered as the root node.\n
     BFS algorithm
     A standard BFS implementation puts each vertex of the graph into one of two categories:
-    1.Visited
-    2.Not Visited\n
-    The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.\n
+    1. Visited
+    2. Not Visited\n
+    The purpose of the algorithm is to mark each vertex as visited while avoiding visited nodes.\n
     The algorithm works as follows:
     1.Start by putting any one of the graph's vertices at the back of a queue.
     2.Take the front item of the queue and add it to the visited list.
@@ -149,7 +149,7 @@ const DetailedQuestionData = [
     The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
     The space complexity of DFS is O(V).
     `,
-    YouTubeLink: "https://",
+    YouTubeLink: "https://www.youtube.com/embed/9HajSeGP1Pc?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
 },

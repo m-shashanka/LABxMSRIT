@@ -1,6 +1,6 @@
 .page{
     background-color: aliceblue;
-    padding: 8px;
+    padding: 2rem;
 }
 
 .page h1{
@@ -9,11 +9,14 @@
 
 .page p{
     white-space: pre-wrap;
-    font-size: large;
+    margin-bottom: 0.5rem;
+    font-family:serif;
+    font-size: 1.2rem;
 }
 
 .matriximg{
     display: block;
     margin: 0 auto;
     width: 50%;
+    margin: 2rem auto;
 }

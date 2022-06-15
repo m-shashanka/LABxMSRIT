@@ -1,24 +1,45 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './code.module.css'
 import programs from './Programs';
 
 function Code({idx}){
+
+    const [showCode,setShowCode] = useState(false);
+
+    const toggleCode = () =>{
+        setShowCode(prevState => !prevState)
+    }
+
+    function copyText(){
+        const text = document.getElementById('code');
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
 
     const myText = programs[idx];
 
     const textAreaRef = useRef(null);
 
     useEffect(() => {
-        textAreaRef.current.style.height = "1px";
-        textAreaRef.current.style.height = (textAreaRef.current.scrollHeight - 45)+"px";
-    },[]);
+        if(showCode){
+            textAreaRef.current.style.height = "1px";
+            textAreaRef.current.style.height = (textAreaRef.current.scrollHeight - 45)+"px";
+        }
+    },[showCode]);
 
     return(
-        <textarea className={styles.codeSnippet} 
-            defaultValue={myText} readOnly  
-            ref={textAreaRef}
-        >
-        </textarea>
+        <div className={styles.codeContainer}>
+            <div className={styles.dropDown}>
+                <h2>Code</h2>
+                <h2 onClick={toggleCode}>{"\u2193"}</h2>
+            </div>
+            {showCode && <textarea id='code' className={styles.codeSnippet} 
+                defaultValue={myText} readOnly  
+                ref={textAreaRef}
+            >
+            </textarea>}
+            {showCode && <button onClick={copyText}>Copy</button>}
+        </div>
     )
 }
 
