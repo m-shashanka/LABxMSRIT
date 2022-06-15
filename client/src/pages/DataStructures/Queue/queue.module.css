@@ -18,17 +18,18 @@
     font-weight: 500;
 }
 
-.stackimg{
+.queueimg{
     display: block;
     margin: 0 auto;
     width: 50%;
+    /* height: 50%; Not working */
 }
 
 .operation{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 
 .operation > div{
