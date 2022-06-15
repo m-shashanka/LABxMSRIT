@@ -31,7 +31,7 @@ function Code({idx}){
         <div className={styles.codeContainer}>
             <div className={styles.dropDown}>
                 <h2>Code</h2>
-                <h2 onClick={toggleCode}>{"\u2193"}</h2>
+                <h2 onClick={toggleCode}>{showCode ? "\u2191" : "\u2193"}</h2>
             </div>
             {showCode && <textarea id='code' className={styles.codeSnippet} 
                 defaultValue={myText} readOnly  
