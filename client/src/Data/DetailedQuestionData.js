@@ -54,8 +54,8 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 10. And at the end a while loop is executed wherein the operators in the stack are popped, and printed unless it reaches eos.
     `,
     YouTubeLink: "https://www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
-    Input:"12345",
-    Output:"98765"
+    Input:"(A+B-C*(D-E)/F)-G",
+    Output:"AB+CDE-*F/-G"
 },
 {
     id: 5,
