@@ -1,7 +1,7 @@
 const DetailedQuestionData = [
 {
     id: 1,
-    PreReq: ["Stack", "Queue", "LinkedList", "SparseMatrix"],
+    PreReq: ["Array", "SparseMatrix"],
     Objective:`
     Matrix: A matrix is a two-dimensional array having m rows and n columns. A matrix with m rows and n columns is called an mxn matrix. The data is stored in horizontal and vertical lines of entries.\n
     Sparse Matrix: A sparse matrix is a matrix that has a majority of its elements equal to zero. Simply put, a matrix in which the number of zero elements is greater than non-zero elements is a sparse matrix.\n
@@ -35,8 +35,24 @@ const DetailedQuestionData = [
 },
 {
     id: 4,
-    PreReq: ["Stack", "Queue", "LinkedList"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    PreReq: ["Array", "Stack"],
+    Objective:`
+ The basic algorithm for infix to postfix conversion uses a stack data structure. The expression to be converted is scanned from left to right.\n
+An enumerated data type called precedence is declared which has a list of all the operators.
+A stack of data type precedence is declared to store the operators to be pushed into the stack. The value of top is initialized to -1 and a character array called EXPR is declared to store the infix expression to be converted to postfix expression.
+Two integer arrays called icp and isp are initialized to define the in-stack precedence and in-coming precedence of the operators.\n
+The function get_token has a return type of struct(precedence) ,and a switch statement is used to return the operator being used as defined by the struct of precedence. The function print_token is used to print the operator symbol using a switch case statement.
+1. In the postfix function, stack[0] is initialized as eos (end of string) and top is initialized to 0.
+2. A call to get_token function is made through a for loop. If the token is not equal to eos, the control enters the loop.In the loop:
+3. If the token is equal to the operand, the operand symbol is printed.     
+4. If the token is equal to right parenthesis, then pop and print the operators until a left parenthesis is reached in the stack.
+5. Otherwise, the in-stack precedence(isp) of the operator is compared to the in-coming precedence(icp) of the operator.
+6. If the isp of the operator at stack top is lower than the icp of the token, the token is pushed onto the stack. 
+7. If the isp of the stack top is higher than the icp of the token, the top is popped and printed. Then the incoming token is compared with the new stack top.
+8. If the incoming operator has the higher isp then the same operation is repeated until the isp of stack top becomes less then icp of token. The token is pushed into the stack.
+9. The control comes out of the for loop.
+10. And at the end a while loop is executed wherein the operators in the stack are popped, and printed unless it reaches eos.
+    `,
     YouTubeLink: "https://www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
@@ -99,7 +115,7 @@ const DetailedQuestionData = [
 },
 {
     id: 12,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Stack", "Graph="],
     Objective:`
     Depth First Search: It is a recursive algorithm to search all the vertices of a tree data structure or a graph. The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until the goal node is reached or a node with no children is reached.
     Because of the recursive nature, the stack data structure can be used to implement the DFS algorithm.\n
@@ -130,7 +146,7 @@ const DetailedQuestionData = [
 },
 {
     id: 13,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Queue", "Graph"],
     Objective:`
     Breadth First Search: It is a recursive algorithm to search all the vertices of a tree or graph data structure.
     Breadth-first search is a graph traversal algorithm that starts traversing the graph from the root node and explores all the neighboring nodes. Then, it selects the nearest node and explores all the unexplored nodes. While using BFS for traversal, any node in the graph can be considered as the root node.\n

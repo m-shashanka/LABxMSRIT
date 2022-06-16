@@ -1,54 +1,60 @@
 const programs = [
 `#include <stdio.h>
+
 typedef struct
 {
- int r, c, v;
-} term;
+	int r, c, v;
+}
+
+term;
 void transpose(term a[], term t[])
 {
- int rt[10], sp[10];
- int i, j, numcols = a[0].c, numterms = a[0].v;
- t[0].r = numcols;
- t[0].v = numterms;
- t[0].c = a[0].r;
- if (numterms > 0)
- {
- for (i = 0; i < numcols; i++)
-    rt[i] = 0;
- for (i = 1; i <= numterms; i++)
-    rt[a[i].c]++;
- sp[0] = 1;
- for (i = 1; i < numcols; i++)
- sp[i] = sp[i - 1] + rt[i - 1];
- for (i = 1; i <= numterms; i++)
- {
- j = sp[a[i].c]++;
- t[j].r = a[i].c;
- t[j].c = a[i].r;
- t[j].v = a[i].v;
- }
- }
- printf("\\nTranspose Matrix\\n");
- for (i = 1; i <= t[0].v; i++)
- printf("%d\\t%d\\t%d\\n", t[i].r, t[i].c, t[i].v);
+	int rt[10], sp[10];
+	int i, j, numcols = a[0].c, numterms = a[0].v;
+	t[0].r = numcols;
+	t[0].v = numterms;
+	t[0].c = a[0].r;
+	if (numterms > 0)
+	{
+		for (i = 0; i < numcols; i++)
+			rt[i] = 0;
+		for (i = 1; i <= numterms; i++)
+			rt[a[i].c]++;
+		sp[0] = 1;
+		for (i = 1; i < numcols; i++)
+			sp[i] = sp[i - 1] + rt[i - 1];
+		for (i = 1; i <= numterms; i++)
+		{
+			j = sp[a[i].c]++;
+			t[j].r = a[i].c;
+			t[j].c = a[i].r;
+			t[j].v = a[i].v;
+		}
+	}
+
+	printf("\\nTranspose Matrix\\n");
+	for (i = 1; i <= t[0].v; i++)
+		printf("%d\\t%d\\t%d\\n", t[i].r, t[i].c, t[i].v);
 }
+
 void main()
 {
- term a[10], t[10];
- int i;
- printf("\\nEnter the number of rows and columns\\n");
- scanf("%d%d", &a[0].r, &a[0].c);
- printf("\\nEnter the number of values\\n");
- scanf("%d", &a[0].v);
- for (i = 1; i <= a[0].v; i++)
- {
- printf("\\nEnter %dth row, column and element values\\n", i);
- scanf("%d%d%d", &a[i].r, &a[i].c, &a[i].v);
- }
- printf("\\nOriginal Matrix\\n");
- for (i = 1; i <= a[0].v; i++)
- printf("%d\\t%d\\t%d\\n", a[i].r, a[i].c, a[i].v);
- transpose(a, t);
+	term a[10], t[10];
+	int i;
+	printf("\\nEnter the number of rows and columns\\n");
+	scanf("%d%d", &a[0].r, &a[0].c);
+	printf("\\nEnter the number of values\\n");
+	scanf("%d", &a[0].v);
+	for (i = 1; i <= a[0].v; i++)
+	{
+		printf("\\nEnter %dth row, column and element values\\n", i);
+		scanf("%d%d%d", &a[i].r, &a[i].c, &a[i].v);
+	}
+
+	printf("\\nOriginal Matrix\\n");
+	for (i = 1; i <= a[0].v; i++)
+		printf("%d\\t%d\\t%d\\n", a[i].r, a[i].c, a[i].v);
+	transpose(a, t);
 }`,
 
 
@@ -221,103 +227,118 @@ void main()
 
 `#include <stdio.h>
 #define MAX 20
-typedef enum{
- lparen,
- rparen,
- plus,
- minus,
- times,
- divide,
- mod,
- eos,
- operand
-} precedence;
+typedef enum
+{
+	lparen,
+	rparen,
+	plus,
+	minus,
+	times,
+	divide,
+	mod,
+	eos,
+	operand
+}
+
+precedence;
 precedence stack[30];
 int top = -1;
 char EXPR[MAX];
-int isp[] = {0, 19, 12, 12, 13, 13, 13, 0};
-int icp[] = {20, 19, 12, 12, 13, 13, 13, 0};
-void push(precedence token){
- stack[++top] = token;
+int isp[] = { 0, 19, 12, 12, 13, 13, 13, 0 };
+int icp[] = { 20, 19, 12, 12, 13, 13, 13, 0 };
+void push(precedence token)
+{
+	stack[++top] = token;
 }
-precedence pop(){
- return stack[top--];
+
+precedence pop()
+{
+	return stack[top--];
 }
-precedence get_token(char *symbol, int *n){
- *symbol = EXPR[(*n)++];
- switch (*symbol)
- {
- case '(':
- return lparen;
- case ')':
- return rparen;
- case '+':
- return plus;
- case '-':
- return minus;
- case '*':
- return times;
- case '/':
- return divide;
- case '%':
- return mod;
- case '\\0':
- return eos;
- default:
- return operand;
- }
+
+precedence get_token(char *symbol, int *n)
+{
+	*symbol = EXPR[(*n) ++];
+	switch (*symbol)
+	{
+		case '(':
+			return lparen;
+		case ')':
+			return rparen;
+		case '+':
+			return plus;
+		case '-':
+			return minus;
+		case '*':
+			return times;
+		case '/':
+			return divide;
+		case '%':
+			return mod;
+		case '\\0':
+			return eos;
+		default:
+			return operand;
+	}
 }
-void print_token(precedence token){
- switch (token)
- {
- case plus:
- printf("+");
- break;
- case minus:
- printf("-");
- break;
- case times:
- printf("*");
- break;
- case divide:
- printf("/");
- break;
- case mod:
- printf("%%");
- break;
- }
+
+void print_token(precedence token)
+{
+	switch (token)
+	{
+		case plus:
+			printf("+");
+			break;
+		case minus:
+			printf("-");
+			break;
+		case times:
+			printf("*");
+			break;
+		case divide:
+			printf("/");
+			break;
+		case mod:
+			printf("%%");
+			break;
+	}
 }
-void postfix(){
- char symbol;
- precedence token;
- int n = 0;
- top = 0;
- stack[0] = eos;
- for (token = get_token(&symbol, &n); token != eos; token = get_token(&symbol, &n))
- {
- if (token == operand)
- printf("%c", symbol);
- else if (token == rparen)
- {
- while (stack[top] != lparen)
- print_token(pop());
- pop();
- }
- else
- {
- while (isp[stack[top]] >= icp[token])
- print_token(pop());
- push(token);
- }
- }
- while ((token = pop()) != eos)
- print_token(token);
- printf("\\n");
+
+void postfix()
+{
+	char symbol;
+	precedence token;
+	int n = 0;
+	top = 0;
+	stack[0] = eos;
+	for (token = get_token(&symbol, &n); token != eos; token = get_token(&symbol, &n))
+	{
+		if (token == operand)
+			printf("%c", symbol);
+		else if (token == rparen)
+		{
+			while (stack[top] != lparen)
+				print_token(pop());
+			pop();
+		}
+		else
+		{
+			while (isp[stack[top]] >= icp[token])
+				print_token(pop());
+			push(token);
+		}
+	}
+
+	while ((token = pop()) != eos)
+		print_token(token);
+	printf("\\n");
 }
-void main(){
- printf("\\nEnter the infix expression\\n");
- scanf("%s", EXPR);
- postfix();
+
+void main()
+{
+	printf("\\nEnter the infix expression\\n");
+	scanf("%s", EXPR);
+	postfix();
 }`,
 
 
@@ -979,82 +1000,137 @@ int main()
 
 
 
-`#include<stdio.h>
-#include<stdlib.h>
+`#include <stdio.h>
+#include <stdlib.h>
 #define MAX 200
 typedef struct node
 {
-struct node *next;
-int vertex;
-}node;
-void readgraph(); //create an adjecency list
-void insert(int vi,int vj); //insert an edge (vi,vj)in adj.list
+	struct node * next;
+	int vertex;
+}
+
+node;
+void readgraph();	//create an adjecency list
+void insert(int vi, int vj);	//insert an edge (vi,vj)in adj.list
 void DFS(int i);
 int visited[MAX];
-node *G[20]; //heads of the linked list
-int n; 
+node *G[20];	//heads of the linked list
+int n;
 void main()
 {
-int i,op;
-do
- { printf("\\n\\n1)Create\\n2)DFS\\n4)Quit");
- printf("\\nEnter Your Choice: ");
- scanf("%d",&op);
- switch(op)
- { case 1: readgraph();break;
- case 2: for(i=0;i<n;i++)
- visited[i]=0;
- printf("\\nStarting Node No. : ");
- scanf("%d",&i);
- DFS(i);break;
- }
- }while(op!=4);
+	int i, op;
+	do {
+		printf("\\n\\n1)Create\\n2)DFS\\n4)Quit");
+		printf("\\nEnter Your Choice: ");
+		scanf("%d", &op);
+		switch (op)
+		{
+			case 1:
+				readgraph();
+				break;
+			case 2:
+				for (i = 0; i < n; i++)
+					visited[i] = 0;
+				printf("\\nStarting Node No. : ");
+				scanf("%d", &i);
+				DFS(i);
+				break;
+		}
+	} while (op != 4);
 }
+
 void DFS(int i)
 {
-node *p;
-visited[i]=1;
-printf("\\n%d",i);
-for(p=G[i];p;p=p->next)
-if(!visited[p->vertex])
-DFS(p->vertex);
+	node * p;
+	visited[i] = 1;
+	printf("\\n%d", i);
+	for (p = G[i]; p; p = p->next)
+		if (!visited[p->vertex])
+			DFS(p->vertex);
 }
+
 void readgraph()
-{ int i,vi,vj,no_of_edges;
-printf("\\nEnter no. of vertices :");
-scanf("%d",&n);
-//initialise G[] with NULL
-for(i=0;i<n;i++)
- G[i]=NULL;
-//read edges and insert them in G[]
-printf("\\nEnter no of edges :");
-scanf("%d",&no_of_edges);
-for(i=0;i<no_of_edges;i++)
 {
-printf("\\nEnter an edge (u,v) :");
- scanf("%d%d",&vi,&vj);
- insert(vi,vj);
- insert(vj,vi);
+	int i, vi, vj, no_of_edges;
+	printf("\\nEnter no. of vertices :");
+	scanf("%d", &n);
+	//initialise G[] with NULL
+	for (i = 0; i < n; i++)
+		G[i] = NULL;
+	//read edges and insert them in G[]
+	printf("\\nEnter no of edges :");
+	scanf("%d", &no_of_edges);
+	for (i = 0; i < no_of_edges; i++)
+	{
+		printf("\\nEnter an edge (u,v) :");
+		scanf("%d%d", &vi, &vj);
+		insert(vi, vj);
+		insert(vj, vi);
+	}
 }
-}
-void insert(int vi,int vj)
+
+void insert(int vi, int vj)
 {
-node *p,*q;
-//acquire memory for the new node
-q=(node *)malloc(sizeof(node));
-q->vertex=vj;
-q->next=NULL;
-//insert the node in the linked list for the vertex no. vi
-if(G[vi]==NULL)
- G[vi]=q;
-else
+	node *p, *q;
+	//acquire memory for the new node
+	q = (node*) malloc(sizeof(node));
+	q->vertex = vj;
+	q->next = NULL;
+	//insert the node in the linked list for the vertex no. vi
+	if (G[vi] == NULL)
+		G[vi] = q;
+	else
+	{
+		// go to the end of linked 
+		p = G[vi];
+		while (p->next != NULL)
+			p = p->next;
+		p->next = q;
+	}
+}`,
+
+`#include <stdio.h>
+#include <conio.h>
+
+int a[20][20], q[20], visited[20], n, i, j, f = 0, r = -1;
+void bfs(int v)
 {
- // go to the end of linked 
- p=G[vi];
- while(p->next!=NULL)
- p=p->next;
- p->next=q;
+	for (i = 1; i <= n; i++)
+		if (a[v][i] && !visited[i])
+			q[++r] = i;
+	if (f <= r)
+	{
+		visited[q[f]] = 1;
+		bfs(q[f++]);
+	}
 }
+
+void main()
+{
+	int v;
+	clrscr();
+	printf("\\n Enter the number of vertices:");
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		q[i] = 0;
+		visited[i] = 0;
+	}
+
+	printf("\\n Enter graph data in matrix form:\\n");
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= n; j++)
+			scanf("%d", &a[i][j]);
+	printf("\\n Enter the starting vertex:");
+	scanf("%d", &v);
+	bfs(v);
+	printf("\\n The node which are reachable are:\\n");
+	for (i = 1; i <= n; i++)
+		if (visited[i])
+			printf("%d\\t", i);
+		else
+			printf("\\n Bfs is not possible");
+	getch();
 }`
 ]; 
 
