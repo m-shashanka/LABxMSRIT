@@ -115,7 +115,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 12,
-    PreReq: ["Stack", "Graph="],
+    PreReq: ["Stack", "Graph"],
     Objective:`
     Depth First Search: It is a recursive algorithm to search all the vertices of a tree data structure or a graph. The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until the goal node is reached or a node with no children is reached.
     Because of the recursive nature, the stack data structure can be used to implement the DFS algorithm.\n
