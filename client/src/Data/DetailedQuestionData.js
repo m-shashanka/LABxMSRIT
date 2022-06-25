@@ -19,7 +19,7 @@ const DetailedQuestionData = [
 },
 {
     id: 2,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Array"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -27,7 +27,7 @@ const DetailedQuestionData = [
 },
 {
     id: 3,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Queue"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -59,7 +59,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 5,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Stack"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
     Input:"12345",
@@ -67,7 +67,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 6,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Stack","LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -75,7 +75,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 7,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Queue","LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -83,7 +83,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 8,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -91,7 +91,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 9,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -99,7 +99,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 10,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Tree", "Heap"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",
@@ -107,7 +107,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 },
 {
     id: 11,
-    PreReq: ["Stack", "Queue", "LinkedList"],
+    PreReq: ["Tree", "LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     YouTubeLink: "https://",
     Input:"12345",

@@ -5,6 +5,7 @@ import arrayimg3 from "./array3.png";
 import arrayimg4 from "./array4.png";
 import arrayimg5 from "./array5.png";
 import arrayimg6 from "./array6.png";
+import arrayimg7 from "./array7.png";
 
 export default function Array() {
     return (
@@ -85,6 +86,7 @@ export default function Array() {
             </ul>
             <br/>
             <h3>Time Complexity</h3>
+            <img style={{marginLeft: "10px"}} className={styles.arrayimg} src={arrayimg7} alt="array" />
             <br/>
             <h3>Space Complexity</h3>
             <br />
