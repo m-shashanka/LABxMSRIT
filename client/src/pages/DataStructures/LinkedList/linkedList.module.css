@@ -14,6 +14,10 @@
     font-size: 1.2rem;
 }
 
+.page textarea{
+    left: 0;
+}
+
 .linkedlistimg{
     display: block;
     margin: 0 auto;
@@ -21,3 +25,25 @@
     margin: 2rem auto;
     height: 40%;
 }
+
+.multiline {
+    white-space: pre-wrap;
+    background-color: rgb(230, 237, 253);
+    border: none;
+    padding: 1.5%;
+    color: black;
+    border-radius: 10px;
+    display: block;
+    width: 95%;
+    margin-top: 2%;
+    cursor: text;
+    overflow: hidden;
+    resize: none;
+  }
+
+  .tableimg{
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    margin-left: 0%;
+  }

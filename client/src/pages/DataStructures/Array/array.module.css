@@ -27,3 +27,10 @@
 .multidimensionalArray{
     margin-left: 3%;
 }
+
+.tableimg{
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    margin-left: 0%;
+  }
