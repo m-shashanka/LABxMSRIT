@@ -1,0 +1,23 @@
+.page{
+    background-color: aliceblue;
+    padding: 2rem;
+}
+
+.page h1{
+    text-align: center;
+}
+
+.page p{
+    white-space: pre-wrap;
+    margin-bottom: 0.5rem;
+    font-family:serif;
+    font-size: 1.2rem;
+}
+
+.linkedlistimg{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    margin: 2rem auto;
+    height: 40%;
+}

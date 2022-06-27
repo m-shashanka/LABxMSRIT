@@ -5,6 +5,7 @@ import Stack from "./pages/DataStructures/Stack/Stack";
 import SparseMatrix from "./pages/DataStructures/SparseMatrix/SparseMatrix";
 import Queue from "./pages/DataStructures/Queue/Queue";
 import Array from "./pages/DataStructures/Array/Array";
+import LinkedList from "./pages/DataStructures/LinkedList/LinkedList";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/datastructure/Queue" element={<Queue />} />
         <Route path="/datastructure/SparseMatrix" element={<SparseMatrix />} />
         <Route path="/datastructure/Array" element={<Array />} />
+        <Route path="/datastructure/LinkedList" element={<LinkedList />} />
       </Routes>
    </>
   );
