@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './filterchip.module.css'
 
-function FilterChip(props){
+function FilterChip({name, addTag, removeTag}){
 
     const [active,setActive] = useState(false);
 
@@ -11,7 +11,7 @@ function FilterChip(props){
 
     return(
         <div onClick={toggleActive} className={active ? `${styles.chipContainer} ${styles.selected}` : styles.chipContainer}>
-            <span>{props.name}</span>
+            <span>{name}</span>
             {active && <i className={styles.close}>x</i>}
         </div>
     );
