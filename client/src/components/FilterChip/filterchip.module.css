@@ -1,0 +1,21 @@
+.chipContainer{
+    background-color: rgb(230, 237, 253);
+    padding: 6px 15px 8px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 2px solid #CDD6FF;
+    position: relative;
+    cursor: pointer;
+}
+
+.chipContainer:hover, .selected{
+    background-color: #9AACFF;
+    border: 2px solid #9AACFF;
+}
+
+.close{
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    color: white;
+}

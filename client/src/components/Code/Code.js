@@ -7,7 +7,7 @@ function Code({idx}){
     const [showCode,setShowCode] = useState(false);
 
     const toggleCode = () =>{
-        setShowCode(prevState => !prevState)
+        setShowCode(prevState => !prevState);
     }
 
     function copyText(){
