@@ -20,6 +20,12 @@ function Filter(props){
         <div className={styles.filterContainer}>
             <FilterChip name="Stack" addTag={addTag} removeTag={removeTag} />
             <FilterChip name="Queue" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Linked List" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Sparse Matrix" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Array" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Graph" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Tree" addTag={addTag} removeTag={removeTag} />
+            <FilterChip name="Heap" addTag={addTag} removeTag={removeTag} />
         </div>
     );
 }

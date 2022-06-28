@@ -9,7 +9,7 @@ function DSLab() {
   return (
     <>
       <Header />
-      <h1 style={{textAlign: "center"}}>Questions Filtering will come here</h1>
+      {/* <h1 style={{textAlign: "center"}}>Questions Filtering will come here</h1> */}
       <Filter />
       {Questions.map((question) => (
         <Link to={`/dslab/question/${question.id}`} style={{all: 'unset'}} key={question.id}>

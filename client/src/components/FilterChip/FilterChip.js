@@ -12,7 +12,7 @@ function FilterChip({name, addTag, removeTag}){
     return(
         <div onClick={toggleActive} className={active ? `${styles.chipContainer} ${styles.selected}` : styles.chipContainer}>
             <span>{name}</span>
-            {active && <i className={styles.close}>x</i>}
+            {active && <span className={styles.close}>&#10006;</span>}
         </div>
     );
 }
