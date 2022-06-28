@@ -1,6 +1,11 @@
 import styles from './queue.module.css'
 import queueimg from "./queue.png"
 import queueimg2 from "./queue2.png"
+import queueimg3 from "./queue3.png"
+import queueimg4 from "./queue4.png"
+import queueimg5 from "./queue5.png"
+import queueimg6 from "./queue6.png"
+import queueimg7 from "./queue7.png"
 
 export default function Queue() {
     return (
@@ -23,13 +28,13 @@ The operation of adding an element to the queue is called enqueue, while the ope
             <p><span>isFull: </span>Operation to check if the queue is full</p>
             <p><span>Peek: </span>Operation to get the value of the element at the front of the queue without removing it</p>
             <br />
-            <p>Two pointers, front and rear, are used to maintain a queue. Front tracks the first element of the queue, 
-                while rear tracks the last element of the queue. Front and rear are initialized to -1. If rear is equal 
-                to MAXSIZE of queue, then queue is full. If front and rear are equal to -1, then queue is empty. 
-                When adding an element to the queue, the value of rear is incremented by 1 and the new element is placed 
-                at the position pointed to by rear. When removing an element, increment the value of front by 1 and 
+            <p>Two pointers, front and rear, are used to maintain a queue. Front tracks the first element of the queue,
+                while rear tracks the last element of the queue. Front and rear are initialized to -1. If rear is equal
+                to MAXSIZE of queue, then queue is full. If front and rear are equal to -1, then queue is empty.
+                When adding an element to the queue, the value of rear is incremented by 1 and the new element is placed
+                at the position pointed to by rear. When removing an element, increment the value of front by 1 and
                 return the value pointed by front. Before insertion, check if the queue is full. Before removing an element,
-                 check if the queue is empty.
+                check if the queue is empty.
             </p>
             <br />
             <hr className={styles.line} />
@@ -57,7 +62,7 @@ The operation of adding an element to the queue is called enqueue, while the ope
                 </div>
             </div>
             <br />
-            <img className={styles.queueimg} src={queueimg} alt="queue" />
+            <img className={styles.queuelongimg} src={queueimg} alt="enqueue-dequeue" />
             <br />
             <div className={styles.operation}>
                 <div className={styles.space}>
@@ -90,8 +95,35 @@ The operation of adding an element to the queue is called enqueue, while the ope
 3. Else return queue is not full`}</p>
                 </div>
             </div>
+            <h3>Types of Queues</h3><br />
+            <p>There are four different types of queues:</p><br />
+            <img className={styles.queueimg} src={queueimg3} alt="types-of-queue" /><br />
+            <h3>Simple Queue or Linear Queue</h3><br />
+            <p>In a linear queue, insertion takes place from one end called rear end while deletion
+                takes place from another end called the front end. It follows the FIFO rule.</p><br />
+            <img className={styles.queueimg} src={queueimg4} alt="linear-queue" /><br />
+            <h3>Circular Queue</h3><br />
+            <p>A circular queue is similar to a linear queue except that the last element of the queue is connected to the first element of the queue.
+                The nodes are represented in a circular manner. This type of queue is also known as Ring Buffer.</p><br />
+            <img className={styles.queueimg} src={queueimg5} alt="circular-queue" /><br />
+            <h3>Priority Queue</h3><br />
+            <p>It is a queue in which elements are arranged according to priority. Every element has a priority associated with it.
+                If elements with the same priority are encountered, the FIFO principle is followed. Insertion in a priority queue is based on arrival, while deletion takes place based on priority.</p><br />
+            <img className={styles.queueimg} src={queueimg6} alt="prioroty-queue" /><br />
+            <p>{`There are two types of priority queues:
+            
+1. Ascending Priority Queue
+   In the ascending priority queue, elements can be inserted in arbitrary order, but only the smallest can be deleted first.
+   
+2. Descending Priority Queue
+   In the descending priority queue, elements can be inserted in arbitrary order, but only the largest element can be deleted first.
+`}</p><br />
+            <h3>Deque ( Double Ended Queue)</h3> <br />
+            <p>In Deque or Double Ended Queue, insertion and deletion is done from both front and rear ends of the queue. Deque can be used both as stack and queue as it allows the insertion and deletion operations on both ends. Deque can be considered as stack because stack follows the LIFO (Last In First Out) principle in which insertion and deletion both can be performed only from one end. And in deque, it is possible to perform both insertion and deletion from one end, and Deque does not follow the FIFO principle.
+            </p><br />
+            <img className={styles.queueimg} src={queueimg7} alt="double-ended-queue" /><br />
             <hr className={styles.line} />
-            <h3>Implementation</h3>
+            <h3>Implementation</h3><br />
             <p>A queue data structure can be implemented by using arrays or linked lists.</p>
             <br />
         </div>

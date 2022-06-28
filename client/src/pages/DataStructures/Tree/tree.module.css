@@ -18,10 +18,10 @@
     left: 0;
 }
 
-.linkedlistimg{
+.treeimg{
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 38%;
     margin: 2rem auto;
 }
 
@@ -38,11 +38,4 @@
     cursor: text;
     overflow: hidden;
     resize: none;
-  }
-
-  .tableimg{
-    margin: 0 auto;
-    display: block;
-    width: 30%;
-    margin-left: 0%;
   }

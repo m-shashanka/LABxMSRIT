@@ -25,6 +25,12 @@
     /* height: 50%; Not working */
 }
 
+.queuelongimg{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+}
+
 .operation{
     display: flex;
     flex-wrap: nowrap;

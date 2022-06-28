@@ -7,6 +7,7 @@ import Queue from "./pages/DataStructures/Queue/Queue";
 import Array from "./pages/DataStructures/Array/Array";
 import LinkedList from "./pages/DataStructures/LinkedList/LinkedList";
 import Graph from "./pages/DataStructures/Graph/Graph";
+import Tree from "./pages/DataStructures/Tree/Tree";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/datastructure/Array" element={<Array />} />
         <Route path="/datastructure/LinkedList" element={<LinkedList />} />
         <Route path="/datastructure/Graph" element={<Graph />} />
+        <Route path="/datastructure/Tree" element={<Tree />} />
       </Routes>
    </>
   );
