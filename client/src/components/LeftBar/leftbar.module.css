@@ -6,11 +6,8 @@
     font-weight: 600;
     background-color: #191d3d;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
     position: fixed;
     top: 12%;
     width: 17%;
@@ -22,10 +19,16 @@
     border-radius: 12px;
     color: black;
     width: 90%;
+    margin: 0 auto;
+    display: block;
     padding: 5px;
-    position: absolute;
-    top: 0;
-    left: 3%;
+}
+
+.filterContainer{
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .qContainer{

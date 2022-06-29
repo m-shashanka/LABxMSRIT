@@ -6,7 +6,7 @@ function LeftBarItem({name,tag,addTag,removeTag}){
         if(name === tag)
             removeTag();
         else
-            addTag(name);
+            addTag(name.replace(/\s+/g, ''));
     }
 
     return(
