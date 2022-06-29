@@ -2,7 +2,8 @@
     cursor: pointer;
     padding: 6px 15px;
     font-size: x-large;
-    border-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     width: 90%;
 }
 
