@@ -12,8 +12,8 @@ function DSLab() {
     <>
       <Header />
       {/* <Filter /> */}
-      <TopBar />
-      {/* <LeftBar /> */}
+      {/* <TopBar /> */}
+      <LeftBar />
     </>
   );
 }
