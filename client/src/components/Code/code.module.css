@@ -1,7 +1,6 @@
 .codeContainer{
     margin: 2% 5%;
     width: 90%;
-    position: relative;
 }
 
 .dropDown{
@@ -19,6 +18,7 @@
 .dropDown h2:nth-child(2){
     cursor: pointer;
     padding-right: 8px;
+    transform: scale(0.8);
 }
 
 .codeSnippet{ 
@@ -34,10 +34,19 @@
     resize: none;
 }
 
-.codeContainer button{
+.codeArea {
+    position: relative;
+}
+
+.codeArea > textarea{
+    height: 100%;
+    width: 96.5%;
+}
+
+.codeArea > button{
     position: absolute;
-    top: 3.7%;
-    right: 0.9%;
+    top: 0;
+    right: 0.35%;
     border: none;
     border-bottom-left-radius: 12px;
     border-top-right-radius: 10px;

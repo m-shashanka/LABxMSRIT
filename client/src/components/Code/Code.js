@@ -31,14 +31,16 @@ function Code({idx}){
         <div className={styles.codeContainer}>
             <div className={styles.dropDown}>
                 <h2>Code</h2>
-                <h2 onClick={toggleCode}>{showCode ? "\u2191" : "\u2193"}</h2>
+                <h2 onClick={toggleCode}>{showCode ? "\u25b2" : "\u25bc"}</h2>
             </div>
-            {showCode && <textarea id='code' className={styles.codeSnippet} 
-                defaultValue={myText} readOnly  
-                ref={textAreaRef}
-            >
-            </textarea>}
-            {showCode && <button onClick={copyText}>Copy</button>}
+            {showCode && <div className={styles.codeArea}>
+                <textarea id='code' className={styles.codeSnippet} 
+                    defaultValue={myText} readOnly  
+                    ref={textAreaRef}
+                >
+                </textarea>
+                <button onClick={copyText}>Copy</button>
+            </div>}
         </div>
     )
 }
