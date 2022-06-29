@@ -5,6 +5,7 @@ import Questions from "../Data/Questions";
 import { Link } from "react-router-dom";
 import Filter from "../components/Filter/Filter";
 import TopBar from "../components/TopBar/TopBar";
+import LeftBar from "../components/LeftBar/LeftBar";
 
 function DSLab() {
   return (
@@ -12,7 +13,7 @@ function DSLab() {
       <Header />
       {/* <Filter /> */}
       {/* <TopBar /> */}
-      {Questions.map((question) => (
+      {/* {Questions.map((question) => (
         <Link to={`/dslab/question/${question.id}`} style={{all: 'unset'}} key={question.id}>
           <Question 
             id={question.id}
@@ -20,7 +21,8 @@ function DSLab() {
           />
         </Link>
       ))
-      }
+      } */}
+      <LeftBar />
     </>
   );
 }

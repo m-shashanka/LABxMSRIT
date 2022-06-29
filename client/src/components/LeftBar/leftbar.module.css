@@ -1,0 +1,35 @@
+.page{
+    display: flex;
+}
+
+.container{
+    font-weight: 600;
+    background-color: #191d3d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    top: 12%;
+    width: 17%;
+}
+
+.container > strong{
+    background-color: white;
+    font-size: large;
+    border-radius: 12px;
+    color: black;
+    width: 90%;
+    padding: 5px;
+    margin: 6px auto;
+}
+
+.qContainer{
+    width: 80%;
+    position: absolute;
+    height: 88vh;
+    overflow-y: auto;
+    top: 12%;
+    right: 0;
+}
