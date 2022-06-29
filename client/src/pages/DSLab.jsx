@@ -13,15 +13,6 @@ function DSLab() {
       <Header />
       {/* <Filter /> */}
       {/* <TopBar /> */}
-      {/* {Questions.map((question) => (
-        <Link to={`/dslab/question/${question.id}`} style={{all: 'unset'}} key={question.id}>
-          <Question 
-            id={question.id}
-            question={question.value}
-          />
-        </Link>
-      ))
-      } */}
       <LeftBar />
     </>
   );

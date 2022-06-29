@@ -1,4 +1,11 @@
 .filterContainer{
     display: flex;
-    margin-top: 20px;
+    margin-top: 7%;
+}
+
+.qContainer{
+    position: absolute;
+    height: 79vh;
+    overflow-y: auto;
+    top: 21%;
 }

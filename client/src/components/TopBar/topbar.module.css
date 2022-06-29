@@ -4,5 +4,12 @@
     background-color: #191D3D;
     color: white;
     padding: 5px 0;
-    /* border-top: 1px solid white; */
+    margin-top: 5.8%;
+}
+
+.qContainer{
+    position: absolute;
+    height: 82vh;
+    overflow-y: auto;
+    top: 18%;
 }

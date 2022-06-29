@@ -5,6 +5,7 @@
     display: flex;
     flex-wrap: nowrap;
     position: fixed;
+    top: 0;
 }
 
 .logo1{
