@@ -1,10 +1,14 @@
+import img1 from "./dslab.png"
 import styles from "./dscard.module.css";
+import {Link} from "react-router-dom"
 
 function DSCard() {
   return (
-    <div className={styles.container}>
-      <h1>Data Structures Lab</h1>
-    </div>
+    <Link to={`/dslab`} style={{all: 'unset'}}>
+      <div className={styles.container}>
+        <img className={styles.img1} src={img1} alt="DSLab" />
+      </div>
+    </Link>
   );
 }
 

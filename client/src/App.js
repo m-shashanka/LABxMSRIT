@@ -15,8 +15,8 @@ function App() {
   return (
    <>
       <Routes>
-        {/* <Route path='/' element={<DSLab />} /> */}
         <Route path='/' element={<Menu />} />
+        <Route path='/dslab' element={<DSLab />} />
         <Route exact path='/dslab/question/:id' element={<DSQuestion />} />
         <Route path="/datastructure/Stack" element={<Stack />} />
         <Route path="/datastructure/Queue" element={<Queue />} />
