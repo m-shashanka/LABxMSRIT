@@ -5,7 +5,7 @@ import Questions from '../../Data/Questions';
 import FilterChip from '../FilterChip/FilterChip';
 import styles from './filter.module.css'
 
-function Filter(props){
+function Filter(){
 
     const [tag,setTag] = useState([]);
 

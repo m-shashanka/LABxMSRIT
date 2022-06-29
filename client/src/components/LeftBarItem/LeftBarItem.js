@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import styles from './leftbaritem.module.css'
 
-function LeftBarItem({name}){
-
-    const [active,setActive] = useState(false);
+function LeftBarItem({name,tag,addTag,removeTag}){
 
     const toggleActive = () =>{
-        setActive(prevState => !prevState);
+        if(name === tag)
+            removeTag();
+        else
+            addTag(name);
     }
 
     return(
-        <div onClick={toggleActive} className={active ? `${styles.container} ${styles.selected}` : styles.container}>
+        <div onClick={toggleActive} className={name === tag ? `${styles.container} ${styles.selected}` : styles.container}>
             {name}
             <span>&#8921;</span>
         </div>
