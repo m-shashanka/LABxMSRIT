@@ -8,13 +8,15 @@ import Array from "./pages/DataStructures/Array/Array";
 import LinkedList from "./pages/DataStructures/LinkedList/LinkedList";
 import Graph from "./pages/DataStructures/Graph/Graph";
 import Tree from "./pages/DataStructures/Tree/Tree";
+import Menu from "./pages/Menu/Menu";
 
 function App() {
 
   return (
    <>
       <Routes>
-        <Route path='/' element={<DSLab />} />
+        {/* <Route path='/' element={<DSLab />} /> */}
+        <Route path='/' element={<Menu />} />
         <Route exact path='/dslab/question/:id' element={<DSQuestion />} />
         <Route path="/datastructure/Stack" element={<Stack />} />
         <Route path="/datastructure/Queue" element={<Queue />} />

@@ -4,7 +4,7 @@ import Questions from '../../Data/Questions';
 import LeftBarItem from '../LeftBarItem/LeftBarItem';
 import styles from './leftbar.module.css'
 
-function TopBar(props){
+function LeftBar(){
 
     return(
         <div className={styles.page}>
@@ -34,4 +34,4 @@ function TopBar(props){
     );
 }
 
-export default TopBar;
+export default LeftBar;

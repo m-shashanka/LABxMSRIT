@@ -3,6 +3,8 @@
     width: 100%;
     background-color: #191d3d;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
     position: fixed;
     top: 0;
@@ -16,10 +18,10 @@
 
 .dslab > h1{
     color: white;
-    padding-right: 8%;
+    padding-right: 6%;
 }
 
 .logo2{
     max-height: 5em;
-    margin-right: 0;
+    margin-right: 4px;
 }
