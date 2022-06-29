@@ -39,3 +39,18 @@
     top: 12%;
     right: 0;
 }
+
+.dsPage{
+    display: flex;
+    justify-content: center;
+}
+
+.dsPage h2{
+    margin: 15px auto 0 auto;
+    background-color: #CDD6FF;
+    border: 2px solid #191d3d;
+    padding: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}

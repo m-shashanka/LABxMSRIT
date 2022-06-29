@@ -26,17 +26,22 @@ function LeftBar(){
             <div className={styles.container}>
                 <strong>Data Structures</strong>
                 <div className={styles.filterContainer}>
-                    <LeftBarItem name="Stack" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Queue" tag={tag} addTag={addTag} removeTag={removeTag} />
+                    <LeftBarItem name="Array" tag={tag} addTag={addTag} removeTag={removeTag} />
                     <LeftBarItem name="Linked List" tag={tag} addTag={addTag} removeTag={removeTag} />
                     <LeftBarItem name="Sparse Matrix" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Array" tag={tag} addTag={addTag} removeTag={removeTag} />
+                    <LeftBarItem name="Stack" tag={tag} addTag={addTag} removeTag={removeTag} />
+                    <LeftBarItem name="Queue" tag={tag} addTag={addTag} removeTag={removeTag} />
                     <LeftBarItem name="Graph" tag={tag} addTag={addTag} removeTag={removeTag} />
                     <LeftBarItem name="Tree" tag={tag} addTag={addTag} removeTag={removeTag} />
                     <LeftBarItem name="Heap" tag={tag} addTag={addTag} removeTag={removeTag} />
                 </div>
             </div>
             <div className={styles.qContainer}>
+                {tag && <div className={styles.dsPage}>
+                    <Link to={`/datastructure/${tag}`} style={{all: 'unset'}}>
+                        <h2>Learn {tag} Data Structure &#8921;</h2>
+                    </Link>
+                </div>}
                 {questions.map((question) => (
                     <Link to={`/dslab/question/${question.id}`} style={{all: 'unset'}} key={question.id}>
                         <Question 
