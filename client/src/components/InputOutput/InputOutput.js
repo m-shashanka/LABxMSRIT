@@ -2,8 +2,8 @@ import styles from './inputOutput.module.css'
 
 function InputOutput(props){
 
-    function copyText(){
-        const text = document.getElementById('input');
+    function copyText(str){
+        const text = document.getElementById(str);
         text.select();
         navigator.clipboard.writeText(text.value);
     }
@@ -12,12 +12,15 @@ function InputOutput(props){
         <div className={styles.inout}>
         <div className={styles.input}>
             <h4>Input</h4>
-            <button onClick={copyText}>Copy</button>
+            <button onClick={()=>copyText('input')}>Copy</button>
         </div>
         <textarea disabled id='input' value={props.input}></textarea>
         <hr className={styles.border}/>
-         <h4>Output</h4>
-         <textarea disabled value={props.output}></textarea>
+        <div className={styles.input}>
+            <h4>Output</h4>
+            <button onClick={()=>copyText('output')}>Copy</button>
+        </div>
+         <textarea disabled id='output' value={props.output}></textarea>
         </div>
     );
 }

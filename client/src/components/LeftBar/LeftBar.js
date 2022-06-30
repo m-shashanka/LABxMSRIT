@@ -12,7 +12,7 @@ function LeftBar(){
 
     const addTag = (newTag) => {
         setTag(newTag);
-        let temp = Questions.filter(item => item.PreReq.includes(newTag));
+        let temp = Questions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
         setQuestions(temp);
     }    
 
@@ -38,7 +38,7 @@ function LeftBar(){
             </div>
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
-                    <Link to={`/datastructure/${tag}`} style={{all: 'unset'}}>
+                    <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{all: 'unset'}}>
                         <h2>Learn {tag} Data Structure &#8921;</h2>
                     </Link>
                 </div>}

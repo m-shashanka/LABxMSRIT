@@ -24,6 +24,7 @@ function DSQuestion(){
         <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />
         <InputOutput input={question.Input} output={question.Output} />
         <Code idx={question.id-1} />
+        <div style={{height:"100px"}}></div>
       </>
   );
 }

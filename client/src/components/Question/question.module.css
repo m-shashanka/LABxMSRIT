@@ -3,7 +3,7 @@
     padding: 1.5%;
     background-color: #d4f1fa;
     /* margin: 2% 5%; */
-    margin: 2% 2%;
+    margin: 2% 5%;
     font-family: "Montserrat-Bold";
     font-size: 1.1rem;
     font-weight: 500;
@@ -16,7 +16,7 @@
     background-color: #a1ffff3a;
     opacity: 1.0;
     cursor: pointer;
-    /* transform: scale(1.05); */
-    transform: scale(1.02);
+    transform: scale(1.05);
+    /* transform: scale(1.02); */
     font-weight: 550;
 }

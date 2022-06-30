@@ -10,11 +10,14 @@
     margin-top: 5px;
     width: 99%;
     background-color: aliceblue;
+    margin-bottom: 7px;
 }
 
 .input{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 3px auto;
 }
 
 .input h4,button{
@@ -27,6 +30,7 @@
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    margin-right: 9px;
 }
 
 .border{
