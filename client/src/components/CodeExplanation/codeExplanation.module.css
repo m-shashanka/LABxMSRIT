@@ -1,4 +1,4 @@
-.obj{
+.algo{
     border: 3px solid rgba(159, 196, 255, 0.3);;
     padding: 1.5%;
     background-color: #d4f1fa;
@@ -11,10 +11,6 @@
     white-space: pre-line;
 }
 
-/* button{
-       background-color: transparent;
-       border: none;
-       font-weight: 500;
-       color: rgb(204, 23, 174);
-       cursor: pointer;
-} */
+.algo h3{
+   margin: auto;
+}

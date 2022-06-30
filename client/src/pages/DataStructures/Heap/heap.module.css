@@ -15,12 +15,12 @@
     font-size: 1.2rem;
 }
 
-.page textarea{
-    left: 0;
-}
-
-.graphimg{
+.heapimg{
     display: block;
     width: 40%;
     margin: 0 auto;
+}
+
+.page span{
+    font-weight: 600;
 }

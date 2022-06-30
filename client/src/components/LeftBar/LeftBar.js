@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Question from '../Question/Question';
-import Questions from '../../Data/Questions';
+import Questions from '../../Data/DetailedQuestionData';
 import LeftBarItem from '../LeftBarItem/LeftBarItem';
 import styles from './leftbar.module.css'
 

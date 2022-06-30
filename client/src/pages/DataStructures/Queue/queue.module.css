@@ -1,6 +1,7 @@
 .page{
     background-color: aliceblue;
     padding: 2rem;
+    margin: -2rem auto;
 }
 
 .page h1{
@@ -9,7 +10,7 @@
 
 .page p{
     white-space: pre-wrap;
-    margin-bottom: 0.5rem;
+    margin:auto;
     font-family:serif;
     font-size: 1.2rem;
 }
@@ -22,7 +23,6 @@
     display: block;
     margin: 0 auto;
     width: 50%;
-    /* height: 50%; Not working */
 }
 
 .queuelongimg{

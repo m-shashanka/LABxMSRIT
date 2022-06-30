@@ -7,13 +7,12 @@ import IFrame from "../components/IFrame/IFrame";
 import DetailedQuestionData from "../Data/DetailedQuestionData";
 import {useParams} from "react-router-dom";
 import Code from "../components/Code/Code";
-import Questions from "../Data/Questions";
 
 function DSQuestion(){
   const {id} = useParams();
 
   const question = DetailedQuestionData.filter(q => id == q.id)[0];
-  const ques = Questions.filter(q => id == q.id)[0];
+  const ques = DetailedQuestionData.filter(q => id == q.id)[0];
 
 
   return (

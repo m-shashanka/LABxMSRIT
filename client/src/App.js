@@ -9,6 +9,7 @@ import LinkedList from "./pages/DataStructures/LinkedList/LinkedList";
 import Graph from "./pages/DataStructures/Graph/Graph";
 import Tree from "./pages/DataStructures/Tree/Tree";
 import Menu from "./pages/Menu/Menu";
+import Heap from "./pages/DataStructures/Heap/Heap";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/datastructure/LinkedList" element={<LinkedList />} />
         <Route path="/datastructure/Graph" element={<Graph />} />
         <Route path="/datastructure/Tree" element={<Tree />} />
+        <Route path="/datastructure/Heap" element={<Heap />} />
       </Routes>
    </>
   );
