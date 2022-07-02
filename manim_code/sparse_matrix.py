@@ -82,7 +82,7 @@ class Sparse(Scene):
         tb30 = Text("1").scale(0.5).move_to(B.get_entries_without_labels((4,1)).get_center())
         tb31 = Text("0").scale(0.5).move_to(B.get_entries_without_labels((4,2)).get_center())
         tb32 = Text("2").scale(0.5).move_to(B.get_entries_without_labels((4,3)).get_center())
-        self.play(ReplacementTransform(Aent[1].copy(), VGroup(tb30, tb31, tb32)))
+        self.play(ReplacementTransform(Aent[4].copy(), VGroup(tb30, tb31, tb32)))
         self.wait(1)
 
         self.play(Circumscribe(Aent[6]))
@@ -90,7 +90,7 @@ class Sparse(Scene):
         tb40 = Text("1").scale(0.5).move_to(B.get_entries_without_labels((5,1)).get_center())
         tb41 = Text("2").scale(0.5).move_to(B.get_entries_without_labels((5,2)).get_center())
         tb42 = Text("4").scale(0.5).move_to(B.get_entries_without_labels((5,3)).get_center())
-        self.play(ReplacementTransform(Aent[1].copy(), VGroup(tb40, tb41, tb42)))
+        self.play(ReplacementTransform(Aent[6].copy(), VGroup(tb40, tb41, tb42)))
         self.wait(1)
 
         self.play(Circumscribe(Aent[10]))
@@ -98,7 +98,7 @@ class Sparse(Scene):
         tb50 = Text("2").scale(0.5).move_to(B.get_entries_without_labels((6,1)).get_center())
         tb51 = Text("2").scale(0.5).move_to(B.get_entries_without_labels((6,2)).get_center())
         tb52 = Text("7").scale(0.5).move_to(B.get_entries_without_labels((6,3)).get_center())
-        self.play(ReplacementTransform(Aent[1].copy(), VGroup(tb50, tb51, tb52)))
+        self.play(ReplacementTransform(Aent[10].copy(), VGroup(tb50, tb51, tb52)))
         self.wait(2)
 
         Bgroup = VGroup(B, Btitle, tb00, tb01, tb02, tb10, tb11, tb12, tb20, tb21, tb22, tb30, tb31, tb32, tb40, tb41, tb42, tb50, tb51, tb52)
