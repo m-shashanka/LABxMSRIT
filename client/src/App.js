@@ -10,6 +10,11 @@ import Graph from "./pages/DataStructures/Graph/Graph";
 import Tree from "./pages/DataStructures/Tree/Tree";
 import Menu from "./pages/Menu/Menu";
 import Heap from "./pages/DataStructures/Heap/Heap";
+import FOCLab from "./pages/FOCLab";
+import FOCQuestion from "./pages/FOCQuestion";
+import FlowControl from "./pages/FOC/FLowControl/FlowControl";
+import Function from "./pages/FOC/Function/Function";
+import String from "./pages/FOC/String/String";
 
 function App() {
 
@@ -18,7 +23,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Menu />} />
         <Route path='/dslab' element={<DSLab />} />
+        <Route path='/foclab' element={<FOCLab />} />
         <Route exact path='/dslab/question/:id' element={<DSQuestion />} />
+        <Route exact path='/foclab/question/:id' element={<FOCQuestion />} />
         <Route path="/datastructure/Stack" element={<Stack />} />
         <Route path="/datastructure/Queue" element={<Queue />} />
         <Route path="/datastructure/SparseMatrix" element={<SparseMatrix />} />
@@ -27,6 +34,9 @@ function App() {
         <Route path="/datastructure/Graph" element={<Graph />} />
         <Route path="/datastructure/Tree" element={<Tree />} />
         <Route path="/datastructure/Heap" element={<Heap />} />
+        <Route path="/foclab/FlowControl" element={<FlowControl />} />
+        <Route path="/foclab/Function" element={<Function />} />
+        <Route path="/foclab/String" element={<String />} />
       </Routes>
    </>
   );

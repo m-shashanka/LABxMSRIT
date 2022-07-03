@@ -1,6 +1,7 @@
 .page{
     background-color: aliceblue;
-    padding: 2rem;
+    padding: 3rem;
+    margin: -1.5rem auto;
 }
 
 .page h1{

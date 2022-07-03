@@ -15,17 +15,28 @@
     font-size: 1.2rem;
 }
 
-.page textarea{
-    left: 0;
+.page span{
+    font-weight: 600;
 }
 
-.linkedlistimg{
+.arrayimg{
     display: block;
-    width: 50%;
     margin: 2rem auto;
+    width: 50%;
 }
 
-.multiline {
+.multidimensionalArray{
+    margin-left: 3%;
+}
+
+.tableimg{
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    margin-left: 0%;
+  }
+
+  .multiline {
     white-space: pre-wrap;
     background-color: rgb(230, 237, 253);
     border: none;
@@ -38,10 +49,4 @@
     cursor: text;
     overflow: hidden;
     resize: none;
-  }
-
-  .tableimg{
-    margin: 0 0 auto;
-    display: block;
-    width: 30%;
   }

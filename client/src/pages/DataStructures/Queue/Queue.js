@@ -18,7 +18,7 @@ A real-world example of a queue can be a single-lane one-way road, where the veh
             <br />
             <h3>FIFO Principle of Queue</h3>
             <p>{`The element added first is accessed first following the First In First Out principle. In the example, 1 is added first and accessed first.
-The operation of adding an element to the queue is called enqueue, while the operation of removing an element is called dequeue.`}</p>
+The operation of adding an element to the queue is called enqueue, while the operation of removing an element is called dequeue.`}</p><br />
             <img className={styles.queueimg} src={queueimg2} alt="queue" />
             <h2>Operations of queue</h2>
             <br />

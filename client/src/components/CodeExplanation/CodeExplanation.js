@@ -6,8 +6,8 @@ function CodeExplanation({text}){
     
     return(
         <div className={styles.algo}>
-        <h3>Code Explanation:</h3>
-        {text}
+        <h3>Algorithm:</h3>
+        <span>{text}</span>
         </div>
     );
 }

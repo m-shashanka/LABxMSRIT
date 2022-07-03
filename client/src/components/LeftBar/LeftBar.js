@@ -1,57 +1,71 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Question from '../Question/Question';
-import Questions from '../../Data/DetailedQuestionData';
+import DSQuestions from '../../Data/DetailedQuestionData';
 import LeftBarItem from '../LeftBarItem/LeftBarItem';
 import styles from './leftbar.module.css'
+import FocQuestions from '../../Data/FocQuestionData';
 
-function LeftBar(){
+function LeftBar(props) {
 
-    const [tag,setTag] = useState(null);
-    const [questions,setQuestions] = useState(Questions);
+    const [tag, setTag] = useState(null);
+    const [dsquestions, setQuestions] = useState(DSQuestions);
+    const [focquestions] = useState(FocQuestions);
 
     const addTag = (newTag) => {
         setTag(newTag);
-        let temp = Questions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+        let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
         setQuestions(temp);
-    }    
+    }
 
     const removeTag = () => {
         setTag(null);
-        setQuestions(Questions);
+        setQuestions(DSQuestions);
     }
 
-    return(
+    return (
         <div className={styles.page}>
             <div className={styles.container}>
-                <strong>Data Structures</strong>
+                <strong>{props.name}</strong>
                 <div className={styles.filterContainer}>
-                    <LeftBarItem name="Array" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Linked List" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Sparse Matrix" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Stack" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Queue" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Graph" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Tree" tag={tag} addTag={addTag} removeTag={removeTag} />
-                    <LeftBarItem name="Heap" tag={tag} addTag={addTag} removeTag={removeTag} />
+                    {props.arr.map((title) => (
+                        <LeftBarItem name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
+                    ))}
                 </div>
             </div>
+           { (props.name == "Data Structures") ?
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
-                    <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{all: 'unset'}}>
+                    <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>
                         <h2>Learn {tag} Data Structure &#8921;</h2>
                     </Link>
                 </div>}
-                {questions.map((question) => (
-                    <Link to={`/dslab/question/${question.id}`} style={{all: 'unset'}} key={question.id}>
-                        <Question 
+                {dsquestions.map((question) => (
+                    <Link to={`/dslab/question/${question.id}`} style={{ all: 'unset' }} key={question.id}>
+                        <Question
                             id={question.id}
                             question={question.value}
                         />
                     </Link>
                 ))
                 }
-            </div>
+            </div>:
+            <div className={styles.qContainer}>
+                {tag && <div className={styles.dsPage}>
+                    <Link to={`/foclab/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>
+                        <h2>Learn {tag} Data Structure &#8921;</h2>
+                    </Link>
+                </div>}
+                {focquestions.map((question) => (
+                    <Link to={`/foclab/question/${question.id}`} style={{ all: 'unset' }} key={question.id}>
+                        <Question
+                            id={question.id}
+                            question={question.value}
+                        />
+                    </Link>
+                ))
+                }
+            </div>}
         </div>
     );
 }

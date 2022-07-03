@@ -32,8 +32,42 @@ const DetailedQuestionData = [
     id: 3,
     value: `Write a C program to implement a circular queue using dynamically allocated array and perform the following operations on it.
     (i) Insert an item (ii) Delete an item (iii) Display a circular queue`,
-    PreReq: ["Queue"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    PreReq: ["Queue","Array"],
+    Objective:`
+    Inserting an element in a circular queue
+
+    Step 1:  IF (REAR+1)%MAX = FRONT
+                 Write " OVERFLOW "
+                 Goto step 4
+                 [End OF IF]
+
+    Step 2:  IF FRONT = -1 and REAR = -1
+                      SET FRONT = REAR = 0
+                  ELSE
+                      SET REAR = (REAR + 1) % MAX
+                  [END OF IF]
+
+    Step 3:  SET QUEUE[REAR] = ITEM
+
+    Step 4:  EXIT
+
+    Deleting an element from the circular queue
+
+    Step 1:  IF FRONT = -1
+                 Write " UNDERFLOW "
+                 Goto Step 4
+                 [END of IF]
+
+    Step 2:  SET ITEM = QUEUE[FRONT]
+    
+    Step 3:  IF FRONT = REAR
+                    SET FRONT = REAR = -1
+                 ELSE
+                    SET FRONT = (FRONT + 1) % MAX
+                 [END OF IF]
+    
+    Step 4: EXIT   
+    `,
     YouTubeLink: "https://",
     Input:"12345",
     Output:"98765"
@@ -67,7 +101,20 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
     id: 5,
     value: "Write a C program to evaluate a given postfix expression using a stack.",
     PreReq: ["Stack"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`
+    Step 1: Create a stack to store operands.
+    Step 2: Scan the given expression from left to right.
+    Step 3:    
+     a)   If the scanned character is an operand, push it into the stack. 
+     b) If the scanned character is an operator, POP 2 operands from stack and perform the operation using the operator encountered, and then PUSH the result back to the stack.
+    Step 4: Repeat step 3 till all the characters are scanned.
+    Step 5: When the expression has ended, the number in the stack is the final result.
+
+    Complexity of postfix evaluation:
+
+The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
+
+    `,
     YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
@@ -97,7 +144,21 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
     value: `Write a C program to add two polynomials represented as circular linked lists with header nodes. 
                 Display both polynomials and the resultant polynomial after addition.`,
     PreReq: ["LinkedList"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:` 
+1. Create two circular linked lists, where each node will consist of the coefficient, power of  x and pointer to the next node.
+2. Traverse both the polynomials and check the following conditions:
+      If the power of x of 1st polynomial is greater than power of x of second polynomial then store node of first polynomial in resultant polynomial and 
+      increase counter of polynomial 1.
+      If power of x of 1st polynomial is less than power of x of second polynomial then store the node of second polynomial in resultant polynomial and 
+      increase counter of polynomial 2.
+      If power of x of 1st polynomial is equal to power of x of second polynomial then store the sum of coefficient of both polynomial in resultant 
+      polynomial and increase counter of both polynomial 1 and polynomial 2.
+3. If there are nodes left to be traversed in the 1st polynomial or in the 2nd polynomial then append them in the resultant polynomial.
+4. Finally, print the resultant polynomial.
+
+   Time Complexity: O(M + N), where M and N are the number of nodes in the first and second lists respectively.
+   Auxiliary Space: O(M + N)
+   `,
     YouTubeLink: "https://",
     Input:"12345",
     Output:"98765"
@@ -128,7 +189,47 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
     value: `Write a C program to implement a binary search tree using linked representation and perform the following operations on it.
     (i) Insert an item (ii) Search an item (iii) Inorder Traversal.`,
     PreReq: ["Tree", "LinkedList"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`
+    Insertion into Binary Search Tree
+    
+    1. Create a new BST node and assign values to it.
+    2. insert(node, item)
+         i) If root == NULL,
+             return the new node to the calling function.
+         ii) if root=>data < item
+             call the insert function with root=>right and assign the return value in root=>right.
+            root->right = insert(root=>right, item)
+         iii) if root=>data > item
+             call the insert function with root->left and assign the return value in root=>left.
+             root=>left = insert(root=>left, item)
+    3. Finally, return the original root pointer to the calling function.
+
+    Searching in Binary Search Tree
+
+    If root == NULL 
+        return NULL;
+    If item == root->data 
+        return root->data;
+    If item < root->data 
+        return search(root->left)
+    If item > root->data 
+        return search(root->right)
+
+    In-order Traversal of BST
+
+    Steps
+    Traverse the left subtree in in-order
+    Visit the root
+    Traverse the right subtree in in-order
+
+    Algorithm
+    Step 1: Repeat Steps 2 to 4 while TREE != NULL
+    Step 2: INORDER(TREE -> LEFT)
+    Step 3: Print TREE -> DATA
+    Step 4: INORDER(TREE -> RIGHT)
+    [END OF LOOP]
+    Step 5: END
+    `,
     YouTubeLink: "https://",
     Input:"12345",
     Output:"98765"

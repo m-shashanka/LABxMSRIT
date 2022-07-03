@@ -10,7 +10,7 @@
 
 .page p{
     white-space: pre-wrap;
-    margin: auto;
+    margin:auto;
     font-family:serif;
     font-size: 1.2rem;
 }
@@ -19,10 +19,9 @@
     left: 0;
 }
 
-.linkedlistimg{
+.fcimg{
     display: block;
-    width: 50%;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 .multiline {
@@ -38,10 +37,4 @@
     cursor: text;
     overflow: hidden;
     resize: none;
-  }
-
-  .tableimg{
-    margin: 0 0 auto;
-    display: block;
-    width: 30%;
   }
