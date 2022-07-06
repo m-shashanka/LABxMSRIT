@@ -245,7 +245,7 @@ main()
 {
 	char ch;
 
-	if (ch == ’a’ || ch == ’e’ || ch == ’i’ || ch == ’o’ || ch == ’u’)
+	if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
 		printf("the entered character % c is vowel", ch);
 	else
 		printf("The entered character % c is consonant", ch);
@@ -665,7 +665,7 @@ main()
 	scanf(" % d", &n);
 	for (i = 0; i < n; i++)
 		sum += i;
-	printf("the sum of 1 st n natural no’ s is % d", sum);
+	printf("the sum of 1 st n natural no' s is % d", sum);
 }`,
 
 `#include <stdio.h>
