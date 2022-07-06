@@ -1,13 +1,27 @@
+import { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import LeftBar from "../components/LeftBar/LeftBar";
 import TopBar from "../components/TopBar/TopBar";
 
 function DSLab() {
+
+  const [width,setWidth] = useState(window.innerWidth);
+
+  const handler = () => setWidth(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize",handler);
+    return () => window.removeEventListener("resize",handler);
+  });
+
   return (
     <>
       <Header name="Data Structures Lab" />
-      {/* <LeftBar name="Data Structures" arr={["Array", "Linked List","Sparse Matrix", "Stack", "Queue", "Graph", "Tree", "Heap"]} /> */}
-      <TopBar name="Data Structures" arr={["Array", "Linked List","Sparse Matrix", "Stack", "Queue", "Graph", "Tree", "Heap"]} />
+      {width > 1200 ? 
+        <LeftBar name="Data Structures" arr={["Array", "Linked List","Sparse Matrix", "Stack", "Queue", "Graph", "Tree", "Heap"]} />
+        :
+        <TopBar name="Data Structures" arr={["Array", "Linked List","Sparse Matrix", "Stack", "Queue", "Graph", "Tree", "Heap"]} />
+      }
     </>
   );
 }
