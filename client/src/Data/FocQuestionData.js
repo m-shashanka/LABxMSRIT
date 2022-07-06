@@ -508,7 +508,7 @@ const FocQuestionData = [
     },
     {
         id: 46,
-        value: `Write a program to copy one string to another without using built-in functions.`,
+        value: `Write a program to find length of a string without using built-in functions.`,
         PreReq: ["Queue", "LinkedList"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         YouTubeLink: "https://",
@@ -517,7 +517,7 @@ const FocQuestionData = [
     },
     {
         id: 47,
-        value: `Write a program to combine two strings without using built-in functions.`,
+        value: `Write a program to copy one string to another without using built-in functions.`,
         PreReq: ["Queue", "LinkedList"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         YouTubeLink: "https://",
@@ -526,6 +526,15 @@ const FocQuestionData = [
     },
     {
         id: 48,
+        value: `Write a program to combine two strings without using built-in functions.`,
+        PreReq: ["Queue", "LinkedList"],
+        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        YouTubeLink: "https://",
+        Input: "12345",
+        Output: "98765"
+    },
+    {
+        id: 49,
         value: `Write a program to compare two strings without using built-in functions.`,
         PreReq: ["LinkedList"],
         Objective: ` 
@@ -539,7 +548,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 49,
+        id: 50,
         value: `Write a program to find whether given string is palindrome or not.`,
         PreReq: ["LinkedList"],
         Objective: ` 
@@ -553,7 +562,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 50,
+        id: 51,
         value: `Write C Programs to demonstrate the use of built in string functions like strcpy( ), strcat( ), strcmp( ) and strlen( ).`,
         PreReq: ["LinkedList"],
         Objective: ` 
@@ -567,7 +576,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 51,
+        id: 52,
         value: `Write a C program to find factorial of a given number using functions with arguments, with return type.`,
         PreReq: ["LinkedList"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -576,7 +585,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 52,
+        id: 53,
         value: `Write a C program to find GCD and LCM of 2 numbers using functions with arguments, without return type.`,
         PreReq: ["LinkedList"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -585,7 +594,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 53,
+        id: 54,
         value: `Write a C program to find whether a number is a palindrome using functions without arguments, with return type.`,
         PreReq: ["Tree", "Heap"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -594,7 +603,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 54,
+        id: 55,
         value: `Write a C program to find whether a given triangle is isosceles scalene or equilateral using functions without arguments, without return type.`,
         PreReq: ["Tree", "Heap"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -603,7 +612,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 55,
+        id: 56,
         value: `Write a C program to illustrate automatic variables.`,
         PreReq: ["Tree", "Heap"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -612,7 +621,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 56,
+        id: 57,
         value: `Write a C program to illustrate the properties of global variables.`,
         PreReq: ["Tree", "Heap"],
         Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -621,7 +630,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 57,
+        id: 58,
         value: `Write a C program to illustrate the properties of static variables.`,
         PreReq: ["Tree", "LinkedList"],
         Objective: `
@@ -634,7 +643,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 58,
+        id: 59,
         value: `Write a C program to illustrate compare and copy structure variables.`,
         PreReq: ["Tree", "LinkedList"],
         Objective: `
@@ -647,7 +656,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 59,
+        id: 60,
         value: `Write a C program to accept 3 subject marks and calculate the student wise totals and store them as part of structure. Illustrate using arrays of structures in the program.`,
         PreReq: ["Tree", "LinkedList"],
         Objective: `
@@ -660,7 +669,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 60,
+        id: 61,
         value: `Write a C program to compute sum of all elements stored in an array using pointers.`,
         PreReq: ["Tree", "LinkedList"],
         Objective: `
@@ -673,7 +682,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 61,
+        id: 62,
         value: `Write a C program to swap two numbers using pointers.`,
         PreReq: ["Stack", "Graph"],
         Objective: `
@@ -685,7 +694,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 62,
+        id: 63,
         value: `Write a program to determine the length of a character string using pointers.`,
         PreReq: ["Stack", "Graph"],
         Objective: `
@@ -697,7 +706,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 63,
+        id: 64,
         value: `Write the C program which opens a file using the function fopen( ).`,
         PreReq: ["Stack", "Graph"],
         Objective: `
@@ -709,7 +718,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 64,
+        id: 65,
         value: `Write a C program to demonstrate the use of fscanf().`,
         PreReq: ["Stack", "Graph"],
         Objective: `
@@ -721,7 +730,7 @@ const FocQuestionData = [
         Output: "98765"
     },
     {
-        id: 65,
+        id: 66,
         value: `Write a C program to demonstrate the use of fprintf().`,
         PreReq: ["Stack", "Graph"],
         Objective: `

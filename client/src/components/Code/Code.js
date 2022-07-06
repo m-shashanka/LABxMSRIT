@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import {useLocation } from 'react-router-dom'
 import styles from './code.module.css'
 import programs from './Programs';
+import FocPrograms from './FocPrograms';
 
 function Code({idx}){
 
@@ -15,8 +17,10 @@ function Code({idx}){
         text.select();
         navigator.clipboard.writeText(text.value);
     }
-
-    const myText = programs[idx];
+    var myText;
+    const location = useLocation();
+    console.log(location.pathname[1]);
+    (location.pathname[1] === 'd') ? myText =  programs[idx] : myText = FocPrograms[idx]  
 
     const textAreaRef = useRef(null);
 

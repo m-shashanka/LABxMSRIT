@@ -13,10 +13,15 @@ const DetailedQuestionData = [
     For example, consider a matrix of size 5 X 6 containing 6 non-zero values. This matrix can be represented as shown in the image.
     In above example matrix, there are only 6 non-zero elements ( those are 9, 8, 4, 2, 5 & 2) and matrix size is 5 X 6. We represent this matrix as shown in the above image. Here the first row in the right side table is filled with values 5, 6 & 6 which indicates that it is a sparse matrix with 5 rows, 6 columns & 6 non-zero values. The second row is filled with 0, 4, & 9 which indicates the non-zero value 9 is at the 0th-row 4th column in the Sparse matrix. In the same way, the remaining non-zero values also follow a similar pattern.
     `,
-    YouTubeLink: "https://www.youtube.com/embed/gYgV0Xsn1GM?rel=0&amp;showinfo=0",
+    YouTubeLink: "https://www.youtube.com/embed/fMZelmTUWZk?rel=0&amp;showinfo=0",
     YouTubeLinkTitle:"DFS",
-    Input:"12345",
-    Output:"98765"
+    Input:`0 5 0 6
+2 0 4 0
+0 0 7 0`,
+    Output:`0 2 0
+5 0 0
+0 4 7
+6 0 0`
 },
 {
     id: 2,
@@ -125,8 +130,15 @@ The Postfix evaluation algorithm has linear complexity O(N). Since the expressio
     value: `Write a C program to implement multiple linked stacks (at least 5) and perform the following operations on them 
     (i) Push an item in ithstack (ii) Pop an item from ithstack (iii) Display ith stack.`,
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    YouTubeLink: "https://",
-    Input:"12345",
+    YouTubeLink: "https://www.youtube.com/embed/Nr2vaQGppjU?rel=0&amp;showinfo=0",
+    Input:`push(0,10)
+push(0,20)
+push(2,30)
+push(0,40)
+push(4,50)
+pop(0)
+push(2,60)
+pop(4)`,
     Output:"98765"
 },
 {
@@ -135,7 +147,7 @@ The Postfix evaluation algorithm has linear complexity O(N). Since the expressio
                (i) Add an item in ithqueue (ii) Delete an item from ithqueue (iii) Display ithqueue.`,
     PreReq: ["Queue","LinkedList"],
     Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    YouTubeLink: "https://",
+    YouTubeLink: "https://www.youtube.com/embed/gQoJRDx-7I4?rel=0&amp;showinfo=0",
     Input:"12345",
     Output:"98765"
 },

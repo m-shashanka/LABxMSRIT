@@ -7,7 +7,6 @@ import styles from './leftbar.module.css'
 import FocQuestions from '../../Data/FocQuestionData';
 
 function LeftBar(props) {
-
     const [tag, setTag] = useState(null);
     const [dsquestions, setQuestions] = useState(DSQuestions);
     const [focquestions] = useState(FocQuestions);
@@ -37,7 +36,7 @@ function LeftBar(props) {
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
                     <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>
-                        <h2>Learn {tag} Data Structure &#8921;</h2>
+                        <h2>Learn about {tag} &#8921;</h2>
                     </Link>
                 </div>}
                 {dsquestions.map((question) => (
@@ -53,7 +52,7 @@ function LeftBar(props) {
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
                     <Link to={`/foclab/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>
-                        <h2>Learn {tag} Data Structure &#8921;</h2>
+                        <h2>Learn about {tag} &#8921;</h2>
                     </Link>
                 </div>}
                 {focquestions.map((question) => (

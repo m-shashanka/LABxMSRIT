@@ -15,6 +15,9 @@ import FOCQuestion from "./pages/FOCQuestion";
 import FlowControl from "./pages/FOC/FLowControl/FlowControl";
 import Function from "./pages/FOC/Function/Function";
 import String from "./pages/FOC/String/String";
+import InputOutputinC from "./pages/FOC/InputOutputinC/InputOutputinC";
+import DataTypes from "./pages/FOC/DataTpes/DataTypes";
+import ArrayIO from "./pages/FOC/ArrayIO/ArrayIO";
 
 function App() {
 
@@ -37,6 +40,9 @@ function App() {
         <Route path="/foclab/FlowControl" element={<FlowControl />} />
         <Route path="/foclab/Function" element={<Function />} />
         <Route path="/foclab/String" element={<String />} />
+        <Route path="/foclab/Input-Output" element={<InputOutputinC />} />
+        <Route path="/foclab/DataTypes" element={<DataTypes />} />
+        <Route path="/foclab/Array" element={<ArrayIO />} />
       </Routes>
    </>
   );

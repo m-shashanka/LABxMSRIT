@@ -5,7 +5,7 @@ function FOCLab() {
   return (
     <>
       <Header name="Fundamentals of computing" />
-      <LeftBar name="Fundamentals of computing" arr={["DataTypes", "String" ,"Flow Control", "Array", "Function"]}/>
+      <LeftBar name="Fundamentals of computing" arr={["Input-Output" ,"DataTypes", "String" ,"Flow Control", "Array", "Function"]}/>
     </>
   );
 }
