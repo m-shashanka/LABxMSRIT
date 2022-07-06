@@ -1,0 +1,40 @@
+.page{
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 600;
+    background-color: #191D3D;
+    color: white;
+    padding-bottom: 2px;
+    position: fixed;
+    width: 100%;
+    top: 11%;
+}
+
+.qContainer{
+    background-color: aliceblue;
+    position: absolute;
+    height: 84vh;
+    overflow-y: auto;
+    top: 16%;
+    width: 100%;
+}
+
+.dsPage{
+    display: flex;
+    justify-content: center;
+}
+
+.dsPage h2{
+    margin: 18px auto -8px auto;
+    background-color: #CDD6FF;
+    border: 2px solid #191d3d;
+    padding: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
