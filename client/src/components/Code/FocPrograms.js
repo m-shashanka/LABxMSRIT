@@ -95,7 +95,7 @@ main()
 {
 	int num, num1, a, b, c, d, sum = 0, rev = 0;
 	clrscr():
-		printf("Enter the 4 digit number\ n");
+		printf("Enter the 4 digit number\\n");
 	scanf(" % d", &num);
 	num1 = num;
 	a = num % 10;
@@ -117,7 +117,7 @@ main()
 main()
 {
 	int num;
-	printf("Enter the number\ n");
+	printf("Enter the number\\n");
 	scanf(" % d", &num);
 	(num == 0) ? printf("The number is zero"): (num > 0) ? printf("The number is positive") : printf("The number is negative");
 
@@ -129,7 +129,7 @@ main()
 {
 	int num;
 
-	printf("Enter the number\ n");
+	printf("Enter the number\\n");
 	scanf(" % d", &num);
 	(num % 2 == 0) ? printf("The number is even"): printf("The number is odd");
 
@@ -141,7 +141,7 @@ main()
 {
 	int a, b, c;
 
-	printf("Enter the three sides of triangle\ n");
+	printf("Enter the three sides of triangle\\n");
 	scanf(" % d % d % d", &a, &b, &c);
 	((a == b) && (b == c)) ? printf("equilateral triangle"): (a == b || b == c || a == c) ? printf("isosceles triangle") : printf("scalene triangle");
 
@@ -153,7 +153,7 @@ main()
 {
 	char ch;
 
-	printf("Enter a lowercase letter\ n");
+	printf("Enter a lowercase letter\\n");
 	scanf(" % c", &ch);
 	(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') ? printf("the entered character is vowel"): printf("The entered character is consonant");
 
@@ -165,7 +165,7 @@ main()
 {
 	int num;
 
-	printf("Enter the number\\ n");
+	printf("Enter the number\\\n");
 	scanf(" % d", &num);
 	(num % 4 == 0) && (num % 100 != 0) || (num % 400 == 0) ? printf("The entered year is leap year"): printf("The entered year is not leap year");
 
@@ -614,7 +614,7 @@ main()
 		scanf("%d", &x);
 	if (x < 0)
 	{
-		printf("Entered Value is negative\ n");
+		printf("Entered Value is negative\\n");
 		goto negative;	//forward jump
 	}
 	else
