@@ -18,7 +18,7 @@ function FOCQuestion(){
   return (
       <>
         <Question id={ques.id} question={ques.value} disableHover/>
-        <Prerequisite arrayOfItems={question.PreReq} />
+        <Prerequisite foc arrayOfItems={question.PreReq} />
         <CodeExplanation text={question.Objective} />
         <IFrame src={question.YouTubeLink} title={question.YouTubeLinkTitle} />
         <InputOutput input={question.Input} output={question.Output} />

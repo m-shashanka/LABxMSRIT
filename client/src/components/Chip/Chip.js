@@ -2,8 +2,9 @@ import styles from './chip.module.css'
 import {Link} from "react-router-dom"
 
 function Chip(props){
+    let url = props.foc ? '/foclab' : '/datastructure';
     return(
-        <Link to={`/datastructure/${props.name}`} style={{all: 'unset'}}>
+        <Link to={`${url}/${props.name}`} style={{all: 'unset'}}>
             <div className={styles.chip}>
                 {props.name}
             </div>

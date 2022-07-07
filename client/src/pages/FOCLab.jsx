@@ -14,9 +14,11 @@ function FOCLab() {
     return () => window.removeEventListener("resize",handler);
   });
 
+  var name = width > 1200 ? "Fundamentals Of Computing" : "FOC LAB";
+
   return (
     <>
-      <Header name="Fundamentals of computing" />
+      <Header name={name} />
       {width > 1200 ? 
         <LeftBar name="Fundamentals of computing" arr={["Input-Output" ,"DataTypes", "String" ,"Flow Control", "Array", "Function"]}/>
         :

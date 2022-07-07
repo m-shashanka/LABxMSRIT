@@ -14,9 +14,11 @@ function DSLab() {
     return () => window.removeEventListener("resize",handler);
   });
 
+  var name = width > 1200 ? "Data Structures Lab" : "DS LAB";
+
   return (
     <>
-      <Header name="Data Structures Lab" />
+      <Header name={name} />
       {width > 1200 ? 
         <LeftBar name="Data Structures" arr={["Array", "Linked List","Sparse Matrix", "Stack", "Queue", "Graph", "Tree", "Heap"]} />
         :

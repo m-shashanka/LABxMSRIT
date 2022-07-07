@@ -2,7 +2,7 @@ const FocQuestionData = [
     {
         id: 1,
         value: `Write a program to find area of rectangle.`,
-        PreReq: ["Array", "DataTypes"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective:`
 The formula to find area of a rectangle is length multiplied by its breadth (l*b).  Three integer variables l (length), b (breadth) and area are declared. The function scanf() is used to take user input for variables l and b using the format specifier  (%d). The value of l is multiplied by value of b and stored in the variable area (area = l * b). The function printf() is used to print the value of area onto the screen.`,
         YouTubeLink: "https://www.youtube.com/embed/XjY6w7-HaW0?rel=0&amp;showinfo=0",
@@ -12,7 +12,7 @@ The formula to find area of a rectangle is length multiplied by its breadth (l*b
     {
         id: 2,
         value: `Write a program to find area and circumference of circle by defining the value of PI (using symbolic constant).`,
-        PreReq: ["Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective:`
 A symbolic constant is a name that substitutes for a sequence of characters or a numeric constant, a character constant or a string constant. Preprocessor directive #define can be used to define a symbolic constant. In the given question symbolic constant PI is used to define the value of pi (3.14). The symbolic constant PI can replace any occurrences of 3.14 in the code. Here, #define PI 3.14  is used. 
 The formula to find area of a circle  is  pi*r*r and the formula for calculating the circumference of a circle is 2*pi*r.  Three floating point variables r (radius), area and circum (circumference) are declared. The function scanf() is used to take user input for variable r  using the format specifier  (%f). The value of r is multiplied by PI and r and stored in the variable area (area = PI*r*r). The value of r is multiplied by 2*PI and stored in the variable circum (circum = 2*PI*r).  The function printf() is used to print the value of area and circum onto the screen.`,
@@ -23,7 +23,7 @@ The formula to find area of a circle  is  pi*r*r and the formula for calculating
     {
         id: 3,
         value: `Write a program to swap 2 numbers without using temporary variable.`,
-        PreReq: ["Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective:`
 To swap two numbers without using a temporary variable, store the sum of the two numbers in the first variable (a=a+b). Then, assign the difference between the sum of two numbers (a) and the second variable (b) to b. Now, variable b contains the value of the first variable a (b=a-b). Similarly, assign the difference between the sum of two numbers and the variable b (which now contains the first number) to a (a=a-b). Now , variable a contains the value of the second variable. Use scanf() and printf() for input and output respectively.`,
         YouTubeLink: "https://www.youtube.com/embed/Gcu82iosSYY?rel=0&amp;showinfo=0",
@@ -33,7 +33,7 @@ To swap two numbers without using a temporary variable, store the sum of the two
     {
         id: 4,
         value: `Write a program to find simple interest.`,
-        PreReq: ["Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective: `
 The formula for calculating simple interest is (p*t*r)/100, where p is the principal amount, t is time and r is the rate of interest. scanf() is used to take input for floating point variables p, t, and r. The calculated interest is assigned to the variable si, which is printed onto the screen using printf().`,
         YouTubeLink: "https://www.youtube.com/embed/n7JRMZY0Pog?rel=0&amp;showinfo=0",
@@ -43,7 +43,7 @@ The formula for calculating simple interest is (p*t*r)/100, where p is the princ
     {
         id: 5,
         value: `Write a C program to convert Celsius to Fahrenheit.`,
-        PreReq: ["Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective: `
 The formula for conversion of Celcius to Fahrenheit is temp_f = (9 * temp_c)/5 + 32. Transposing the formula gives conversion of Fahrenheit to Celcius. scanf()  is used to take input for the temperature in Celsius to be converted to Fahrenheit and vice versa.
 The formula is applied and the converted results are stored in the variables temp_c and temp_f. The function printf() is used to display output on the screen.`,
@@ -54,7 +54,7 @@ The formula is applied and the converted results are stored in the variables tem
     {
         id: 6,
         value: `Write a program to swap 2 numbers using temporary variable.`,
-        PreReq: ["Queue", "Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective: ` 
 The two numbers to be swapped (a and b) are taken as user input using scanf(). A temporary variable (temp) having the same data type as a and b is declared. The value of a is assigned to temp. Then the variable a is assigned the value of b. Finally the value stored in temp is assigned to a, successfully swapping the two variables using the temporary variable temp. The two numbers are displayed after swapping using printf().`,
         YouTubeLink: "https://www.youtube.com/embed/YSXEYaqoTg0?rel=0&amp;showinfo=0",
@@ -64,7 +64,7 @@ The two numbers to be swapped (a and b) are taken as user input using scanf(). A
     {
         id: 7,
         value: `Write a C program to find the sum of digits and reverse of a 4 digit number using arithmetic operators.`,
-        PreReq: ["Queue", "Array"],
+        PreReq: ["Input-Output", "DataTypes"],
         Objective: `
 Take num (number) as user input using scanf() function. Declare another variable num1 and assign num to num1.Make sure both num and num1 are of integer data type. Now find modulo 10 of num and store it in variable a. Modulo operator (%) is used to calculate the remainder. By performing modulo 10 on num, the digit in ones place can be calculated. Now, divide num by 10 and store the resulting value in num. This eliminates the digit at ones place which is already stored in a. Similarly, calculate digits at tens, hundreds and thousands place by alternating modulo 10 and division by 10 operations and store them in b , c and d. The sum of the digits of the four digit number is (sum=a+b+c+d). To reverse the given number, apply (rev=(a*1000)+(b*100)+(c*10)+d)  on a, b, c and d. Print the results using  prints() function.`,
         YouTubeLink: "https://www.youtube.com/embed/HdI5b43Nk5k?rel=0&amp;showinfo=0",
@@ -74,7 +74,7 @@ Take num (number) as user input using scanf() function. Declare another variable
     {
         id: 8,
         value: `Write a C program to find whether given number is positive, negative or zero using conditional operator.`,
-        PreReq: ["Queue", "Array"],
+        PreReq: ["FlowControl"],
         Objective: `
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.The condition is before the question mark, true block is after question mark and the false block is after colon.
 To find out if a given number num is positive, negative or zero, a conditional operator can be used. If num==0 is true, then  "The number is zero" is printed. If not, then the condition (num >0) is checked. If it is true, then "The  number is positive" is printed. Finally, if the above two conditions are not satisfied, the "The  number is negative" is printed.`,
@@ -85,7 +85,7 @@ To find out if a given number num is positive, negative or zero, a conditional o
     {
         id: 9,
         value: `Write a C program to check whether the number is odd or even using conditional operator.`,
-        PreReq: ["Queue", "Array"],
+        PreReq: ["FlowControl"],
         Objective: `
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.
 The condition is before the question mark, the true block is after the question mark and the false block is after the colon. The modulo 2 operation is used to check if a number is even or odd. Since the modulo operation gives the remainder, if remainder of modulo 2 is zero, then the number is even.
