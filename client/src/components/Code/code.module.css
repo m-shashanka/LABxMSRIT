@@ -41,6 +41,8 @@
 .codeArea > textarea{
     height: 100%;
     width: 96.5%;
+    border: none;
+    outline: none;
 }
 
 .codeArea > button{

@@ -11,6 +11,8 @@
     width: 99%;
     background-color: aliceblue;
     margin-bottom: 7px;
+    border: none;
+    outline: none;
 }
 
 .input{
