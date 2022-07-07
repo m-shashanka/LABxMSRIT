@@ -24,6 +24,11 @@ export default function Tree() {
     return (
         <div className={styles.page}>
             <h1>Tree</h1>
+            <div className={styles.graph}>
+                <a href="https://graph-visualizer-labxrit.herokuapp.com" target="_blank" rel="noreferrer">
+                    <h2>&#8920; Tree Visualizer &#8921;</h2>
+                </a>
+            </div>
             <p>The tree is a nonlinear hierarchical data structure and comprises a collection of entities known as nodes. It connects each node in the tree data structure using "edges”, both directed and undirected.
             </p><br />
             <img className={styles.treeimg} src={img1} alt="tree" />

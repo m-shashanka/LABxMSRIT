@@ -11,6 +11,11 @@ export default function Graph() {
     return (
         <div className={styles.page}>
             <h1>Graph</h1>
+            <div className={styles.graph}>
+                <a href="https://graph-visualizer-labxrit.herokuapp.com" target="_blank" rel="noreferrer">
+                    <h2>&#8920; Graph Visualizer &#8921;</h2>
+                </a>
+            </div>
             <p>A graph is a non-linear data structure made up of vertices (nodes) and edges. The edges connect any two nodes or vertices in the graph.
             </p> <br />
             <img className={styles.graphimg} style={{ margin: "2rem auto", width: "30%" }} src={img1} alt="graph" /><br />

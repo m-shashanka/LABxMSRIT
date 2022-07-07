@@ -39,6 +39,11 @@ function LeftBar(props) {
                         <h2>Learn about {tag} &#8921;</h2>
                     </Link>
                 </div>}
+                {(tag === 'Tree' || tag === 'Graph') && <div className={styles.graph}>
+                    <a href="https://graph-visualizer-labxrit.herokuapp.com" target="_blank" rel="noreferrer">
+                        <h2>&#8920; {tag} Visualizer &#8921;</h2>
+                    </a>
+                </div>}
                 {dsquestions.map((question) => (
                     <Link to={`/dslab/question/${question.id}`} style={{ all: 'unset' }} key={question.id}>
                         <Question

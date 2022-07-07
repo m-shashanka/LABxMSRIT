@@ -19,7 +19,6 @@ function Code({idx}){
     }
     var myText;
     const location = useLocation();
-    console.log(location.pathname[1]);
     (location.pathname[1] === 'd') ? myText =  programs[idx] : myText = FocPrograms[idx]  
 
     const textAreaRef = useRef(null);

@@ -102,7 +102,7 @@ To find out if a given number num is  even or odd, a conditional operator can be
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.
 The condition is before the question mark, the true block is after the question mark and the false block is after the colon.
 To check if the triangle is isosceles, equilateral or scalene, different conditions on the length if the sides can be verified. If ((a==b)&&(b==c)), then all sides are equal, implying that it is an equilateral triangle. Similarly, if (a==b||b==c||a==c), then any two sides are equal, making the triangle an isosceles triangle. Otherwise, the triangle is scalene.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/OK5cKp99zpU?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },

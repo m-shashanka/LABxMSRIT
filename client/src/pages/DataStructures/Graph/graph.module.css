@@ -8,6 +8,25 @@
     text-align: center;
 }
 
+.graph{
+    display: flex;
+    justify-content: center;
+    background-color: #1C2130;
+    width: 50%;
+    margin: 18px auto;
+    border-radius: 12px;
+}
+
+.graph > a{
+    text-decoration: none;
+    color: cyan;
+}
+
+.graph h2{
+    margin: 0;
+    padding: 7px;
+}
+
 .page p{
     white-space: pre-wrap;
     margin: auto;
