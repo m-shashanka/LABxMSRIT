@@ -32,7 +32,7 @@ scanf("%s", name);
             <p>{`The fgets() function is used to read a line of string and the puts() function can be used to display the string. Ex:
 
 `}</p>
-            <textarea className={styles.multiline} readOnly rows="3">{`char name[30];
+            <textarea className={styles.multiline} readOnly rows="5">{`char name[30];
 
 fgets(name, sizeof(name), stdin);  // read string
 

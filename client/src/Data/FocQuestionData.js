@@ -6,8 +6,8 @@ const FocQuestionData = [
         Objective:`
 The formula to find area of a rectangle is length multiplied by its breadth (l*b).  Three integer variables l (length), b (breadth) and area are declared. The function scanf() is used to take user input for variables l and b using the format specifier  (%d). The value of l is multiplied by value of b and stored in the variable area (area = l * b). The function printf() is used to print the value of area onto the screen.`,
         YouTubeLink: "https://www.youtube.com/embed/XjY6w7-HaW0?rel=0&amp;showinfo=0",
-        Input: "12345",
-        Output: "98765"
+        Input: "3 4",
+        Output: "12"
     },
     {
         id: 2,
