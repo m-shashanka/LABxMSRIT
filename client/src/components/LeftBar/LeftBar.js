@@ -28,11 +28,11 @@ function LeftBar(props) {
                 <strong>{props.name}</strong>
                 <div className={styles.filterContainer}>
                     {props.arr.map((title) => (
-                        <LeftBarItem name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
+                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
                     ))}
                 </div>
             </div>
-           { (props.name == "Data Structures") ?
+           { (props.name === "Data Structures") ?
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
                     <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>

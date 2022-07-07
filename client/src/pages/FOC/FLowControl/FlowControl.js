@@ -10,6 +10,7 @@ import img8 from "./img8.png"
 import img9 from "./img9.png"
 import img10 from "./img10.png"
 import img11 from "./img11.png"
+import img12 from "./img12.png"
 
 export default function FlowControl() {
     return (
@@ -131,6 +132,12 @@ else
 \u2022 Case labels must end with a colon.
 \u2022 The break statement transfers the control out of the switch statement.
 \u2022 The break statement is optional.`}</p>
+<h3>6. Conditional Operator</h3>
+  <p>{`The conditional operator is also known as a ternary operator. The conditional statements are the decision-making statements which depends upon the output of the expression. It is represented by two symbols, i.e., '?' and ':'.`}</p>
+  <h4>Synatx:</h4>
+  <textarea className={styles.multiline} readOnly rows="1">{`Expression1? expression2: expression3;  
+`}</textarea> <br />
+<img className={styles.fcimg} src={img12} alt="ternary" /><br />
             <h2>Types of Iterative Statements</h2>
             <h3>1. For Loop</h3>
             <p>{`It executes the set of statements until the time a particular condition is accomplished. It is known as the Open-ended loop. In For loop,there can be  more than one initialization or increment/decrement, separated using a comma operator and one condition as well. For loop is used to evaluate the initialization part first, and then it checks the condition for true or false. If the condition is true, then it executes the set of statements of for loop. After that, it evaluates the increment or decrement condition until the condition becomes false, it repeats the same steps. It will exit the loop when the condition is false. It is an entry controlled loop.

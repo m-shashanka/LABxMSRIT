@@ -26,7 +26,7 @@ function TopBar(props){
     return(<div className={styles.page}>
         <div className={styles.container}>
             {props.arr.map((title) => (
-                <TopBarItem name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
+                <TopBarItem key={title} name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
             ))}
         </div>
         { (props.name === "Data Structures") ?

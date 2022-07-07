@@ -11,9 +11,8 @@ import Code from "../components/Code/Code";
 function FOCQuestion(){
   const {id} = useParams();
 
-  const question = FocQuestionData.filter(q => id == q.id)[0];
-  const ques = FocQuestionData.filter(q => id == q.id)[0];
-
+  const question = FocQuestionData.filter(q => id === q.id)[0];
+  const ques = FocQuestionData.filter(q => id === q.id)[0];
 
   return (
       <>
