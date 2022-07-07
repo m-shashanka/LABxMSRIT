@@ -29,7 +29,7 @@ function TopBar(props){
                 <TopBarItem name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
             ))}
         </div>
-        { (props.name == "Data Structures") ?
+        { (props.name === "Data Structures") ?
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
                     <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>

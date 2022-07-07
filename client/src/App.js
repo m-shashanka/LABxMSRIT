@@ -16,7 +16,7 @@ import FlowControl from "./pages/FOC/FLowControl/FlowControl";
 import Function from "./pages/FOC/Function/Function";
 import String from "./pages/FOC/String/String";
 import InputOutputinC from "./pages/FOC/InputOutputinC/InputOutputinC";
-import DataTypes from "./pages/FOC/DataTpes/DataTypes";
+import DataTypes from "./pages/FOC/DataTypes/DataTypes";
 import ArrayIO from "./pages/FOC/ArrayIO/ArrayIO";
 
 function App() {

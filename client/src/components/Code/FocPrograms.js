@@ -1659,7 +1659,7 @@ main()
 
 	printf("\\n Enter the name and roll number of the student: ");
 	fscanf(stdin, " % s % d", name, &roll_no);
-	printf("\\n Name: % s\ t ROLL NUMBER = % d", name, roll_no);
+	printf("\\n Name: % s\\t ROLL NUMBER = % d", name, roll_no);
 	fclose(fp);
 	return 0;
 }`,
@@ -1685,7 +1685,7 @@ main()
 		fflush(stdin);
 		puts("\\n enter your name: ");
 		scanf(" % f", &salary);
-		fprintf(fp, "(% d) NAME:[ % -10.10 s]\ t SALARY % 5.2 f", I, name, salary);
+		fprintf(fp, "(% d) NAME:[ % -10.10 s]\\t SALARY % 5.2 f", I, name, salary);
 	}
 
 	fclose(fp);
