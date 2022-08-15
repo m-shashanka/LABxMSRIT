@@ -8,42 +8,38 @@ import FocQuestions from '../../Data/FocQuestionData';
 
 function LeftBar(props) {
     const [tag, setTag] = useState(null);
-    const [dsquestions, setQuestions] = useState(DSQuestions);
-    const [focquestions] = useState(FocQuestions);
+    const [dsquestions, setDSQuestions] = useState(DSQuestions);
+    const [focquestions, setFOCQuestions] = useState(FocQuestions);
 
-    const addTag1 = (newTag) => {
+    const addTag = (newTag) => {
         setTag(newTag);
-        let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
-        setQuestions(temp);
-    }
-
-    const addTag2 = (newTag) => {
-        setTag(newTag);
-        let temp = FocQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
-        setQuestions(temp);
+        if(props.name === "Data Structures"){
+            let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+            setDSQuestions(temp);
+        }
+        else{
+            let temp = FocQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+            setFOCQuestions(temp);
+        }
     }
 
     const removeTag = () => {
         setTag(null);
-        setQuestions(DSQuestions);
+        if(props.name === "Data Structures")
+            setDSQuestions(DSQuestions);
+        else
+            setFOCQuestions(FocQuestions);
     }
 
     return (
         <div className={styles.page}>
             <div className={styles.container}>
                 <strong>{props.name}</strong>
-                {(props.name === "Data Structures") ?
                 <div className={styles.filterContainer}>
                     {props.arr.map((title) => (
-                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag1} removeTag={removeTag} />
+                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
                     ))}
-                </div>
-                :
-                   <div className={styles.filterContainer}>
-                    {props.arr.map((title) => (
-                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag1} removeTag={removeTag} />
-                    ))}
-                </div>}
+                </div>    
             </div>
            { (props.name === "Data Structures") ?
            <div>

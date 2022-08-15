@@ -164,645 +164,600 @@ main()
 {
 	int num;
 
-	printf("Enter the number\\\n");
+	printf("Enter the number\\n");
 	scanf(" % d", &num);
 	(num % 4 == 0) && (num % 100 != 0) || (num % 400 == 0) ? printf("The entered year is leap year"): printf("The entered year is not leap year");
 
 }`,
 
-`#include <stdio.h>
-#include <stdlib.h>
+`#include<stdio.h>
 
-main()
-{
-	long int m1 = 0, m2 = 0, m3 = 0, m4 = 0, m5 = 0, m6 = 0;
-	long int perce = 0;
+main() {
+  int a, b, c;
 
-	printf("Enter the marks for 6 subjects");
-	scanf("%ld%ld%ld%ld%ld%ld", &m1, &m2, &m3, &m4, &m5, &m6);
-	perce = ((m1 + m2 + m3 + m4 + m5 + m6) *100 / 600);
-	if ((m1 < 50) || (m2 < 50) || (m3 < 50) || (m4 < 50) || (m5 < 50) || (m6 < 50))
-	{
-		printf("Fail");
-
-		exit(0);
-	}
-
-	printf("\\nPercentage : %ld\\n", perce);
-	if (perce >= 90)
-		printf("\\n S grade");
-	else if (perce >= 80)
-		printf("\\n A grade");
-	else if (perce >= 70)
-		printf("\\n B grade");
-	else if (perce >= 60)
-		printf("\\n C grade");
-	else if (perce >= 50)
-		printf("\\n D grade");
-	else
-		printf("\\n Fail");
+  printf("Enter the three numbers\ n");
+  scanf(" % d % d % d", & a, & b, & c);
+  (a > b) ? ((a > c) ? printf(" % d is largest", a) : printf("The % d is largest", c)) : ((b > c) ? printf(" % d is largest", b) : printf(" % d is largest", c));
 
 }`,
 
-`#include <stdio.h>
-#include <ctype.h>
+`Without using built in functions
 
-main()
-{
-	char ch;
-	if (isalpha(ch))
-		printf("the enterd character is an alphabet");
-	if (isdigit(ch))
-		printf("the enterd character is a digit");
-	if (ispunct(ch))
-		printf("the enterd character is punctuation");
-	if (isspace(ch))
-		printf("the enterd character is whitespace character");
+#include<stdio.h>
+
+main() {
+  char ch;
+
+  printf("Enter a character\\n");
+  scanf("%c", & ch);
+  if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    printf("\\n%c is an Alphabet", ch);
+  else if (ch >= 48 && ch <= 56)
+    printf("\\n%c is a Number", ch);
+  else
+    printf("\\nSpecial Character");
+
+}
+
+Using built in functions
+
+#include<stdio.h>
+#include<ctype.h>
+
+main() {
+  char ch;
+
+  printf("Enter a character\\n");
+  scanf("%c", & ch);
+  if (isalpha(ch))
+    printf("\\n%c is an Alphabet", ch);
+  else if (isdigit(ch))
+    printf("\\n%c is a Digit", ch);
+  else
+    printf("It is a special character\\n");
+
+}
+`,
+
+`#include<stdio.h>
+
+#include<ctype.h>
+
+main() {
+  char ch;
+  if (isalpha(ch))
+    printf(“the enterd character is an alphabet”);
+  if (isdigit(ch))
+    printf(“the enterd character is a digit”);
+  if (ispunct(ch))
+    printf(“the enterd character is punctuation”);
+  if (isspace(ch))
+    printf(“the enterd character is whitespace character”);
+
+}
+`,
+
+`#include<stdio.h>
+
+main() {
+  int year;
+
+  printf("Enter a Year");
+  scanf("%d", & year);
+  if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    printf("\\n%d is a Leap Year", year);
+  else
+    printf("\\n%d is not a Leap Year", year);
+
+}
+`,
+
+`#include<stdio.h>
+
+main() {
+  char ch;
+
+  if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+    printf(“the entered character % c is vowel”, ch);
+  else
+    printf(“The entered character % c is consonant”, ch);
+  getch()
+}
+`,
+
+`#include<stdio.h>
+
+main() {
+  int num;
+
+  if (num == 0)
+    printf(“the number is zero”);
+  else if (num > 0)
+    printf(“the number is positive”);
+  else
+    printf(“the number is negative”);
+}
+`,
+
+`#include<stdio.h>
+
+main() {
+  int a, b, c;
+
+  printf("Enter 3 sides of a triangle");
+  scanf("%d%d%d", & a, & b, & c);
+  if (a == b && b == c && a == c)
+    printf("\\nTriangle is Equilateral Triangle");
+  else if ((a == b || a == c) || (b == a || b == c) || (c == a || c == b))
+    printf("\\nTriangle is Isosceles Triangle");
+  else
+    printf("\\nTriangle is Scalene Triangle");
 
 }
 `,
 
 `#include <stdio.h>
 
-main()
-{
-	int year;
-
-	printf("Enter a Year");
-	scanf("%d", &year);
-	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
-		printf("\\n%d is a Leap Year", year);
-	else
-		printf("\\n%d is not a Leap Year", year);
-
-}
-`,
-
-`#include <stdio.h>
-
-main()
-{
-	char ch;
-
-	if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-		printf("the entered character % c is vowel", ch);
-	else
-		printf("The entered character % c is consonant", ch);
-	getch()
-}
-`,
-
-`#include <stdio.h>
-
-main()
-{
-	int num;
-
-	if (num == 0)
-		printf("the number is zero");
-	else if (num > 0)
-		printf("the number is positive");
-	else
-		printf("the number is negative");
-}
-`,
-
-`#include <stdio.h>
-
-main()
-{
-	int a, b, c;
-
-	printf("Enter 3 sides of a triangle");
-	scanf("%d%d%d", &a, &b, &c);
-	if (a == b && b == c && a == c)
-		printf("\\nTriangle is Equilateral Triangle");
-	else if ((a == b || a == c) || (b == a || b == c) || (c == a || c == b))
-		printf("\\nTriangle is Isosceles Triangle");
-	else
-		printf("\\nTriangle is Scalene Triangle");
-
-}
-`,
-
-`#include <stdio.h>
 #include <math.h>
 
-main()
-{
-	float a, b, c;
-	float disc, root1, root2;
-	float real, imag;
+main() {
+  float a, b, c;
+  float disc, root1, root2;
+  float real, imag;
 
-	printf("\\n Enter the Coefficients of the Equation : ax2+bx+c=O ? : ");
-	scanf("%f%f%f", &a, &b, &c);
-	if (a == 0 || b == 0 || c == 0) /*Check for non-zero coefficients */
-		printf("\\n\\n Error: Coefficients value must be Non-Zero...");
-	else
-	{
-		disc = b *b - 4 *a * c;
-		if (disc < 0)
-		{ /*Case: imaginary roots */
-			printf("\\n\\n Roots are Imaginary...");
-			real = -b / (2 *a);
-			imag = sqrt(fabs(disc)) / (2 *a);
-			printf("\\n\\n Complex Root1 = %7.4f +i %7.4f", real, imag);
-			printf("\\n Complex Root2 = %7.4f -i %7.4f", real, imag);
-		}
-		else if (disc == 0)
-		{ /*Case: real and identical roots */
-			printf("\\n\\n Roots are Real &Identical...");
-			root1 = -b / (2 *a);
-			root2 = root1;
-			printf("\\n\\n Root1 = %7.4f", root1);
-			printf("\\n Root2 = %7.4f", root2);
-		}
-		else
-		{ /*Case: real and distinct roots */
-			printf("\\n\\n Roots are Real &Distinct...");
-			root1 = (-b + sqrt(disc)) / (2 *a);
-			root2 = (-b - sqrt(disc)) / (2 *a);
-			printf("\\n\\n Root1 = %7.4f", root1);
-			printf("\\n Root2 = %7.4f", root2);
-		}
-	}
-}
-`,
-
-`#include <stdio.h>
-#include <stdlib.h>
-
-main()
-{
-	long int m1 = 0, m2 = 0, m3 = 0, m4 = 0, m5 = 0, m6 = 0;
-	long int perce = 0;
-
-	printf("Enter the marks for 6 subjects");
-	scanf("%ld%ld%ld%ld%ld%ld", &m1, &m2, &m3, &m4, &m5, &m6);
-	perce = ((m1 + m2 + m3 + m4 + m5 + m6) *100 / 600);
-	if ((m1 < 50) || (m2 < 50) || (m3 < 50) || (m4 < 50) || (m5 < 50) || (m6 < 50))
-	{
-		printf("Fail");
-
-		exit(0);
-	}
-
-	printf("\\nPercentage : %ld\\n", perce);
-	if (perce >= 90)
-		printf("\\n S grade");
-	else if (perce >= 80)
-		printf("\\n A grade");
-	else if (perce >= 70)
-		printf("\\n B grade");
-	else if (perce >= 60)
-		printf("\\n C grade");
-	else if (perce >= 50)
-		printf("\\n D grade");
-	else
-		printf("\\n Fail");
+  printf("\\n Enter the Coefficients of the Equation : ax2+bx+c=O ? : ");
+  scanf("%f%f%f", & a, & b, & c);
+  if (a == 0 || b == 0 || c == 0) /* Check for non-zero coefficients */
+    printf("\\n\\n Error: Coefficients value must be Non-Zero...");
+  else {
+    disc = b * b - 4 * a * c;
+    if (disc < 0) {
+      /* Case: imaginary roots */
+      printf("\\n\\n Roots are Imaginary...");
+      real = -b / (2 * a);
+      imag = sqrt(fabs(disc)) / (2 * a);
+      printf("\\n\\n Complex Root1 = %7.4f +i %7.4f", real, imag);
+      printf("\\n Complex Root2 = %7.4f -i %7.4f", real, imag);
+    } else if (disc == 0) {
+      /* Case: real and identical roots */
+      printf("\\n\\n Roots are Real & Identical...");
+      root1 = -b / (2 * a);
+      root2 = root1;
+      printf("\\n\\n Root1 = %7.4f", root1);
+      printf("\\n Root2 = %7.4f", root2);
+    } else {
+      /* Case: real and distinct roots */
+      printf("\\n\\n Roots are Real & Distinct...");
+      root1 = (-b + sqrt(disc)) / (2 * a);
+      root2 = (-b - sqrt(disc)) / (2 * a);
+      printf("\\n\\n Root1 = %7.4f", root1);
+      printf("\\n Root2 = %7.4f", root2);
+    }
+  }
 
 }
 `,
-`#include <stdio.h>
+`#include<stdio.h>
 
-main()
-{
-	int a, b, c;
+#include<stdlib.h>
 
-	printf("Enter 3 numbers");
-	scanf("%d%d%d", &a, &b, &c);
-	if (a > b)
-	{
-		if (a > c)
-			printf("\\n%d is largest", a);
-		else
-			printf("\\n%d is largest", c);
-	}
-	else
-	{
-		if (b > c)
-			printf("\\n%d is largest", b);
-		else
-			printf("\\n%d is largest", c);
-	}
+main() {
+  long int m1 = 0, m2 = 0, m3 = 0, m4 = 0, m5 = 0, m6 = 0;
+  long int perce = 0;
+
+  printf("Enter the marks for 6 subjects");
+  scanf("%ld%ld%ld%ld%ld%ld", & m1, & m2, & m3, & m4, & m5, & m6);
+  perce = ((m1 + m2 + m3 + m4 + m5 + m6) * 100 / 600);
+  if ((m1 < 50) || (m2 < 50) || (m3 < 50) || (m4 < 50) || (m5 < 50) || (m6 < 50)) {
+    printf("Fail");
+
+    exit(0);
+  }
+  printf("\\nPercentage : %ld\\n", perce);
+  if (perce >= 90)
+    printf("\\n S grade");
+  else if (perce >= 80)
+    printf("\\n A grade");
+  else if (perce >= 70)
+    printf("\\n B grade");
+  else if (perce >= 60)
+    printf("\\n C grade");
+  else if (perce >= 50)
+    printf("\\n D grade");
+  else
+    printf("\\n Fail");
+
+}`,
+
+`#include<stdio.h>
+
+main() {
+  int a, b, c;
+
+  printf("Enter 3 numbers");
+  scanf("%d%d%d", & a, & b, & c);
+  if (a > b) {
+    if (a > c)
+      printf("\\n%d is largest", a);
+    else
+      printf("\\n%d is largest", c);
+  } else {
+    if (b > c)
+      printf("\\n%d is largest", b);
+    else
+      printf("\\n%d is largest", c);
+  }
+
+}`,
+
+`#include<stdio.h>
+
+#include<stdlib.h>
+
+main() {
+  float a = 0, b = 0, result = 0;
+  char opcode;
+
+  printf("Enter 2 Numbers");
+  scanf("%f%f", & a, & b);
+  fflush(stdin);
+  printf("\\nEnter + to add\\n - to subtract\\n * to multiply\\n / to divide");
+  scanf("%c", & opcode);
+  switch (opcode) {
+  case '+':
+    result = a + b;
+    printf("\\nSum of %f & %f is : %f", a, b, result);
+    break;
+  case '-':
+    result = a - b;
+    printf("\\nSubtraction of %f & %f is : %f", a, b, result);
+    break;
+  case '*':
+    result = a * b;
+    printf("\\nMultiplication of %f & %f is : %f", a, b, result);
+    break;
+  case '/':
+    if (b == 0) {
+      printf("Divide By Zero Error\\n");
+      exit(0);
+    } else {
+      result = a / b;
+      printf("\\nDivision of %f & %f is : %f", a, b, result);
+    }
+    break;
+  default:
+    printf("\\nInvalid Operator");
+  }
+
 }`,
 
 `#include <stdio.h>
-#include <stdlib.h>
 
-main()
-{
-	float a = 0, b = 0, result = 0;
-	char opcode;
-
-	printf("Enter 2 Numbers");
-	scanf("%f%f", &a, &b);
-	fflush(stdin);
-	printf("\\nEnter + to add\\n - to subtract\\n *to multiply\\n / to divide");
-	scanf("%c", &opcode);
-	switch (opcode)
-	{
-		case '+':
-			result = a + b;
-			printf("\\nSum of %f &%f is : %f", a, b, result);
-			break;
-		case '-':
-			result = a - b;
-			printf("\\nSubtraction of %f &%f is : %f", a, b, result);
-			break;
-		case '*':
-			result = a * b;
-			printf("\\nMultiplication of %f &%f is : %f", a, b, result);
-			break;
-		case '/':
-			if (b == 0)
-			{
-				printf("Divide By Zero Error\\n");
-				exit(0);
-			}
-			else
-			{
-				result = a / b;
-				printf("\\nDivision of %f &%f is : %f", a, b, result);
-			}
-
-			break;
-		default:
-			printf("\\nInvalid Operator");
-	}
-}`,
-
-`#include <stdio.h>
 #include <math.h>
+
 #include <.h>
 
-main()
-{
-	float a, b, c;
-	float disc, root1, root2;
-	float real, imag;
-	int ch = 0;
+main() {
+  float a, b, c;
+  float disc, root1, root2;
+  float real, imag;
+  int ch = 0;
 
-	printf("\\n Enter the Coefficients of the Equation : ax2+bx+c=O ? : ");
-	scanf("%f%f%f", &a, &b, &c);
-	if (a == 0 || b == 0 || c == 0) /*Check for non-zero coefficients */
-		printf("\\n\\n Error: Coefficients value must be Non-Zero...");
-	else
-	{
-		disc = b *b - 4 *a * c;
-		if (disc < 0)
-			ch = 1;
-		else if (disc == 0)
-			ch = 2;
-		else
-			ch = 3;
-		switch (ch)
-		{
-			case 1:
-				/*Case: imaginary roots */
-				printf("\\n\\n Roots are Imaginary...");
-				real = -b / (2 *a);
-				imag = sqrt(fabs(disc)) / (2 *a);
-				printf("\\n\\n Complex Root1 = %7.4f +i %7.4f", real, imag);
-				printf("\\n Complex Root2 = %7.4f -i %7.4f", real, imag);
-				break;
-			case 2:
-				/*Case: real and identical roots */
-				printf("\\n\\n Roots are Real &Identical...");
-				root1 = -b / (2 *a);
-				root2 = root1;
-				printf("\\n\\n Root1 = %7.4f", root1);
-				printf("\\n Root2 = %7.4f", root2);
-				break;
-			case 3:
-				/*Case: real and distinct roots */
-				printf("\\n\\n Roots are Real &Distinct...");
-				root1 = (-b + sqrt(disc)) / (2 *a);
-				root2 = (-b - sqrt(disc)) / (2 *a);
-				printf("\\n\\n Root1 = %7.4f", root1);
-				printf("\\n Root2 = %7.4f", root2);
-				break;
-			default:
-				printf("Invalid Choice");
-		} /*End of Switch*/
-	}
-} /*End of main() */`,
+  printf("\\n Enter the Coefficients of the Equation : ax2+bx+c=O ? : ");
+  scanf("%f%f%f", & a, & b, & c);
+  if (a == 0 || b == 0 || c == 0) /* Check for non-zero coefficients */
+    printf("\\n\\n Error: Coefficients value must be Non-Zero...");
+  else {
+    disc = b * b - 4 * a * c;
+    if (disc < 0)
+      ch = 1;
+    else if (disc == 0)
+      ch = 2;
+    else
+      ch = 3;
+    switch (ch) {
+    case 1:
+      /* Case: imaginary roots */
+      printf("\\n\\n Roots are Imaginary...");
+      real = -b / (2 * a);
+      imag = sqrt(fabs(disc)) / (2 * a);
+      printf("\\n\\n Complex Root1 = %7.4f +i %7.4f", real, imag);
+      printf("\\n Complex Root2 = %7.4f -i %7.4f", real, imag);
+      break;
+    case 2:
+      /* Case: real and identical roots */
+      printf("\\n\\n Roots are Real & Identical...");
+      root1 = -b / (2 * a);
+      root2 = root1;
+      printf("\\n\\n Root1 = %7.4f", root1);
+      printf("\\n Root2 = %7.4f", root2);
+      break;
+    case 3:
+      /* Case: real and distinct roots */
+      printf("\\n\\n Roots are Real & Distinct...");
+      root1 = (-b + sqrt(disc)) / (2 * a);
+      root2 = (-b - sqrt(disc)) / (2 * a);
+      printf("\\n\\n Root1 = %7.4f", root1);
+      printf("\\n Root2 = %7.4f", root2);
+      break;
+    default:
+      printf("Invalid Choice");
+    } /*End of Switch*/
+  }
 
-`#include <stdio.h>
+} /* End of main( ) */`,
 
-main()
-{
-	char ch;
+`#include<stdio.h>
 
-	printf("Enter the alphabet\\n");
-	ch = getchar();
-	switch (ch)
-	{
-		case 'a':
-		case 'e':
-		case 'i':
-		case 'o':
-		case 'u':
-		case 'A':
-		case 'E':
-		case 'I':
-		case 'O':
-		case 'U':
-			printf("Alphatbet is vowel");
-			break;
-		default:
-			printf("Alphabet is consonant");
-	}
+main() {
+  char ch;
+
+  printf("Enter the alphabet\\n");
+  ch = getchar();
+  switch (ch) {
+  case 'a':
+  case 'e':
+  case 'i':
+  case 'o':
+  case 'u':
+  case 'A':
+  case 'E':
+  case 'I':
+  case 'O':
+  case 'U':
+    printf("Alphatbet is vowel");
+    break;
+  default:
+    printf("Alphabet is consonant");
+  }
+
 }`,
 
-`#include <stdio.h>
+`#include<stdio.h>
+
 #define PI 3.147
-main()
-{
-	float radius = 0, length = 0, breadth = 0;
-	float base = 0, height = 0, area = 0;
-	int choice = 0;
+main() {
+  float radius = 0, length = 0, breadth = 0;
+  float base = 0, height = 0, area = 0;
+  int choice = 0;
 
-	printf("Enter \\n1 to find area of triangle\\n2 to find area of Square");
-	printf("\\n3 to find area of circle\\n4 to find area of rectangle\\n");
-	scanf("%d", &choice);
-	switch (choice)
-	{
-		case 1:
-			printf("\\nEnter base &height of a triangle");
-			scanf("%f%f", &base, &height);
-			area = (1.0 / 2) *base * height;
-			printf("\\nArea of Triangle : %f", area);
-			break;
-		case 2:
-			printf("\\nEnter length of a Square");
-			scanf("%f", &length);
-			area = length * length;
-			printf("\\nArea of Square : %f", area);
-			break;
-		case 3:
-			printf("\\nEnter the radius of a Circle");
-			scanf("%f", &radius);
-			area = PI *radius * radius;
-			printf("\\nArea of Circle : %f", area);
-			break;
-		case 4:
-			printf("\\nEnter the length &breadth of a Rectangle");
-			scanf("%f%f", &length, &breadth);
-			area = length * breadth;
-			printf("\\nArea of Rectangle : %f", area);
-			break;
-		default:
-			printf("\\nInvalid Choice");
-	}
-}`,
-
-`#include <stdio.h>
-
-main()
-{
-	int a, b, c, d, e, f, total, per = 0, ch;
-
-	printf("Enter the marks in 6 subjects\\n");
-	scanf("%d%d%d%d%d%d", &a, &b, &c, &d, &e, &f);
-	if ((a < 40) || (b < 40) || (c < 40) || (d < 40) || (e < 40) || (f < 40))
-		printf("Grade is F");
-	else
-	{
-		total = a + b + c + d + e + f;
-		per = total / 6;
-		printf("total = %d\\n", total);
-		printf("per=%d\\n", per);
-		ch = per / 10;
-		switch (ch)
-		{
-			case 10:
-			case 9:
-			case 8:
-				printf("Grade is S");
-				break;
-			case 7:
-				printf("Grade is A");
-				break;
-			case 6:
-				printf("Grade is B");
-				break;
-			case 5:
-				printf("Grade is C");
-				break;
-			case 4:
-				printf("Grade is D");
-				break;
-			default:
-				printf("Invalid marks");
-		}
-	}
-}`,
-
-`#include <math.h>
-#include <stdio.h>
-
-main()
-{
-	int x, y;
-	int count;
-
-	count = 1;
-	printf("Enter Five Real values in a line\\n");
-	read:
-		scanf("%d", &x);
-	if (x < 0)
-	{
-		printf("Entered Value is negative\\n");
-		goto negative;	//forward jump
-	}
-	else
-	{
-		y = sqrt(x);
-		printf("x=%d\tsqrt(x)=%d\\n", x, y);
-	}
-
-	negative:
-		count = count + 1;
-	if (count <= 5)
-		goto read;	// backward jump
-	printf("\\n End of computation\\n");
+  printf("Enter \\n1 to find area of triangle\n2 to find area of Square");
+  printf("\\n3 to find area of circle\n4 to find area of rectangle\n");
+  scanf("%d", & choice);
+  switch (choice) {
+  case 1:
+    printf("\\nEnter base & height of a triangle");
+    scanf("%f%f", & base, & height);
+    area = (1.0 / 2) * base * height;
+    printf("\\nArea of Triangle : %f", area);
+    break;
+  case 2:
+    printf("\\nEnter length of a Square");
+    scanf("%f", & length);
+    area = length * length;
+    printf("\\nArea of Square : %f", area);
+    break;
+  case 3:
+    printf("\\nEnter the radius of a Circle");
+    scanf("%f", & radius);
+    area = PI * radius * radius;
+    printf("\\nArea of Circle : %f", area);
+    break;
+  case 4:
+    printf("\\nEnter the length & breadth of a Rectangle");
+    scanf("%f%f", & length, & breadth);
+    area = length * breadth;
+    printf("\\nArea of Rectangle : %f", area);
+    break;
+  default:
+    printf("\\nInvalid Choice");
+  }
 
 }`,
 
-`#include <stdio.h>
+`#include<stdio.h>
 
-main()
-{
-	int N = 0;
-	int i = 0;
-	long int fact = 1;
 
-	printf("Enter a Number\\n");
-	scanf("%d", &N);
-	i = N;
-	if (N == 0)
-	{
-		printf("\\nFactorial of %d is : 1", N);
+main() {
+  int a, b, c, d, e, f, total, per = 0, ch;
 
-		exit(0);
-	}
-	else
-	{
-		for (i = N; i >= 1; i--)
-			fact = fact * i;
-		printf("\\nFactorial of %d is : %ld", N, fact);
-	}
-}`,
-
-`#include <stdio.h>
-
-main()
-{
-	int i, sum = 0, n;
-	printf("Enter the numbers");
-	scanf(" % d", &n);
-	for (i = 0; i < n; i++)
-		sum += i;
-	printf("the sum of 1 st n natural no' s is % d", sum);
-}`,
-
-`#include <stdio.h>
-
-main()
-{
-	int n, i, OSum = 0, ESum = 0;
-
-	printf("Enter the value of N\\n");
-	scanf("%d", &n);
-	for (i = 0; i <= n; i++)
-	{
-		if (i % 2 == 0)
-			ESum = ESum + i;
-		else
-			OSum = OSum + i;
-	}
-
-	printf("\\nSum of Even Numbers from 1 to %d is : %d", n, ESum);
-	printf("\\nSum of Odd Numbers from 1 to %d is : %d", n, OSum);
+  printf("Enter the marks in 6 subjects\\n");
+  scanf("%d%d%d%d%d%d", & a, & b, & c, & d, & e, & f);
+  if ((a < 40) || (b < 40) || (c < 40) || (d < 40) || (e < 40) || (f < 40))
+    printf("Grade is F");
+  else {
+    total = a + b + c + d + e + f;
+    per = total / 6;
+    printf("total = %d\\n", total);
+    printf("per=%d\\n", per);
+    ch = per / 10;
+    switch (ch) {
+    case 10:
+    case 9:
+    case 8:
+      printf("Grade is S");
+      break;
+    case 7:
+      printf("Grade is A");
+      break;
+    case 6:
+      printf("Grade is B");
+      break;
+    case 5:
+      printf("Grade is C");
+      break;
+    case 4:
+      printf("Grade is D");
+      break;
+    default:
+      printf("Invalid marks");
+    }
+  }
 
 }`,
 
-`#include <stdio.h>
+`#include<math.h>
 
-int main()
-{
-	int n, I;
-	printf("enter a positive integer");
-	scanf(" % d", &n);
-	printf("Factors of % d are: ", n);
-	for (i = 1; i <= n; i++)
-	{
-		if (n % i == 0)
-			printf(" % d", i);
-	}
+#include<stdio.h>
 
-	return 0;
-}`,
+main() {
+  int x, y;
+  int count;
 
-`#include <stdio.h>
+  count = 1;
+  printf("Enter Five Real values in a line\\n");
+  read:
+    scanf("%d", & x);
+  if (x < 0) {
+    printf(“Entered Value is negative\ n”);
+    goto negative; //forward jump
+  } else {
+    y = sqrt(x);
+    printf("x=%d\\tsqrt(x)=%d\\n", x, y);
+  }
+  negative:
+    count = count + 1;
+  if (count <= 5)
+    goto read; // backward jump
+  printf("\\n End of computation\\n");
 
-main()
-{
-	int a = 0, b = 0, rem = 0, lcm = 0;
-	int temp1 = 0, temp2 = 0;
+}
+`,
 
-	printf("Enter 2 numbers\\n");
-	scanf("%d%d", &a, &b);
-	temp1 = a;
-	temp2 = b;
-	do {
-		rem = a % b;
-		a = b;
-		b = rem;
-	} while (rem);
-	printf("\\nGCD of %d and %d is : %d", temp1, temp2, a);
-	lcm = (temp1 *temp2) / a;
-	printf("\\nLCM of %d and %d is : %d", temp1, temp2, lcm);
+`#include<stdio.h>
 
-}`,
+main() {
+  int N = 0;
+  int i = 0;
+  long int fact = 1;
 
-`#include <stdio.h>
+  printf("Enter a Number\\n");
+  scanf("%d", & N);
+  i = N;
+  if (N == 0) {
+    printf("\\nFactorial of %d is : 1", N);
 
-main()
-{
-	int i = 0, n = 0;
-	int a = 0, b = 1, fib = 0;
-
-	printf("Enter a Number\\n");
-	scanf("%d", &n);
-	if (n <= 0)
-	{
-		printf("\\nInvalid Input");
-		exit(0);
-	}
-
-	printf("\\nFibonacci Series :\\n\\n");
-	if (n == 1)
-		printf("%d\t", a);
-	else if (n >= 2)
-	{
-		printf("%d\t", a);
-		printf("%d\t", b);
-		for (i = 0; i < n - 2; i++)
-		{
-			fib = a + b;
-			printf("%d\t", fib);
-			a = b;
-			b = fib;
-		}
-	}
-
-	printf("\\n\\nFibanocci Series Ends");
+    exit(0);
+  } else {
+    for (i = N; i >= 1; i--)
+      fact = fact * i;
+    printf("\\nFactorial of %d is : %ld", N, fact);
+  }
 
 }`,
 
-`#include <stdio.h>
+`#include<stdio.h>
 
-main()
-{
-	int rem = 0, temp = 0;
-	int num1 = 0, num2 = 0;
 
-	printf("Enter 4-Digit Number\\n");
-	scanf("%d", &num1);
-	temp = num1;
-	while (temp)
-	{
-		rem = temp % 10;
-		num2 = (num2 *10) + rem;
-		temp = temp / 10;
-	}
+main() {
+  int i, sum = 0, n;
+  printf(“Enter the numbers”);
+  scanf(“ % d”, & n);
+  for (i = 0; i < n; i++)
+    sum += i;
+  printf(“the sum of 1 st n natural no' s is % d”, sum);
+}`,
 
-	if (num1 == num2)
-		printf("\\n%d is a Palindrome Number", num1);
-	else
-		printf("\\n%d is not a Palindrome Number", num1);
+`#include<stdio.h>
+
+main() {
+  int n, i, OSum = 0, ESum = 0;
+
+  printf("Enter the value of N\\n");
+  scanf("%d", & n);
+  for (i = 0; i <= n; i++) {
+    if (i % 2 == 0)
+      ESum = ESum + i;
+    else
+      OSum = OSum + i;
+  }
+  printf("\\nSum of Even Numbers from 1 to %d is : %d", n, ESum);
+  printf("\\nSum of Odd Numbers from 1 to %d is : %d", n, OSum);
 
 }`,
 
-`#include <stdio.h>
+`#include<stdio.h>
 
-main()
-{
-	int i = 0, n = 0;
-	int sum = 0, rev = 0;
+int main() {
+  int n, I;
+  printf(“enter a positive integer”);
+  scanf(“ % d”, & n);
+  printf(“Factors of % d are: “, n);
+  for (i = 1; i <= n; i++) {
+    if (n % i == 0)
+      printf(“ % d”, i);
+  }
+  return 0;
+}`,
 
-	printf("Enter a Number\\n");
-	scanf("%d", &n);
-	i = n;
-	do {
-		sum = sum + (i % 10);
-		rev = (rev *10) + (i % 10);
-		i = i / 10;
-	} while (i > 0);
-	printf("\\nSum of digits of the number %d is : %d", n, sum);
-	printf("\\n reverse of the number %d is : %d", n, rev);
+`#include<stdio.h>
+
+main() {
+  int a = 0, b = 0, rem = 0, lcm = 0;
+  int temp1 = 0, temp2 = 0;
+
+  printf("Enter 2 numbers\\n");
+  scanf("%d%d", & a, & b);
+  temp1 = a;
+  temp2 = b;
+  do {
+    rem = a % b;
+    a = b;
+    b = rem;
+  } while (rem);
+  printf("\\nGCD of %d and %d is : %d", temp1, temp2, a);
+  lcm = (temp1 * temp2) / a;
+  printf("\\nLCM of %d and %d is : %d", temp1, temp2, lcm);
+
+}`,
+
+`#include<stdio.h>
+
+main() {
+  int i = 0, n = 0;
+  int a = 0, b = 1, fib = 0;
+
+  printf("Enter a Number\\n");
+  scanf("%d", & n);
+  if (n <= 0) {
+    printf("\\nInvalid Input");
+    exit(0);
+  }
+  printf("\\nFibonacci Series :\\n\\n");
+  if (n == 1)
+    printf("%d\\t", a);
+  else if (n >= 2) {
+    printf("%d\\t", a);
+    printf("%d\\t", b);
+    for (i = 0; i < n - 2; i++) {
+      fib = a + b;
+      printf("%d\\t", fib);
+      a = b;
+      b = fib;
+    }
+  }
+  printf("\\n\\nFibanocci Series Ends");
+
+}`,
+
+`#include<stdio.h>
+
+main() {
+  int rem = 0, temp = 0;
+  int num1 = 0, num2 = 0;
+
+  printf("Enter 4-Digit Number\\n");
+  scanf("%d", & num1);
+  temp = num1;
+  while (temp) {
+    rem = temp % 10;
+    num2 = (num2 * 10) + rem;
+    temp = temp / 10;
+  }
+  if (num1 == num2)
+    printf("\\n%d is a Palindrome Number", num1);
+  else
+    printf("\\n%d is not a Palindrome Number", num1);
 
 }`,
 
