@@ -9,18 +9,27 @@ import styles from './topbar.module.css'
 function TopBar(props){
 
     const [tag, setTag] = useState(null);
-    const [dsquestions, setQuestions] = useState(DSQuestions);
-    const [focquestions] = useState(FocQuestions);
+    const [dsquestions, setDSQuestions] = useState(DSQuestions);
+    const [focquestions, setFOCQuestions] = useState(FocQuestions);
 
     const addTag = (newTag) => {
         setTag(newTag);
-        let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
-        setQuestions(temp);
+        if(props.name === "Data Structures"){
+            let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+            setDSQuestions(temp);
+        }
+        else{
+            let temp = FocQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+            setFOCQuestions(temp);
+        }
     }
 
     const removeTag = () => {
         setTag(null);
-        setQuestions(DSQuestions);
+        if(props.name === "Data Structures")
+            setDSQuestions(DSQuestions);
+        else
+            setFOCQuestions(FocQuestions);
     }
 
     return(<div className={styles.page}>
