@@ -86,7 +86,6 @@ main()
 	a = b;
 	b = temp;
 	printf("After swapping a is %d, b is %d", a, b);
-
 }`,
 
 `#include <stdio.h>

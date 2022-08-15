@@ -97,7 +97,7 @@ To find out if a given number num is  even or odd, a conditional operator can be
     {
         id: 10,
         value: `Write a C program to check whether the triangle is isosceles, equilateral or scalene using if-else and conditional operator.`,
-        PreReq: ["Queue", "Array"],
+        PreReq: ["FlowControl"],
         Objective: `
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.
 The condition is before the question mark, the true block is after the question mark and the false block is after the colon.
@@ -109,13 +109,13 @@ To check if the triangle is isosceles, equilateral or scalene, different conditi
     {
         id: 11,
         value: `Write a C program to check whether entered lowercase character is vowel or not using logical || and conditional operator..`,
-        PreReq: ["Array", "Stack"],
+        PreReq: ["FlowControl"],
         Objective: `
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.
 The condition is before the question mark, the true block is after the question mark and the false block is after the colon.
 Logical OR ( || ) operator return true if any one of the conditions separated by ( || ) is true.
 In (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') , if any one condition is true, then the condition is true and " the entered character is a vowel" is printed. Otherwise " the entered character is a consonant" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/JhVfofBf3J4?rel=0&amp;showinfo=0",
         Input: "(A+B-C*(D-E)/F)-G",
         Output: "AB+CDE-*F/-G"
     },
@@ -125,8 +125,10 @@ In (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') , if any one condition is true,
         PreReq: ["Array", "Stack"],
         Objective: `
 The conditional operator (? :) is a ternary operator (it takes three operands). The ternary operator takes three operands. The first is a boolean expression; the second and third are values. If the boolean expression is true, the ternary operator returns the value of the second operand, otherwise, it returns the value of the third operand. It is very similar to using if-else.
-The condition is before the question mark, the true block is after the question mark and the false block is after the colon.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
+The condition is before the question mark, the true block is after the question mark and the false block is after the colon.
+If a year is divisible by 4 and not divisible by 100 or if a year is divisible by 400, then the year is a leap year. 
+In (num%4==0)&&(num%100!=0)||(num%400==0), if any one condition satisfies, then the entire condition is true and “The entered year is a leap year” is printed. Otherwise “The entered year is not a leap year” is printed.`,
+        YouTubeLink: "https://www.youtube.com/embed/fV5N_-8E8FI?rel=0&amp;showinfo=0",
         Input: "(A+B-C*(D-E)/F)-G",
         Output: "AB+CDE-*F/-G"
     },
@@ -139,20 +141,24 @@ The conditional operator (? :) is a ternary operator (it takes three operands). 
 The condition is before the question mark, the true block is after the question mark and the false block is after the colon. Nested conditional operators can be used for more complex conditions. 
 (a>b)?((a>c)?printf("%d is largest",a):  printf("The %d is largest",c)):((b>c)?printf("%d is largest",b):printf("%d is largest",c))
 In the expression above, a nested conditional operator is used. The first condition checked is a>b. If this condition is true, then the condition a>c is checked. If true, then a is the largest. However, if a>c is false, c is the largest. But if a>b is false, then the condition b>c is verified. If it is true, then b is largest, otherwise c is largest.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/nHJBIukSkGQ?rel=0&amp;showinfo=0",
         Input: "(A+B-C*(D-E)/F)-G",
         Output: "AB+CDE-*F/-G"
     },
     {
         id: 14,
-        value: `Write a C program to find whether an entered character is a number or digit using ASCII values and built in functions.`,
+        value: `Write a C program to find whether an entered character is a alphabet or digit using ASCII values and built in functions.`,
         PreReq: ["Array", "Stack"],
-        Objective: `than the icp of the token, the top is popped and printed. Then the incoming token is compared with the new stack top.
-    8. If the incoming operator has the higher isp then the same operation is repeated until the isp of stack top becomes less then icp of token. The token is pushed into the stack.
-    9. The control comes out of the for loop.
-    10. And at the end a while loop is executed wherein the operators in the stack are popped, and printed unless it reaches eos.
-        `,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
+        Objective: `
+ASCII (American Standard Code for Information Interchange) is the most common character encoding format for text data in computers and on the internet. In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes. ASCII value of uppercase alphabets – 65 to 90. ASCII value of lowercase alphabets – 97 to 122. ASCII value of digits [0 – 9] ranges from [48 – 57].
+To find whether the entered character is an alphabet or digit without built in functions, ASCII values can be used. Input is taken through scanf() function. The program uses a simple if-else ladder. If ((ch>='a' && ch<='z')||(ch>='A' && ch<='Z')) is true, then “it is an alphabet” is printed. Else if (ch>=48 && ch<=56) is true, the “it is a number” is printed. Else “it is a special character” is printed.
+The same task can be performed using built in functions.
+isalpha() :
+The isalpha() function checks whether a character is an alphabet or not. If a character passed to isalpha() is an alphabet, it returns a non-zero integer, if not it returns 0.
+isdigit() :
+The isdigit() function checks whether a character is a numeric character (0-9) or not. If a character passed to isdigit() is a digit, it returns a non-zero integer, if not it returns 0.
+If  (isalpha(ch)) is true, i.e., isalpha() return a non-zero integer, then the character is an alphabet, else if (isalpha(ch)) is true then the character is a digit. Otherwise the character is a special character.`,
+        YouTubeLink: "https://www.youtube.com/embed/MRpfGSc7ml4?rel=0&amp;showinfo=0",
         Input: "(A+B-C*(D-E)/F)-G",
         Output: "AB+CDE-*F/-G"
     },
@@ -161,13 +167,17 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to determine character entered by user is alphabet, digit, punctuation or whitespace using simple if statement.`,
         PreReq: ["Stack"],
         Objective: `
-        Step 1: Create a stack to store operands.
-        Step 2: Scan the given expression from left to right.
-        Complexity of postfix evaluation:
-    
-    The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
-    
-        `,
+isalpha() :
+The isalpha() function checks whether a character is an alphabet or not. If a character passed to isalpha() is an alphabet, it returns a non-zero integer, if not it returns 0.
+isdigit() :
+The isdigit() function checks whether a character is a numeric character (0-9) or not. If a character passed to isdigit() is a digit, it returns a non-zero integer, if not it returns 0.
+
+ispunct() :
+The ispunct() function checks whether a character is a punctuation mark or not. If a character passed to the ispunct() function is a punctuation, it returns a non-zero integer. If not, it returns 0.
+isspace() :
+
+The isspace() function checks whether a character is a white-space character or not. If an argument (character) passed to the isspace() function is a white-space character, it returns non-zero integer. If not, it returns 0.
+All the functions are checked using if statements and respective results are printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -177,13 +187,8 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to check whether the entered year is leap year or not using if-else statement.`,
         PreReq: ["Stack"],
         Objective: `
-        Step 1: Create a stack to store operands.
-        Step 2: Scan the given expression from left to right.
-        Complexity of postfix evaluation:
-    
-    The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
-    
-        `,
+If a year is divisible by 4 and not divisible by 100 or if a year is divisible by 400, then the year is a leap year. A program for this can be written using if-else.
+In (num%4==0)&&(num%100!=0)||(num%400==0), if any one condition satisfies, then the entire condition is true and “The entered year is a leap year” is printed. Otherwise, else condition statement “The entered year is not a leap year” is printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -193,13 +198,8 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to check whether an entered character is vowel or consonant using if-else statement.`,
         PreReq: ["Stack"],
         Objective: `
-        Step 1: Create a stack to store operands.
-        Step 2: Scan the given expression from left to right.
-        Complexity of postfix evaluation:
-    
-    The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
-    
-        `,
+This program is written using simple if else. If the condition (ch==’a’|| ch==’e’|| ch==’i’|| ch==’o’|| ch==’u’) is true, then the if block statement “ the entered character is vowel” is printed. 
+Otherwise, the else block statement “ The entered character is consonant” is printed. Input and output use functions scanf() and printf().`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -209,13 +209,7 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to check whether a given number is positive, negative or zero using if-else if statement.`,
         PreReq: ["Stack"],
         Objective: `
-        Step 1: Create a stack to store operands.
-        Step 2: Scan the given expression from left to right.
-        Complexity of postfix evaluation:
-    
-    The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
-    
-        `,
+The program can be executed using a simple if-else ladder. To find out if a given number num is positive, negative or zero, a simple if-else ladder can be used. If num==0 is true, then  “The number is zero” is printed. If not, else if condition (num >0) is checked. If it is true, then “The  number is positive” is printed. Finally, if the above two conditions are not satisfied, the else block statement “The  number is negative” is printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -225,11 +219,7 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to check whether the triangle is isosceles, equilateral or scalene using if-else if statement.`,
         PreReq: ["Stack"],
         Objective: `
-        Step 1: Create a stack to store operands.
-        Step 2: Scan the given expression from left to right.
-        Complexity of postfix evaluation:
-    
-    The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed `,
+The program can be written using an if-else ladder. To check if the triangle is isosceles, equilateral or scalene, different conditions on the length if the sides can be verified. If ((a==b)&&(b==c)), then all sides are equal, implying that it is an equilateral triangle. Similarly, else if condition (a==b||b==c||a==c ) is true, then any two sides are equal, making the triangle an isosceles triangle. Otherwise, the triangle is scalene. The scanf() and printf() functions can be used for input and output.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -238,7 +228,8 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 20,
         PreReq: ["Stack", "LinkedList"],
         value: `Write a C program to find the roots of quadratic equation using if-else if statement.`,
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective:`
+This program can be written through an if-else-if ladder. If ( a == 0 || b == 0 || c == 0) is true, then “Error: Coefficient value must be Non-Zero..." is printed. The discriminant for a quadratic equation can be calculated as disc = b * b - 4 * a * c. If (disc<0), print “Roots are Imaginary”. Then if block statements calculating imaginary roots are calculated. The imaginary roots can be calculated as    real = -b / (2 * a)  and imag = sqrt(fabs(disc)) / (2 * a). Otherwise, else if (disc==0) is true, the “Roots are Real & Identical..." is printed. Then the statements of this if block are executed to calculate real and equal roots as root1 = -b / (2 * a) and root2 = root. Lastly, if all if conditions fail, the the final else block statements are executed. “Roots are Real & Distinct..." is printed, real and distinct roots calculated as root1 = (-b + sqrt(disc)) / (2 * a) and root2 = (-b - sqrt(disc)) / (2 * a).`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -247,7 +238,9 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 21,
         PreReq: ["Stack", "LinkedList"],
         value: `Write a C program to display the examination result by grading system using else if ladder.`,
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+Percentage is calculated as perce = ((m1+m2+m3+m4+m5+m6)*100/600). If any of the subject marks is less than 40, then “Fail”  has to be printed. This is handled using the statement if( (m1<50) || (m2<50) || (m3<50) || (m4<50) || (m5<50) || (m6<50)). 
+Now, the grades can be assigned to percentage using if-else-if ladder. If (perce >= 90) is true, then “S grade” is printed. Else if (perce >= 80) is true, then "A grade" is printed. Similarly, all other grades are assigned until the final else block statements are executed and “Fail” is printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -256,7 +249,9 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 22,
         PreReq: ["Stack", "LinkedList"],
         value: `Write a C program to find the greatest of three numbers using nested if statement.`,
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+Nested If in C Programming is placing If Statement inside another IF Statement. Nested If in C is helpful if you want to check the condition inside a condition. If Else Statement prints different statements based on the expression result (TRUE, FALSE). Sometimes we have to check even further when the condition is TRUE.
+To find the greatest of three numbers using nested if, the first condition checked is if (a>b). If it is true, then the statements inside the if block are executed which contain further if-else statements. The condition if (a>c) is checked. If it is true then “a is largest” is printed. Otherwise the else block statements for the nested if are executed and “c is largest” is printed. If the condition for the outer if fails, then the else block corresponding to that if is executed. Inside this else block, there are further conditions to be checked. If (b>c) is true, then “b is greatest” is printed. Otherwise, the else block statement “c is greatest” is printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -265,7 +260,14 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 23,
         value: `Write a C program to perform a desired arithmetic operation using switch statement and declaring choice as char data type.`,
         PreReq: ["Queue", "LinkedList"],
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+The switch statement allows us to execute one code block among many alternatives.
+The expression is evaluated once and compared with the values of each case label.
+If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
+If there is no match, the default statements are executed.
+To perform desired arithmetic operation, the operators are used for case labels and checked using switch.
+If the expression entered is '+' , then it will be matched with case '+'  and statements in that block will get executed until break is encountered. Similarly, all other operations can be performed if match is found in the case labels.
+If no match is found, then default statements are executed and “Invalid Operation” is printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -274,7 +276,12 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 24,
         value: `Write a C program to find roots of a quadratic equation using switch statement.`,
         PreReq: ["Queue", "LinkedList"],
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+The switch statement allows us to execute one code block among many alternatives.
+The expression is evaluated once and compared with the values of each case label.
+If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
+If there is no match, the default statements are executed.
+To calculate roots of a quadratic equation, the value of the discriminant is used. A variable ch is checked using switch statements. If the discriminant is less than 0, then ch=1, which will match with case 1 , and imaginary roots will be calculated.  If the discriminant is equal to 0, then ch=2, which will match with case 2 , and real, equal roots will be calculated. Finally if the discriminant is greater than 0, then ch=3, which will match with case 3, and real, distinct roots will be calculated. If no case label matches with the condition, then the default statements will be executed and “Invalid Choice” will be printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -283,7 +290,12 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 25,
         value: `Write a C program to find whether given alphabet is vowel or consonant using switch.`,
         PreReq: ["Queue", "LinkedList"],
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+The switch statement allows us to execute one code block among many alternatives.
+The expression is evaluated once and compared with the values of each case label.
+If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
+If there is no match, the default statements are executed.
+The case label can be uppercase and lowercase vowels. If the expression in switch matches any case label, it can be identified as a vowel. Otherwise, the default statements can identify the expression as a consonant. For example, switch(ch) is being evaluated, where ch=’a’, then it matches with case ‘a’. If ch=’z’, then default statements is executed and “Consonant” will be printed.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -292,7 +304,12 @@ In the expression above, a nested conditional operator is used. The first condit
         id: 26,
         value: `Write a C program to find area of a triangle/square/circle/rectangle using switch statement.`,
         PreReq: ["Queue", "LinkedList"],
-        Objective: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        Objective: `
+The switch statement allows us to execute one code block among many alternatives.
+The expression is evaluated once and compared with the values of each case label.
+If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
+If there is no match, the default statements are executed.
+To calculate the area of a triangle/square/circle/rectangle using switch statement, the condition matched using switch will be the choice of shape whose area has to be calculated. If switch(choice) is being executed, when choice=1, it will be matched with case 1, which has code for calculating the area of the triangle. Similarly, based on the value of choice, which matches with respective cases, area of different shapes can be calculated.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
@@ -302,11 +319,13 @@ In the expression above, a nested conditional operator is used. The first condit
         value: `Write a C program to find grade of a student using switch statement.`,
         PreReq: ["LinkedList"],
         Objective: ` 
-    1. Create two circular linked lists, where each node will consist of the coefficient, power of  x and pointer to the next node.
-    2. Traverse both the polynomials and check the following conditions:
-          If the power of x of 1st polynomial is greater than power of x of second polynomial then store node of first polynomial in resultant polynomial and 
-          increase counter of polynomial 1.
-       `,
+The switch statement allows us to execute one code block among many alternatives.
+The expression is evaluated once and compared with the values of each case label.
+If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
+If there is no match, the default statements are executed.
+After taking inputs for all the subjects, check if any of the given marks is less than 40 then it is printed as grade ‘F’. Then else block statement which implies that all the marks entered are above 40 is executed and c total sum of marks entered is calculated. To calculate the percentage of the given marks, divide total marks by 6.
+The switch statement runs over a single digit which is obtained by dividing the percentage obtained by 10.
+In the subsequent cases valid grades are to be written.`,
         YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"

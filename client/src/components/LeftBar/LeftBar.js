@@ -11,9 +11,15 @@ function LeftBar(props) {
     const [dsquestions, setQuestions] = useState(DSQuestions);
     const [focquestions] = useState(FocQuestions);
 
-    const addTag = (newTag) => {
+    const addTag1 = (newTag) => {
         setTag(newTag);
         let temp = DSQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
+        setQuestions(temp);
+    }
+
+    const addTag2 = (newTag) => {
+        setTag(newTag);
+        let temp = FocQuestions.filter(item => item.PreReq.includes(newTag.replace(/\s+/g, '')));
         setQuestions(temp);
     }
 
@@ -26,13 +32,21 @@ function LeftBar(props) {
         <div className={styles.page}>
             <div className={styles.container}>
                 <strong>{props.name}</strong>
+                {(props.name === "Data Structures") ?
                 <div className={styles.filterContainer}>
                     {props.arr.map((title) => (
-                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag} removeTag={removeTag} />
+                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag1} removeTag={removeTag} />
                     ))}
                 </div>
+                :
+                   <div className={styles.filterContainer}>
+                    {props.arr.map((title) => (
+                        <LeftBarItem key={title} name={title} tag={tag} addTag={addTag1} removeTag={removeTag} />
+                    ))}
+                </div>}
             </div>
            { (props.name === "Data Structures") ?
+           <div>
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
                     <Link to={`/datastructure/${tag.replace(/\s+/g, '')}`} style={{ all: 'unset' }}>
@@ -53,6 +67,7 @@ function LeftBar(props) {
                     </Link>
                 ))
                 }
+            </div>
             </div>:
             <div className={styles.qContainer}>
                 {tag && <div className={styles.dsPage}>
