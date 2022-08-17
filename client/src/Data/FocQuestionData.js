@@ -178,7 +178,7 @@ isspace() :
 
 The isspace() function checks whether a character is a white-space character or not. If an argument (character) passed to the isspace() function is a white-space character, it returns non-zero integer. If not, it returns 0.
 All the functions are checked using if statements and respective results are printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/hPi0HlulQSo?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -189,7 +189,7 @@ All the functions are checked using if statements and respective results are pri
         Objective: `
 If a year is divisible by 4 and not divisible by 100 or if a year is divisible by 400, then the year is a leap year. A program for this can be written using if-else.
 In (num%4==0)&&(num%100!=0)||(num%400==0), if any one condition satisfies, then the entire condition is true and "The entered year is a leap year" is printed. Otherwise, else condition statement "The entered year is not a leap year" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/hPi0HlulQSo?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -200,7 +200,7 @@ In (num%4==0)&&(num%100!=0)||(num%400==0), if any one condition satisfies, then 
         Objective: `
 This program is written using simple if else. If the condition (ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u') is true, then the if block statement " the entered character is vowel" is printed. 
 Otherwise, the else block statement " The entered character is consonant" is printed. Input and output use functions scanf() and printf().`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/wbkqc7LBcTs?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -210,7 +210,7 @@ Otherwise, the else block statement " The entered character is consonant" is pri
         PreReq: ["FlowControl"],
         Objective: `
 The program can be executed using a simple if-else ladder. To find out if a given number num is positive, negative or zero, a simple if-else ladder can be used. If num==0 is true, then  "The number is zero" is printed. If not, else if condition (num >0) is checked. If it is true, then "The  number is positive" is printed. Finally, if the above two conditions are not satisfied, the else block statement "The  number is negative" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/lnR0HzLZmGM?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -220,7 +220,7 @@ The program can be executed using a simple if-else ladder. To find out if a give
         PreReq: ["FlowControl"],
         Objective: `
 The program can be written using an if-else ladder. To check if the triangle is isosceles, equilateral or scalene, different conditions on the length if the sides can be verified. If ((a==b)&&(b==c)), then all sides are equal, implying that it is an equilateral triangle. Similarly, else if condition (a==b||b==c||a==c ) is true, then any two sides are equal, making the triangle an isosceles triangle. Otherwise, the triangle is scalene. The scanf() and printf() functions can be used for input and output.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/28LoYWI2C4A?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -230,7 +230,7 @@ The program can be written using an if-else ladder. To check if the triangle is 
         value: `Write a C program to find the roots of quadratic equation using if-else if statement.`,
         Objective:`
 This program can be written through an if-else-if ladder. If ( a == 0 || b == 0 || c == 0) is true, then "Error: Coefficient value must be Non-Zero..." is printed. The discriminant for a quadratic equation can be calculated as disc = b * b - 4 * a * c. If (disc<0), print "Roots are Imaginary". Then if block statements calculating imaginary roots are calculated. The imaginary roots can be calculated as    real = -b / (2 * a)  and imag = sqrt(fabs(disc)) / (2 * a). Otherwise, else if (disc==0) is true, the "Roots are Real & Identical..." is printed. Then the statements of this if block are executed to calculate real and equal roots as root1 = -b / (2 * a) and root2 = root. Lastly, if all if conditions fail, the the final else block statements are executed. "Roots are Real & Distinct..." is printed, real and distinct roots calculated as root1 = (-b + sqrt(disc)) / (2 * a) and root2 = (-b - sqrt(disc)) / (2 * a).`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/yzplt3uOtWo?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -241,7 +241,7 @@ This program can be written through an if-else-if ladder. If ( a == 0 || b == 0 
         Objective: `
 Percentage is calculated as perce = ((m1+m2+m3+m4+m5+m6)*100/600). If any of the subject marks is less than 40, then "Fail"  has to be printed. This is handled using the statement if( (m1<50) || (m2<50) || (m3<50) || (m4<50) || (m5<50) || (m6<50)). 
 Now, the grades can be assigned to percentage using if-else-if ladder. If (perce >= 90) is true, then "S grade" is printed. Else if (perce >= 80) is true, then "A grade" is printed. Similarly, all other grades are assigned until the final else block statements are executed and "Fail" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/18GU5qn6-V0?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -252,7 +252,7 @@ Now, the grades can be assigned to percentage using if-else-if ladder. If (perce
         Objective: `
 Nested If in C Programming is placing If Statement inside another IF Statement. Nested If in C is helpful if you want to check the condition inside a condition. If Else Statement prints different statements based on the expression result (TRUE, FALSE). Sometimes we have to check even further when the condition is TRUE.
 To find the greatest of three numbers using nested if, the first condition checked is if (a>b). If it is true, then the statements inside the if block are executed which contain further if-else statements. The condition if (a>c) is checked. If it is true then "a is largest" is printed. Otherwise the else block statements for the nested if are executed and "c is largest" is printed. If the condition for the outer if fails, then the else block corresponding to that if is executed. Inside this else block, there are further conditions to be checked. If (b>c) is true, then "b is greatest" is printed. Otherwise, the else block statement "c is greatest" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/WOh8QqA37aY?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -268,7 +268,7 @@ If there is no match, the default statements are executed.
 To perform desired arithmetic operation, the operators are used for case labels and checked using switch.
 If the expression entered is '+' , then it will be matched with case '+'  and statements in that block will get executed until break is encountered. Similarly, all other operations can be performed if match is found in the case labels.
 If no match is found, then default statements are executed and "Invalid Operation" is printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/l1aT0Y1_6ko?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -282,7 +282,7 @@ The expression is evaluated once and compared with the values of each case label
 If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
 If there is no match, the default statements are executed.
 To calculate roots of a quadratic equation, the value of the discriminant is used. A variable ch is checked using switch statements. If the discriminant is less than 0, then ch=1, which will match with case 1 , and imaginary roots will be calculated.  If the discriminant is equal to 0, then ch=2, which will match with case 2 , and real, equal roots will be calculated. Finally if the discriminant is greater than 0, then ch=3, which will match with case 3, and real, distinct roots will be calculated. If no case label matches with the condition, then the default statements will be executed and "Invalid Choice" will be printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/i61H3W1H268?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -296,7 +296,7 @@ The expression is evaluated once and compared with the values of each case label
 If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
 If there is no match, the default statements are executed.
 The case label can be uppercase and lowercase vowels. If the expression in switch matches any case label, it can be identified as a vowel. Otherwise, the default statements can identify the expression as a consonant. For example, switch(ch) is being evaluated, where ch='a', then it matches with case 'a'. If ch='z', then default statements is executed and "Consonant" will be printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/WIWLqT7_z04?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -310,7 +310,7 @@ The expression is evaluated once and compared with the values of each case label
 If there is a match, the corresponding statements after the matching label are executed. For example, if the value of the expression is equal to constant2, statements after case constant2: are executed until break is encountered.
 If there is no match, the default statements are executed.
 To calculate the area of a triangle/square/circle/rectangle using switch statement, the condition matched using switch will be the choice of shape whose area has to be calculated. If switch(choice) is being executed, when choice=1, it will be matched with case 1, which has code for calculating the area of the triangle. Similarly, based on the value of choice, which matches with respective cases, area of different shapes can be calculated.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/sCrm2h499c8?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -326,7 +326,7 @@ If there is no match, the default statements are executed.
 After taking inputs for all the subjects, check if any of the given marks is less than 40 then it is printed as grade 'F'. Then else block statement which implies that all the marks entered are above 40 is executed and c total sum of marks entered is calculated. To calculate the percentage of the given marks, divide total marks by 6.
 The switch statement runs over a single digit which is obtained by dividing the percentage obtained by 10.
 In the subsequent cases valid grades are to be written.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/is6UA630YhY?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -347,7 +347,7 @@ The input values are taken in the read label. If the entered value is negative, 
         PreReq: ["FlowControl"],
         Objective: ` 
 To calculate the factorial of N using the for loop, run the for loop starting from i=N till i>=1 , decrementing the value of i for each time the loop runs. For each time the loop is run, which is N times, fact=fact*i is executed. The final value of factorial is printed which is stored in fact.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/3YPwX1Y7_mU?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -357,7 +357,7 @@ To calculate the factorial of N using the for loop, run the for loop starting fr
         PreReq: ["FlowControl"],
         Objective: `
 To calculate the sum of N natural numbers, run the for loop starting from i=0 till i<N, incrementing the value of i for each time the loop runs. For each time the loop is run, which is N times, sum+=i is executed. The final value of sum is stored in sum which can be printed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/di7GRjF8Twk?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
@@ -367,7 +367,7 @@ To calculate the sum of N natural numbers, run the for loop starting from i=0 ti
         PreReq: ["FlowControl"],
         Objective:`
 To calculate the sum of odd and even numbers in the first N natural numbers, run the loop starting from i=0 till i<N, incrementing the value of i for each time the loop runs. Each time the loop is run, if (i%2==0), meaning the number is even, ESum=ESum+i is executed. Otherwise, else block statement OSum=OSum+i is executed.`,
-        YouTubeLink: "https://www.youtube.com/embed/AQCTrRKKxb4?rel=0&amp;showinfo=0",
+        YouTubeLink: "https://www.youtube.com/embed/IZ98-lDbzq8?rel=0&amp;showinfo=0",
         Input: "12345",
         Output: "98765"
     },
