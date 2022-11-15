@@ -4,15 +4,19 @@ const DetailedQuestionData = [
     value: "Write a C program to find the fast transpose of a sparse matrix.",
     PreReq: ["Array", "SparseMatrix"],
     Objective:`
-    Matrix: A matrix is a two-dimensional array having m rows and n columns. A matrix with m rows and n columns is called an mxn matrix. The data is stored in horizontal and vertical lines of entries.\n
-    Sparse Matrix: A sparse matrix is a matrix that has a majority of its elements equal to zero. Simply put, a matrix in which the number of zero elements is greater than non-zero elements is a sparse matrix.\n
-    When a sparse matrix is represented with a 2-dimensional array, we waste a lot of space to represent that matrix. For example, consider a matrix of size 100 X 100 containing only 10 non-zero elements. In this matrix, only 10 spaces are filled with non-zero values and the remaining spaces of the matrix are filled with zero. That means, totally we allocate 100 X 100 X 2 = 20000 bytes of space to store this integer matrix. And to access these 10 non-zero elements we have to make scanning for 10000 times. 
-    To make it simple we use the following sparse matrix representation.\n
-    Triplet Representation (array representation):
-    For this representation, only non-zero values in the sparse matrix are represented along with their row and column index values. In this representation, the 0th-row stores the total number of rows, the total number of columns, and the total number of non-zero values in the sparse matrix.
-    For example, consider a matrix of size 5 X 6 containing 6 non-zero values. This matrix can be represented as shown in the image.
-    In above example matrix, there are only 6 non-zero elements ( those are 9, 8, 4, 2, 5 & 2) and matrix size is 5 X 6. We represent this matrix as shown in the above image. Here the first row in the right side table is filled with values 5, 6 & 6 which indicates that it is a sparse matrix with 5 rows, 6 columns & 6 non-zero values. The second row is filled with 0, 4, & 9 which indicates the non-zero value 9 is at the 0th-row 4th column in the Sparse matrix. In the same way, the remaining non-zero values also follow a similar pattern.
-    `,
+Let A be an n*m matrix containing c non-zero entries.
+Construct a c*3 matrix B. For every non-zero element in A, fill B as:
+B[i][0] = Row of i-th non-zero element
+B[i][1] = Column of i-th non-zero element
+B[i][2] = Value of i-th non-zero element
+Construct an array total of size m. Fill total as:
+Total[i] = No. of non-zero entries in column i of A
+Construct an index array of size m+1. Fill index as:
+index[0] = 1
+index[1] = index[i-1] + total[i-1]
+For every row in B, find index[column] and enter the swapped tuple into B'[index[column]], where B' is the transposed matrix.
+Increment index[column]
+The transpose A' can then be constructed from the compact form B'`,
     YouTubeLink: "https://www.youtube.com/embed/fMZelmTUWZk?rel=0&amp;showinfo=0",
     YouTubeLinkTitle:"DFS",
     Input:`0 5 0 6
@@ -140,8 +144,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 7. If the isp of the stack top is higher than the icp of the token, the top is popped and printed. Then the incoming token is compared with the new stack top.
 8. If the incoming operator has the higher isp then the same operation is repeated until the isp of stack top becomes less then icp of token. The token is pushed into the stack.
 9. The control comes out of the for loop.
-10. And at the end a while loop is executed wherein the operators in the stack are popped, and printed unless it reaches eos.
-    `,
+10. And at the end a while loop is executed wherein the operators in the stack are popped, and printed unless it reaches eos.`,
     YouTubeLink: "https://www.youtube.com/embed/RGmFWu6yjC8?rel=0&amp;showinfo=0",
     Input:"(A+B-C*(D-E)/F)-G",
     Output:"AB+CDE-*F/-G"
@@ -151,15 +154,15 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
     value: "Write a C program to evaluate a given postfix expression using a stack.",
     PreReq: ["Stack"],
     Objective:`
-    Step 1: Create a stack to store operands.
-    Step 2: Scan the given expression from left to right.
-    Step 3:    
-     a)   If the scanned character is an operand, push it into the stack. 
-     b) If the scanned character is an operator, POP 2 operands from stack and perform the operation using the operator encountered, and then PUSH the result back to the stack.
-    Step 4: Repeat step 3 till all the characters are scanned.
-    Step 5: When the expression has ended, the number in the stack is the final result.
+Step 1: Create a stack to store operands.
+Step 2: Scan the given expression from left to right.
+Step 3:    
+ a)   If the scanned character is an operand, push it into the stack. 
+ b) If the scanned character is an operator, POP 2 operands from stack and perform the operation using the operator encountered, and then PUSH the result back to the stack.
+Step 4: Repeat step 3 till all the characters are scanned.
+Step 5: When the expression has ended, the number in the stack is the final result.
 
-    Complexity of postfix evaluation:
+Complexity of postfix evaluation:
 
 The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed `,
     YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
@@ -171,7 +174,8 @@ The Postfix evaluation algorithm has linear complexity O(N). Since the expressio
     PreReq: ["Stack","LinkedList"],
     value: `Write a C program to implement multiple linked stacks (at least 5) and perform the following operations on them 
     (i) Push an item in ithstack (ii) Pop an item from ithstack (iii) Display ith stack.`,
-    Objective:`To implement n stacks, construct a linked list of size n, each node containing a pointer to “element”; a user-defined structure for the stack.
+    Objective:`
+To implement n stacks, construct a linked list of size n, each node containing a pointer to “element”; a user-defined structure for the stack.
 The following operations are defined:
 
 Push
@@ -262,35 +266,35 @@ dequeue(4)`,
     (i) Insert a node (iii) Display a doubly linked circular list in forward direction
     (ii) Delete a node (iv)Display a doubly linked circular list in reverse direction.`,
     PreReq: ["LinkedList"],
-    Objective:`    Insertion at the beginning of a doubly circular linked list
-    Step 1: IF PTR = NULL
-    Write OVERFLOW
-    Go to Step 13
-    [END OF IF]Step 2: SET NEW_NODE = PTR
-    Step 3: SET PTR = PTR -> NEXT
-    Step 4: SET NEW_NODE -> DATA = VAL
-    Step 5: SET TEMP = HEAD
-    Step 6: Repeat Step 7 while TEMP -> NEXT != HEAD
-    Step 7: SET TEMP = TEMP -> NEXT
-    [END OF LOOP]Step 8: SET TEMP -> NEXT = NEW_NODE
-    Step 9: SET NEW_NODE -> PREV = TEMP
-    Step 1 : SET NEW_NODE -> NEXT = HEAD
-    Step 11: SET HEAD -> PREV = NEW_NODE
-    Step 12: SET HEAD = NEW_NODE
-    Step 13: EXIT
+    Objective:`
+Insertion at the beginning of a doubly circular linked list
+Step 1: IF PTR = NULL
+Write OVERFLOW
+Go to Step 13
+[END OF IF]Step 2: SET NEW_NODE = PTR
+Step 3: SET PTR = PTR -> NEXT
+Step 4: SET NEW_NODE -> DATA = VAL
+Step 5: SET TEMP = HEAD
+Step 6: Repeat Step 7 while TEMP -> NEXT != HEAD
+Step 7: SET TEMP = TEMP -> NEXT
+[END OF LOOP]Step 8: SET TEMP -> NEXT = NEW_NODE
+Step 9: SET NEW_NODE -> PREV = TEMP
+Step 1 : SET NEW_NODE -> NEXT = HEAD
+Step 11: SET HEAD -> PREV = NEW_NODE
+Step 12: SET HEAD = NEW_NODE
+Step 13: EXIT
      
-    Deletion from the end of a doubly circular linked list
-    Step 1: IF HEAD = NULL
-    Write UNDERFLOW
-    Go to Step 8
-    [END OF IF]Step 2: SET TEMP = HEAD
-    Step 3: Repeat Step 4 while TEMP -> NEXT != HEAD
-    Step 4: SET TEMP = TEMP -> NEXT
-    [END OF LOOP]Step 5: SET TEMP -> PREV -> NEXT = HEAD
-    Step 6: SET HEAD -> PREV = TEMP -> PREV
-    Step 7: FREE TEMP
-    Step 8: EXIT
-    `,
+Deletion from the end of a doubly circular linked list
+Step 1: IF HEAD = NULL
+Write UNDERFLOW
+Go to Step 8
+[END OF IF]Step 2: SET TEMP = HEAD
+Step 3: Repeat Step 4 while TEMP -> NEXT != HEAD
+Step 4: SET TEMP = TEMP -> NEXT
+[END OF LOOP]Step 5: SET TEMP -> PREV -> NEXT = HEAD
+Step 6: SET HEAD -> PREV = TEMP -> PREV
+Step 7: FREE TEMP
+Step 8: EXIT`,
     YouTubeLink: "https://",
     Input:"",
     Output:""
@@ -300,50 +304,52 @@ dequeue(4)`,
     value: `Write a C program to implement a max heap using an array and perform the following operations on it.
                 (i) Insert an item (ii) Delete an item (iii) Display a heap.`,
     PreReq: ["Tree", "Heap"],
-    Objective:`Max heap construction
-    Step 1 - Create a new node at the end of heap.
-    Step 2 - Assign new value to the node.
-    Step 3 - Compare the value of this child node with its parent.
-    Step 4 - If value of parent is less than child, then swap them.
-    Step 5 - Repeat step 3 & 4 until Heap property holds.
+    Objective:`
+Max heap construction
+Step 1 - Create a new node at the end of heap.
+Step 2 - Assign new value to the node.
+Step 3 - Compare the value of this child node with its parent.
+Step 4 - If value of parent is less than child, then swap them.
+Step 5 - Repeat step 3 & 4 until Heap property holds.
      
-    Insertion in max heap
-    insert(heap, n, item) -
-    Begin
-       if heap is full, then exit
-       else
-          n := n + 1
-          for i := n, i > 1, set i := i / 2 in each iteration, do
-             if item <= heap[i/2], then break
-             heap[i] = heap[i/2]
-          done
-       end if
-       heap[i] := item
-    End
-    Deletion from max heap
-    Step 1 - Remove root node.
-    Step 2 - Move the last element of last level to root.
-    Step 3 - Compare the value of this child node with its parent.
-    Step 4 - If value of parent is less than child, then swap them.
-    Step 5 - Repeat step 3 & 4 until Heap property holds.
+Insertion in max heap
+insert(heap, n, item) -
+Begin
+    if heap is full, then exit
+    else
+        n := n + 1
+        for i := n, i > 1, set i := i / 2 in each iteration, do
+            if item <= heap[i/2], then break
+            heap[i] = heap[i/2]
+        done
+    end if
+    heap[i] := item
+End
+
+Deletion from max heap
+Step 1 - Remove root node.
+Step 2 - Move the last element of last level to root.
+Step 3 - Compare the value of this child node with its parent.
+Step 4 - If value of parent is less than child, then swap them.
+Step 5 - Repeat step 3 & 4 until Heap property holds.
      
-    delete(heap, n) -
-    Begin
-       if heap is empty, then exit
-       else
-          item := heap[1]
-          last := heap[n]
-          n := n - 1
-          for i := 1, j := 2, j <= n, set i := j and j := j * 2, do
-             if j < n, then
-                if heap[j] < heap[j + 1], then j := j + 1
-             end if
-             if last >= heap[j], then break
-             heap[i] := heap[j]
-          done
-       end if
-       heap[i] := last
-    End`,
+delete(heap, n) -
+Begin
+    if heap is empty, then exit
+    else
+        item := heap[1]
+        last := heap[n]
+        n := n - 1
+        for i := 1, j := 2, j <= n, set i := j and j := j * 2, do
+            if j < n, then
+            if heap[j] < heap[j + 1], then j := j + 1
+            end if
+            if last >= heap[j], then break
+            heap[i] := heap[j]
+        done
+    end if
+    heap[i] := last
+End`,
     Input:"",
     Output:""
 },
@@ -353,46 +359,45 @@ dequeue(4)`,
     (i) Insert an item (ii) Search an item (iii) Inorder Traversal.`,
     PreReq: ["Tree", "LinkedList"],
     Objective:`
-    Insertion into Binary Search Tree
+Insertion into Binary Search Tree
     
-    1. Create a new BST node and assign values to it.
-    2. insert(node, item)
-         i) If root == NULL,
-             return the new node to the calling function.
-         ii) if root=>data < item
+1. Create a new BST node and assign values to it.
+2. insert(node, item)
+        i) If root == NULL,
+            return the new node to the calling function.
+        ii) if root=>data < item
              call the insert function with root=>right and assign the return value in root=>right.
-            root->right = insert(root=>right, item)
-         iii) if root=>data > item
-             call the insert function with root->left and assign the return value in root=>left.
+             root->right = insert(root=>right, item)
+        iii) if root=>data > item
+            call the insert function with root->left and assign the return value in root=>left.
              root=>left = insert(root=>left, item)
-    3. Finally, return the original root pointer to the calling function.
+3. Finally, return the original root pointer to the calling function.
 
-    Searching in Binary Search Tree
+Searching in Binary Search Tree
 
-    If root == NULL 
-        return NULL;
-    If item == root->data 
-        return root->data;
-    If item < root->data 
-        return search(root->left)
-    If item > root->data 
-        return search(root->right)
+If root == NULL 
+    return NULL;
+If item == root->data 
+    return root->data;
+If item < root->data 
+    return search(root->left)
+If item > root->data 
+    return search(root->right)
 
-    In-order Traversal of BST
+In-order Traversal of BST
 
-    Steps
-    Traverse the left subtree in in-order
-    Visit the root
-    Traverse the right subtree in in-order
+Steps
+Traverse the left subtree in in-order
+Visit the root
+Traverse the right subtree in in-order
 
-    Algorithm
-    Step 1: Repeat Steps 2 to 4 while TREE != NULL
-    Step 2: INORDER(TREE -> LEFT)
-    Step 3: Print TREE -> DATA
-    Step 4: INORDER(TREE -> RIGHT)
-    [END OF LOOP]
-    Step 5: END
-    `,
+Algorithm
+Step 1: Repeat Steps 2 to 4 while TREE != NULL
+Step 2: INORDER(TREE -> LEFT)
+Step 3: Print TREE -> DATA
+Step 4: INORDER(TREE -> RIGHT)
+[END OF LOOP]
+Step 5: END`,
     YouTubeLink: "https://",
     Input:"",
     Output:""
@@ -402,29 +407,28 @@ dequeue(4)`,
     value: "Write a C program to perform depth first search of a graph represented as an adjacency list.",
     PreReq: ["Stack", "Graph"],
     Objective:`
-    Depth First Search: It is a recursive algorithm to search all the vertices of a tree data structure or a graph. The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until the goal node is reached or a node with no children is reached.
-    Because of the recursive nature, the stack data structure can be used to implement the DFS algorithm.\n
-    The step by step process to implement the DFS traversal is given as follows -
-    1.First, create a stack with the total number of vertices in the graph.
-    2.Now, choose any vertex as the starting point of traversal, and push that vertex into the stack.
-    3.After that, push a non-visited vertex (adjacent to the vertex on the top of the stack) to the top of the stack.
-    4.Now, repeat steps 3 and 4 until no vertices are left to visit from the vertex on the top of the stack.
-    5.If no vertex is left, go back and pop a vertex from the stack.
-    6.Repeat steps 2, 3, and 4 until the stack is empty.\n
-    Depth First Search Algorithm
-    A standard DFS implementation puts each vertex of the graph into one of two categories:
-    1.Visited
-    2.Not Visited\n
-    The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.\n
-    The DFS algorithm works as follows:
-    1.Start by putting any one of the graph's vertices on top of a stack.
-    2.Take the top item of the stack and add it to the visited list.
-    3.Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the top of the stack.
-    4.Keep repeating steps 2 and 3 until the stack is empty.\n 
-    Complexity of Depth First Search
-    The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
-    The space complexity of DFS is O(V).
-    `,
+Depth First Search: It is a recursive algorithm to search all the vertices of a tree data structure or a graph. The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until the goal node is reached or a node with no children is reached.
+Because of the recursive nature, the stack data structure can be used to implement the DFS algorithm.\n
+The step by step process to implement the DFS traversal is given as follows -
+1.First, create a stack with the total number of vertices in the graph.
+2.Now, choose any vertex as the starting point of traversal, and push that vertex into the stack.
+3.After that, push a non-visited vertex (adjacent to the vertex on the top of the stack) to the top of the stack.
+4.Now, repeat steps 3 and 4 until no vertices are left to visit from the vertex on the top of the stack.
+5.If no vertex is left, go back and pop a vertex from the stack.
+6.Repeat steps 2, 3, and 4 until the stack is empty.\n
+Depth First Search Algorithm
+A standard DFS implementation puts each vertex of the graph into one of two categories:
+1.Visited
+2.Not Visited\n
+The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.\n
+The DFS algorithm works as follows:
+1.Start by putting any one of the graph's vertices on top of a stack.
+2.Take the top item of the stack and add it to the visited list.
+3.Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the top of the stack.
+4.Keep repeating steps 2 and 3 until the stack is empty.\n 
+Complexity of Depth First Search
+The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
+The space complexity of DFS is O(V).`,
     YouTubeLink: "https://www.youtube.com/embed/6NWtoUsxVC8?rel=0&amp;showinfo=0",
     Input:`  A B C D E F
 A 0 1 1 1 0 0
@@ -440,23 +444,22 @@ F 0 0 1 1 1 0`,
     value: "Write a C program to perform breadth first search of a graph.",
     PreReq: ["Queue", "Graph"],
     Objective:`
-    Breadth First Search: It is a recursive algorithm to search all the vertices of a tree or graph data structure.
-    Breadth-first search is a graph traversal algorithm that starts traversing the graph from the root node and explores all the neighboring nodes. Then, it selects the nearest node and explores all the unexplored nodes. While using BFS for traversal, any node in the graph can be considered as the root node.\n
-    BFS algorithm
-    A standard BFS implementation puts each vertex of the graph into one of two categories:
-    1. Visited
-    2. Not Visited\n
-    The purpose of the algorithm is to mark each vertex as visited while avoiding visited nodes.\n
-    The algorithm works as follows:
-    1.Start by putting any one of the graph's vertices at the back of a queue.
-    2.Take the front item of the queue and add it to the visited list.
-    3.Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the back of the queue.
-    4.Keep repeating steps 2 and 3 until the queue is empty.\n
-    The graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the BFS algorithm on every node.\n
-    Complexity of BFS
-    The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
-    The space complexity of DFS is O(V).
-    `,
+Breadth First Search: It is a recursive algorithm to search all the vertices of a tree or graph data structure.
+Breadth-first search is a graph traversal algorithm that starts traversing the graph from the root node and explores all the neighboring nodes. Then, it selects the nearest node and explores all the unexplored nodes. While using BFS for traversal, any node in the graph can be considered as the root node.\n
+BFS algorithm
+A standard BFS implementation puts each vertex of the graph into one of two categories:
+1. Visited
+2. Not Visited\n
+The purpose of the algorithm is to mark each vertex as visited while avoiding visited nodes.\n
+The algorithm works as follows:
+1.Start by putting any one of the graph's vertices at the back of a queue.
+2.Take the front item of the queue and add it to the visited list.
+3.Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the back of the queue.
+4.Keep repeating steps 2 and 3 until the queue is empty.\n
+The graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the BFS algorithm on every node.\n
+Complexity of BFS
+The time complexity of the DFS algorithm is O(V+E), where V is the number of nodes and E is the number of edges.
+The space complexity of DFS is O(V).`,
     YouTubeLink: "https://www.youtube.com/embed/9HajSeGP1Pc?rel=0&amp;showinfo=0",
     Input:`  A B C D E F
 A 0 1 1 1 0 0
