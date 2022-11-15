@@ -28,10 +28,54 @@ const DetailedQuestionData = [
     value: `Write a C program to perform pattern matching using KMP Algorithm.
                (Print the failure function of a pattern and display whether match is found or not).`,
     PreReq: ["Array"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`
+findPrefix(pattern, m, prefArray)
+Input - The pattern, the length of pattern and an array to store prefix location
+Output - The array to store where prefixes are located
+
+    Begin
+       length := 0
+       prefArray[0] := 0
+     
+       for all character index 'i' of pattern, do
+          if pattern[i] = pattern[length], then
+             increase length by 1
+             prefArray[i] := length
+          else
+             if length ≠ 0 then
+                length := prefArray[length - 1]
+                decrease i by 1
+             else
+                prefArray[i] := 0
+       done
+    End
+     
+kmpAlgorithm(text, pattern)
+Input: The main text, and the pattern, which will be searched
+Output - The location where patterns are found
+
+    Begin
+       n := size of text
+       m := size of pattern
+       call findPrefix(pattern, m, prefArray)
+     
+       while i < n, do
+          if text[i] = pattern[j], then
+             increase i and j by 1
+          if j = m, then
+             print the location (i-j) as there is the pattern
+             j := prefArray[j-1]
+          else if i < n AND pattern[j] ≠ text[i] then
+             if j ≠ 0 then
+                j := prefArray[j - 1]
+             else
+                increase i by 1
+       done
+    End`,
     YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Input:`txt[] = "THIS IS A TEST TEXT"
+pat[] = "TEST"`,
+    Output:`Pattern found at index 10`
 },
 {
     id: 3,
@@ -121,8 +165,8 @@ The Postfix evaluation algorithm has linear complexity O(N). Since the expressio
 
     `,
     YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
-    Input:"12345",
-    Output:"98765"
+    Input:"2632*+3/+",
+    Output:"6"
 },
 {
     id: 6,
@@ -139,17 +183,40 @@ push(4,50)
 pop(0)
 push(2,60)
 pop(4)`,
-    Output:"98765"
+    Output:""
 },
 {
     id: 7,
     value: `Write a C program to implement multiple linked queues (at least 5) and perform the following operations on them
                (i) Add an item in ithqueue (ii) Delete an item from ithqueue (iii) Display ithqueue.`,
     PreReq: ["Queue","LinkedList"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`
+To implement n queues, construct a linked list of size n, each node containing a pointer to “element”; a user-defined structure for the queue.
+The following operations are defined:
+Enqueue
+Allocate memory to the new node temp and assign data to it.
+Let temp point to null.
+If the front of the i-th queue is not null, update the rear of the i-th queue to point to temp.
+Otherwise, front[i] = temp
+Update rear of i-th queue to temp
+Dequeue
+Initialize a node temp to store the popped node
+Assign the top of the i-th queue to temp.
+If temp is null, then dequeueing is not possible; queue is empty.
+Else, update the top of the i-th queue to the node it points to.
+Display i-th queue
+Let temp be the top of the i-th queue.
+Iteratively traverse the i-th queue until the last node points to null.`,
     YouTubeLink: "https://www.youtube.com/embed/gQoJRDx-7I4?rel=0&amp;showinfo=0",
-    Input:"12345",
-    Output:"98765"
+    Input:`enqueue(0,10)
+enqueue(0,20)
+enqueue(2,30)
+enqueue(0,40)
+enqueue(4,50)
+dequeue(0)
+enqueue(2,60)
+dequeue(4)`,
+    Output:""
 },
 {
     id: 8,
@@ -172,8 +239,9 @@ pop(4)`,
    Auxiliary Space: O(M + N)
    `,
     YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Input:`5x^2 + 4x^1 + 2
+3x^4 + 4x^2 + 2x^1 + 6`,
+    Output:"3x^4 + 9x^2 + 6x^1 + 8"
 },
 {
     id: 9,
@@ -181,20 +249,90 @@ pop(4)`,
     (i) Insert a node (iii) Display a doubly linked circular list in forward direction
     (ii) Delete a node (iv)Display a doubly linked circular list in reverse direction.`,
     PreReq: ["LinkedList"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`    Insertion at the beginning of a doubly circular linked list
+    Step 1: IF PTR = NULL
+    Write OVERFLOW
+    Go to Step 13
+    [END OF IF]Step 2: SET NEW_NODE = PTR
+    Step 3: SET PTR = PTR -> NEXT
+    Step 4: SET NEW_NODE -> DATA = VAL
+    Step 5: SET TEMP = HEAD
+    Step 6: Repeat Step 7 while TEMP -> NEXT != HEAD
+    Step 7: SET TEMP = TEMP -> NEXT
+    [END OF LOOP]Step 8: SET TEMP -> NEXT = NEW_NODE
+    Step 9: SET NEW_NODE -> PREV = TEMP
+    Step 1 : SET NEW_NODE -> NEXT = HEAD
+    Step 11: SET HEAD -> PREV = NEW_NODE
+    Step 12: SET HEAD = NEW_NODE
+    Step 13: EXIT
+     
+    Deletion from the end of a doubly circular linked list
+    Step 1: IF HEAD = NULL
+    Write UNDERFLOW
+    Go to Step 8
+    [END OF IF]Step 2: SET TEMP = HEAD
+    Step 3: Repeat Step 4 while TEMP -> NEXT != HEAD
+    Step 4: SET TEMP = TEMP -> NEXT
+    [END OF LOOP]Step 5: SET TEMP -> PREV -> NEXT = HEAD
+    Step 6: SET HEAD -> PREV = TEMP -> PREV
+    Step 7: FREE TEMP
+    Step 8: EXIT
+    `,
     YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Input:"",
+    Output:""
 },
 {
     id: 10,
     value: `Write a C program to implement a max heap using an array and perform the following operations on it.
                 (i) Insert an item (ii) Delete an item (iii) Display a heap.`,
     PreReq: ["Tree", "Heap"],
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Objective:`Max heap construction
+    Step 1 - Create a new node at the end of heap.
+    Step 2 - Assign new value to the node.
+    Step 3 - Compare the value of this child node with its parent.
+    Step 4 - If value of parent is less than child, then swap them.
+    Step 5 - Repeat step 3 & 4 until Heap property holds.
+     
+    Insertion in max heap
+    insert(heap, n, item) -
+    Begin
+       if heap is full, then exit
+       else
+          n := n + 1
+          for i := n, i > 1, set i := i / 2 in each iteration, do
+             if item <= heap[i/2], then break
+             heap[i] = heap[i/2]
+          done
+       end if
+       heap[i] := item
+    End
+    Deletion from max heap
+    Step 1 - Remove root node.
+    Step 2 - Move the last element of last level to root.
+    Step 3 - Compare the value of this child node with its parent.
+    Step 4 - If value of parent is less than child, then swap them.
+    Step 5 - Repeat step 3 & 4 until Heap property holds.
+     
+    delete(heap, n) -
+    Begin
+       if heap is empty, then exit
+       else
+          item := heap[1]
+          last := heap[n]
+          n := n - 1
+          for i := 1, j := 2, j <= n, set i := j and j := j * 2, do
+             if j < n, then
+                if heap[j] < heap[j + 1], then j := j + 1
+             end if
+             if last >= heap[j], then break
+             heap[i] := heap[j]
+          done
+       end if
+       heap[i] := last
+    End`,
+    Input:"",
+    Output:""
 },
 {
     id: 11,
@@ -243,8 +381,8 @@ pop(4)`,
     Step 5: END
     `,
     YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Input:"",
+    Output:""
 },
 {
     id: 12,
@@ -275,8 +413,14 @@ pop(4)`,
     The space complexity of DFS is O(V).
     `,
     YouTubeLink: "https://www.youtube.com/embed/6NWtoUsxVC8?rel=0&amp;showinfo=0",
-    Input:"12345",
-    Output:"98765"
+    Input:`  A B C D E F
+A 0 1 1 1 0 0
+B 1 0 0 1 1 0
+C 1 0 0 1 1 0
+D 1 1 1 0 1 1
+E 0 1 0 1 0 1
+F 0 0 1 1 1 0`,
+    Output:"C F E B D A"
 },
 {
     id: 13,
@@ -301,8 +445,14 @@ pop(4)`,
     The space complexity of DFS is O(V).
     `,
     YouTubeLink: "https://www.youtube.com/embed/9HajSeGP1Pc?rel=0&amp;showinfo=0",
-    Input:"12345",
-    Output:"98765"
+    Input:`  A B C D E F
+A 0 1 1 1 0 0
+B 1 0 0 1 1 0
+C 1 0 0 1 0 1
+D 1 1 1 0 1 1
+E 0 1 0 1 0 1
+F 0 0 1 1 1 0`,
+    Output:"B A D E C F"
 },
 // {
 //     id: 14,
