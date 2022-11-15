@@ -118,8 +118,8 @@ pat[] = "TEST"`,
     Step 4: EXIT   
     `,
     YouTubeLink: "https://",
-    Input:"12345",
-    Output:"98765"
+    Input:"",
+    Output:""
 },
 {
     id: 4,
