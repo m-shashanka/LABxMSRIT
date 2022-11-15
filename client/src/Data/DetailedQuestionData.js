@@ -161,9 +161,7 @@ The function get_token has a return type of struct(precedence) ,and a switch sta
 
     Complexity of postfix evaluation:
 
-The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed
-
-    `,
+The Postfix evaluation algorithm has linear complexity O(N). Since the expression is scanned once and push and pop operations which take constant time are performed `,
     YouTubeLink: "https://www.youtube.com/embed/YpIkHiMm0EI?rel=0&amp;showinfo=0",
     Input:"2632*+3/+",
     Output:"6"
@@ -173,7 +171,22 @@ The Postfix evaluation algorithm has linear complexity O(N). Since the expressio
     PreReq: ["Stack","LinkedList"],
     value: `Write a C program to implement multiple linked stacks (at least 5) and perform the following operations on them 
     (i) Push an item in ithstack (ii) Pop an item from ithstack (iii) Display ith stack.`,
-    Objective:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    Objective:`To implement n stacks, construct a linked list of size n, each node containing a pointer to “element”; a user-defined structure for the stack.
+The following operations are defined:
+
+Push
+Allocate memory to the new node temp and assign data to it.
+Let temp point to the top of i-th stack
+Update the top of i-th stack to temp
+
+Pop
+Initialize a node temp to store the popped node
+Assign top of the i-th stack to temp.
+If temp is null, then popping is not possible; stack is empty.
+Else, update the top of the i-th stack to the node it points to.
+Display i-th stack
+Let temp be the top of the i-th stack.
+Iteratively traverse the i-th stack until the last node points to null.`,
     YouTubeLink: "https://www.youtube.com/embed/Nr2vaQGppjU?rel=0&amp;showinfo=0",
     Input:`push(0,10)
 push(0,20)
