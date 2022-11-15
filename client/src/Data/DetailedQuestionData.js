@@ -6,14 +6,14 @@ const DetailedQuestionData = [
     Objective:`
 Let A be an n*m matrix containing c non-zero entries.
 Construct a c*3 matrix B. For every non-zero element in A, fill B as:
-B[i][0] = Row of i-th non-zero element
-B[i][1] = Column of i-th non-zero element
-B[i][2] = Value of i-th non-zero element
+    B[i][0] = Row of i-th non-zero element
+    B[i][1] = Column of i-th non-zero element
+    B[i][2] = Value of i-th non-zero element
 Construct an array total of size m. Fill total as:
-Total[i] = No. of non-zero entries in column i of A
+    Total[i] = No. of non-zero entries in column i of A
 Construct an index array of size m+1. Fill index as:
-index[0] = 1
-index[1] = index[i-1] + total[i-1]
+    index[0] = 1
+    index[1] = index[i-1] + total[i-1]
 For every row in B, find index[column] and enter the swapped tuple into B'[index[column]], where B' is the transposed matrix.
 Increment index[column]
 The transpose A' can then be constructed from the compact form B'`,
@@ -210,17 +210,20 @@ pop(4)`,
     Objective:`
 To implement n queues, construct a linked list of size n, each node containing a pointer to “element”; a user-defined structure for the queue.
 The following operations are defined:
+
 Enqueue
 Allocate memory to the new node temp and assign data to it.
 Let temp point to null.
 If the front of the i-th queue is not null, update the rear of the i-th queue to point to temp.
 Otherwise, front[i] = temp
 Update rear of i-th queue to temp
+
 Dequeue
 Initialize a node temp to store the popped node
 Assign the top of the i-th queue to temp.
 If temp is null, then dequeueing is not possible; queue is empty.
 Else, update the top of the i-th queue to the node it points to.
+
 Display i-th queue
 Let temp be the top of the i-th queue.
 Iteratively traverse the i-th queue until the last node points to null.`,
